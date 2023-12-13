@@ -23193,7 +23193,7 @@
                                                                 "topRow": 4,
                                                                 "bottomRow": 61,
                                                                 "parentId": "uapadys84h",
-                                                                "postChatDataUrl": "https://aibotnr-9821-656f07128ab32b12000001b8.ubos.tech/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname=Friendly-Chat&email={{main.user.auth_module.user.info.user.email}}",
+                                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname=Friendly-Chat&email={{main.user.auth_module.user.info.user.email}}",
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "getChatDataUrl"
@@ -23203,7 +23203,7 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "getChatDataUrl": "https://aibotnr-9821-656f07128ab32b12000001b8.ubos.tech/demoUserChat?number={{_Friendly_Chat.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=Friendly-Chat",
+                                                                "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{_Friendly_Chat.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=Friendly-Chat",
                                                                 "darkMode": false,
                                                                 "classStyle": "chatDemo"
                                                             },
@@ -23296,7 +23296,7 @@
                                                                 "topRow": 4,
                                                                 "bottomRow": 61,
                                                                 "parentId": "dh1u1lsl0c",
-                                                                "postChatDataUrl": "https://aibotnr-9821-656f07128ab32b12000001b8.ubos.tech/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname=HumanResources&email={{main.user.auth_module.user.info.user.email}}",
+                                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname=HumanResources&email={{main.user.auth_module.user.info.user.email}}",
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "getChatDataUrl"
@@ -23306,7 +23306,7 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "getChatDataUrl": "https://aibotnr-9821-656f07128ab32b12000001b8.ubos.tech/demoUserChat?number={{HumanResources.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=HumanResources",
+                                                                "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{HumanResources.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=HumanResources",
                                                                 "darkMode": false,
                                                                 "classStyle": "chatDemo"
                                                             },
