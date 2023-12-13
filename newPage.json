@@ -23204,7 +23204,8 @@
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "getChatDataUrl": "https://aibotnr-9821-656f07128ab32b12000001b8.ubos.tech/demoUserChat?number={{_Friendly_Chat.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=Friendly-Chat",
-                                                                "darkMode": false
+                                                                "darkMode": false,
+                                                                "classStyle": "chatDemo"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -23306,7 +23307,8 @@
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "getChatDataUrl": "https://aibotnr-9821-656f07128ab32b12000001b8.ubos.tech/demoUserChat?number={{HumanResources.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=HumanResources",
-                                                                "darkMode": false
+                                                                "darkMode": false,
+                                                                "classStyle": "chatDemo"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -23407,7 +23409,8 @@
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{UBOS_Support.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=UBOS-Support",
-                                                                "darkMode": false
+                                                                "darkMode": false,
+                                                                "classStyle": "chatDemo"
                                                             },
                                                             {
                                                                 "isVisible": true,
