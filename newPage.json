@@ -23131,7 +23131,7 @@
                                                         "index": 2,
                                                         "label": "UBOS-Support",
                                                         "widgetId": "xovd21quky",
-                                                        "isVisible": true
+                                                        "isVisible": "{{Select2.selectedOptionLabel==='UBOS-Support'}}"
                                                     }
                                                 },
                                                 "shouldShowTabs": false,
@@ -23209,7 +23209,7 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "Free messages left: {{_Friendly_Chat.lastMessage}}",
+                                                                "text": " Free messages left: {{Math.ceil(5 -_Friendly_Chat.lastMessage/2) >0 ?Math.ceil(5 -_Friendly_Chat.lastMessage/2) : 0}}",
                                                                 "fontSize": "HEADING2",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
@@ -23312,7 +23312,7 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "Free messages left: {{HumanResources.lastMessage}}",
+                                                                "text": "Free messages left: {{Math.ceil(5 -HumanResources.lastMessage/2) >0 ?Math.ceil(5 -HumanResources.lastMessage/2) : 0}}",
                                                                 "fontSize": "HEADING2",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
@@ -23472,6 +23472,9 @@
                                                     },
                                                     {
                                                         "key": "tabsObj.tab2.isVisible"
+                                                    },
+                                                    {
+                                                        "key": "tabsObj.tabm6ab1ku0hq.isVisible"
                                                     }
                                                 ],
                                                 "dynamicTriggerPathList": [],
@@ -23481,6 +23484,9 @@
                                                     },
                                                     {
                                                         "key": "tabsObj.tab2.isVisible"
+                                                    },
+                                                    {
+                                                        "key": "tabsObj.tabm6ab1ku0hq.isVisible"
                                                     }
                                                 ]
                                             }
