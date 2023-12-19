@@ -506,7 +506,7 @@
         "id": "6579b875a69a47e15535fc49",
         "name": "JSObject1",
         "pageId": "Login",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\nconsole.log('sssss')\t\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1:async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\n  if(data.email){\n\t\tnavigateTo('AI Chat',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -521,10 +521,10 @@
             {
                 "name": "myFun1",
                 "pageId": "Login",
-                "executeOnLoad": false,
+                "executeOnLoad": true,
                 "actionConfiguration": {
-                    "body": "() => {\nconsole.log('sssss')\t\n\t}",
-                    "isAsync": false,
+                    "body": "async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\n  if(data.email){\n\t\tnavigateTo('AI Chat',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t}",
+                    "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
                     "paginationType": "NONE",
@@ -597,6 +597,10 @@
         ],
         "applicationId": "jetsondashboard",
         "pluginType": "JS",
-        "_id": "6579b875a69a47e15535fc49"
+        "_id": "6579b875a69a47e15535fc49",
+        "pluginId": "JS",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": []
     }
 ]

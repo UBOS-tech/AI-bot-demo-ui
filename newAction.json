@@ -7346,7 +7346,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:16:59.846Z",
-        "updatedAt": "2023-12-12T15:45:31.510Z",
+        "updatedAt": "2023-12-19T12:10:28.983Z",
         "deleted": false,
         "policies": [
             {
@@ -7673,7 +7673,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-11T19:42:54.215Z",
-        "updatedAt": "2023-12-13T10:37:09.538Z",
+        "updatedAt": "2023-12-19T14:49:16.717Z",
         "deleted": false,
         "policies": [
             {
@@ -9727,7 +9727,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-05T14:13:45.691Z",
-        "updatedAt": "2023-12-11T14:35:32.211Z",
+        "updatedAt": "2023-12-18T09:08:27.728Z",
         "deleted": false,
         "policies": [
             {
@@ -9766,7 +9766,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "DemoChat",
+            "pageId": "AI Chat",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9846,7 +9846,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "DemoChat",
+            "pageId": "AI Chat",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -9929,7 +9929,7 @@
                 "messages": []
             },
             "executeOnLoad": true,
-            "pageId": "DemoChat",
+            "pageId": "AI Chat",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -10012,7 +10012,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "DemoChat",
+            "pageId": "AI Chat",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -10095,7 +10095,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "DemoChat",
+            "pageId": "AI Chat",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
@@ -10394,10 +10394,10 @@
     {
         "name": "myFun1",
         "pageId": "Login",
-        "executeOnLoad": false,
+        "executeOnLoad": true,
         "actionConfiguration": {
-            "body": "() => {\nconsole.log('sssss')\t\n\t}",
-            "isAsync": false,
+            "body": "async () => {\nconsole.log('Before calling demoUser.run()');\nawait demoUser.run()\n  .then((data) => {\n\tconsole.log(data)\n  if(data.email){\n\t\tnavigateTo('AI Chat',{})\n\t}\n  })\n  .catch((error) => {\n    console.error('Inside catch block');\n    console.error(error);\n  });\n\n\n\n\t}",
+            "isAsync": true,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
             "paginationType": "NONE",

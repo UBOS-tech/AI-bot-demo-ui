@@ -5606,6 +5606,18 @@
                                     "main.env.nodeUrl"
                                 ],
                                 "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "6579b875a69a47e15535fc4a",
+                                "id": "6579b875a69a47e15535fc4a",
+                                "collectionId": "6579b875a69a47e15535fc49",
+                                "confirmBeforeExecute": false,
+                                "name": "myFun1",
+                                "pluginType": "JS",
+                                "jsonPathKeys": [
+                                    "() => {\n\t\t//write code here\n\t}"
+                                ],
+                                "timeoutInMillisecond": 10000
                             }
                         ]
                     ],
@@ -9437,7 +9449,7 @@
                                                                 "buttonVariant": "SECONDARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button3",
-                                                                "isDisabled": "{{appsmith.user.auth_module.user.info.user.role ==='demo'}}",
+                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -11208,7 +11220,7 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "right",
                                                                 "labelWidth": "13",
-                                                                "options": "{{getIDbase.data.map(e=> {\n\treturn {\n\t\t \"label\": e.name,\n    \"value\": e._id\n}\n})}}",
+                                                                "options": "{{getIDbase.data.map(e=> {\n\treturn {\n\t\t\"label\": e.name,\n    \"value\": e._id\n}\n})}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
                                                                 "defaultOptionValue": "{{getIDbase.data.filter(e=>e.select===true)[0]._id ? getIDbase.data.filter(e=>e.select===true)[0]._id : getIDbase.data[0]._id}}",
@@ -13012,6 +13024,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customColumn1.isDisabled"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.url.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -13111,6 +13126,23 @@
                                                         "buttonVariant": "TERTIARY",
                                                         "verticalAlignment": "LEFT",
                                                         "horizontalAlignment": "LEFT"
+                                                    },
+                                                    "url": {
+                                                        "index": 3,
+                                                        "width": 150,
+                                                        "id": "url",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "LEFT",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "url",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.url))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -13176,6 +13208,7 @@
                                                     "_id",
                                                     "question",
                                                     "result",
+                                                    "url",
                                                     "customColumn1",
                                                     "customColumn2"
                                                 ],
@@ -14126,7 +14159,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1050,
+                        "bottomRow": 740,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -14415,7 +14448,7 @@
                                                                                 "buttonVariant": "SECONDARY",
                                                                                 "placement": "CENTER",
                                                                                 "widgetName": "Button5",
-                                                                                "isDisabled": false,
+                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
                                                                                 "isDefaultClickDisabled": true,
                                                                                 "recaptchaType": "V3",
                                                                                 "version": 1,
@@ -14436,7 +14469,11 @@
                                                                                 "bottomRow": 44,
                                                                                 "parentId": "0au237itvf",
                                                                                 "borderRadius": "ROUNDED",
-                                                                                "dynamicBindingPathList": [],
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
                                                                                 "dynamicTriggerPathList": [
                                                                                     {
                                                                                         "key": "onClick"
@@ -14448,6 +14485,9 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -14711,7 +14751,7 @@
                                                                                 "buttonVariant": "SECONDARY",
                                                                                 "placement": "CENTER",
                                                                                 "widgetName": "Button7",
-                                                                                "isDisabled": false,
+                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
                                                                                 "isDefaultClickDisabled": true,
                                                                                 "recaptchaType": "V3",
                                                                                 "version": 1,
@@ -14732,7 +14772,11 @@
                                                                                 "bottomRow": 40,
                                                                                 "parentId": "iu2exaup8n",
                                                                                 "borderRadius": "ROUNDED",
-                                                                                "dynamicBindingPathList": [],
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
                                                                                 "dynamicTriggerPathList": [
                                                                                     {
                                                                                         "key": "onClick"
@@ -14745,6 +14789,9 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             }
@@ -15375,7 +15422,7 @@
                                                                                 "boxShadow": "NONE",
                                                                                 "buttonColor": "#2E3D49",
                                                                                 "buttonVariant": "TERTIARY",
-                                                                                "isDisabled": "{{appsmith.user.auth_module.user.info.user.role === 'demo'}}",
+                                                                                "isDisabled": false,
                                                                                 "widgetName": "IconButton1Copy1Copy1",
                                                                                 "version": 1,
                                                                                 "animateLoading": true,
@@ -15397,9 +15444,6 @@
                                                                                 "dynamicBindingPathList": [
                                                                                     {
                                                                                         "key": "classStyle"
-                                                                                    },
-                                                                                    {
-                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [
@@ -15412,9 +15456,6 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
-                                                                                    },
-                                                                                    {
-                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -15708,7 +15749,7 @@
                                                                                 "boxShadow": "NONE",
                                                                                 "buttonColor": "#2E3D49",
                                                                                 "buttonVariant": "TERTIARY",
-                                                                                "isDisabled": "{{appsmith.user.auth_module.user.info.user.role === 'demo'}}",
+                                                                                "isDisabled": false,
                                                                                 "widgetName": "IconButton1Copy1Copy",
                                                                                 "version": 1,
                                                                                 "animateLoading": true,
@@ -15730,9 +15771,6 @@
                                                                                 "dynamicBindingPathList": [
                                                                                     {
                                                                                         "key": "classStyle"
-                                                                                    },
-                                                                                    {
-                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [
@@ -15745,9 +15783,6 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
-                                                                                    },
-                                                                                    {
-                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -16108,7 +16143,7 @@
                                                                                 "boxShadow": "NONE",
                                                                                 "buttonColor": "#2E3D49",
                                                                                 "buttonVariant": "TERTIARY",
-                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role === 'demo'}}",
+                                                                                "isDisabled": false,
                                                                                 "widgetName": "IconButton1",
                                                                                 "version": 1,
                                                                                 "animateLoading": true,
@@ -16130,9 +16165,6 @@
                                                                                 "dynamicBindingPathList": [
                                                                                     {
                                                                                         "key": "classStyle"
-                                                                                    },
-                                                                                    {
-                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [
@@ -16145,9 +16177,6 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
-                                                                                    },
-                                                                                    {
-                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             }
@@ -16391,7 +16420,7 @@
                                                                                 "buttonVariant": "SECONDARY",
                                                                                 "placement": "CENTER",
                                                                                 "widgetName": "Button6",
-                                                                                "isDisabled": false,
+                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
                                                                                 "isDefaultClickDisabled": true,
                                                                                 "recaptchaType": "V3",
                                                                                 "version": 1,
@@ -16412,7 +16441,11 @@
                                                                                 "bottomRow": 37,
                                                                                 "parentId": "comrqkesi6",
                                                                                 "borderRadius": "ROUNDED",
-                                                                                "dynamicBindingPathList": [],
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
                                                                                 "dynamicTriggerPathList": [
                                                                                     {
                                                                                         "key": "onClick"
@@ -16424,6 +16457,9 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -16718,7 +16754,7 @@
                                 "leftColumn": 7,
                                 "rightColumn": 64,
                                 "topRow": 7,
-                                "bottomRow": 103,
+                                "bottomRow": 72,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
@@ -16886,7 +16922,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1890,
+                        "bottomRow": 2090,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -16919,7 +16955,7 @@
                                         "canExtend": false,
                                         "children": [
                                             {
-                                                "isVisible": true,
+                                                "isVisible": "{{main.user.auth_module.user.info.user.role !=='demo'}}",
                                                 "text": "Configure your bots:",
                                                 "fontSize": "HEADING2",
                                                 "fontStyle": "BOLD",
@@ -16942,13 +16978,22 @@
                                                 "parentColumnSpace": 12.68505859375,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
-                                                "rightColumn": 47,
-                                                "topRow": 1,
-                                                "bottomRow": 5,
+                                                "rightColumn": 26,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
                                                 "parentId": "ygwa9pgk95",
-                                                "dynamicBindingPathList": [],
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": [],
-                                                "classStyle": "title"
+                                                "classStyle": "title",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "isVisible": true,
@@ -17777,7 +17822,7 @@
                                                                                 "buttonVariant": "SECONDARY",
                                                                                 "placement": "CENTER",
                                                                                 "widgetName": "Button4",
-                                                                                "isDisabled": false,
+                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
                                                                                 "isDefaultClickDisabled": true,
                                                                                 "recaptchaType": "V3",
                                                                                 "version": 1,
@@ -17797,7 +17842,11 @@
                                                                                 "topRow": 28,
                                                                                 "bottomRow": 32,
                                                                                 "parentId": "gjzw4rse76",
-                                                                                "dynamicBindingPathList": [],
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
                                                                                 "dynamicTriggerPathList": [
                                                                                     {
                                                                                         "key": "onClick"
@@ -17810,6 +17859,9 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -17988,6 +18040,57 @@
                                                                         "children": [
                                                                             {
                                                                                 "isVisible": true,
+                                                                                "animateLoading": true,
+                                                                                "text": "Save",
+                                                                                "buttonColor": "#215484",
+                                                                                "buttonVariant": "SECONDARY",
+                                                                                "placement": "CENTER",
+                                                                                "widgetName": "Button1Copy",
+                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
+                                                                                "isDefaultClickDisabled": true,
+                                                                                "recaptchaType": "V3",
+                                                                                "version": 1,
+                                                                                "classStyle": "",
+                                                                                "type": "BUTTON_WIDGET",
+                                                                                "hideCard": false,
+                                                                                "displayName": "Button",
+                                                                                "key": "jxb4qrgozg",
+                                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                                "widgetId": "qw5njx1kho",
+                                                                                "renderMode": "CANVAS",
+                                                                                "isLoading": false,
+                                                                                "parentColumnSpace": 8.4140625,
+                                                                                "parentRowSpace": 10,
+                                                                                "leftColumn": 53,
+                                                                                "rightColumn": 64,
+                                                                                "topRow": 20,
+                                                                                "bottomRow": 24,
+                                                                                "parentId": "q07hk2y2v2",
+                                                                                "borderRadius": "ROUNDED",
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "dynamicTriggerPathList": [
+                                                                                    {
+                                                                                        "key": "onClick"
+                                                                                    }
+                                                                                ],
+                                                                                "onClick": "{{saveCredentialsTelegram.run(() => getenvsbots.run(()=> showAlert(saveCredentialsTelegram.data.payload, 'success')), () => {})}}",
+                                                                                "dynamicPropertyPathList": [
+                                                                                    {
+                                                                                        "key": "onClick"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
+                                                                                "iconName": "saved",
+                                                                                "iconAlign": "left"
+                                                                            },
+                                                                            {
+                                                                                "isVisible": true,
                                                                                 "label": "Telegram bot token",
                                                                                 "labelPosition": "Top",
                                                                                 "labelAlignment": "left",
@@ -18076,50 +18179,6 @@
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
-                                                                                "animateLoading": true,
-                                                                                "text": "Save",
-                                                                                "buttonColor": "#215484",
-                                                                                "buttonVariant": "SECONDARY",
-                                                                                "placement": "CENTER",
-                                                                                "widgetName": "Button1",
-                                                                                "isDisabled": false,
-                                                                                "isDefaultClickDisabled": true,
-                                                                                "recaptchaType": "V3",
-                                                                                "version": 1,
-                                                                                "classStyle": "",
-                                                                                "type": "BUTTON_WIDGET",
-                                                                                "hideCard": false,
-                                                                                "displayName": "Button",
-                                                                                "key": "jxb4qrgozg",
-                                                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                                                "widgetId": "og3s8g7u8r",
-                                                                                "renderMode": "CANVAS",
-                                                                                "isLoading": false,
-                                                                                "parentColumnSpace": 8.4140625,
-                                                                                "parentRowSpace": 10,
-                                                                                "leftColumn": 53,
-                                                                                "rightColumn": 64,
-                                                                                "topRow": 20,
-                                                                                "bottomRow": 24,
-                                                                                "parentId": "q07hk2y2v2",
-                                                                                "borderRadius": "ROUNDED",
-                                                                                "dynamicBindingPathList": [],
-                                                                                "dynamicTriggerPathList": [
-                                                                                    {
-                                                                                        "key": "onClick"
-                                                                                    }
-                                                                                ],
-                                                                                "onClick": "{{saveCredentialsTelegram.run(() => getenvsbots.run(()=> showAlert(saveCredentialsTelegram.data.payload, 'success')), () => {})}}",
-                                                                                "dynamicPropertyPathList": [
-                                                                                    {
-                                                                                        "key": "onClick"
-                                                                                    }
-                                                                                ],
-                                                                                "iconName": "saved",
-                                                                                "iconAlign": "left"
-                                                                            },
-                                                                            {
-                                                                                "isVisible": true,
                                                                                 "text": "\nGuide on how to set up a Telegram bot <a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> ",
                                                                                 "fontSize": "PARAGRAPH",
                                                                                 "fontStyle": "",
@@ -18159,7 +18218,7 @@
                                                                         "leftColumn": 0,
                                                                         "rightColumn": 216.9375,
                                                                         "topRow": 0,
-                                                                        "bottomRow": 390,
+                                                                        "bottomRow": 420,
                                                                         "parentId": "be1bdoo100"
                                                                     }
                                                                 ],
@@ -18303,7 +18362,7 @@
                                                                                 "buttonVariant": "SECONDARY",
                                                                                 "placement": "CENTER",
                                                                                 "widgetName": "Button2",
-                                                                                "isDisabled": false,
+                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
                                                                                 "isDefaultClickDisabled": true,
                                                                                 "recaptchaType": "V3",
                                                                                 "version": 1,
@@ -18323,7 +18382,11 @@
                                                                                 "topRow": 28,
                                                                                 "bottomRow": 32,
                                                                                 "parentId": "b75ce8oypi",
-                                                                                "dynamicBindingPathList": [],
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
                                                                                 "dynamicTriggerPathList": [
                                                                                     {
                                                                                         "key": "onClick"
@@ -18336,6 +18399,9 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -18604,7 +18670,7 @@
                                                                                 "buttonVariant": "SECONDARY",
                                                                                 "placement": "CENTER",
                                                                                 "widgetName": "Button3",
-                                                                                "isDisabled": false,
+                                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
                                                                                 "isDefaultClickDisabled": true,
                                                                                 "recaptchaType": "V3",
                                                                                 "version": 1,
@@ -18625,7 +18691,11 @@
                                                                                 "bottomRow": 32,
                                                                                 "parentId": "awrp309oi8",
                                                                                 "borderRadius": "ROUNDED",
-                                                                                "dynamicBindingPathList": [],
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "isDisabled"
+                                                                                    }
+                                                                                ],
                                                                                 "dynamicTriggerPathList": [
                                                                                     {
                                                                                         "key": "onClick"
@@ -18638,6 +18708,9 @@
                                                                                 "dynamicPropertyPathList": [
                                                                                     {
                                                                                         "key": "onClick"
+                                                                                    },
+                                                                                    {
+                                                                                        "key": "isDisabled"
                                                                                     }
                                                                                 ]
                                                                             },
@@ -18806,7 +18879,7 @@
                                                     }
                                                 ],
                                                 "version": 1,
-                                                "classStyle": "main scroll_section",
+                                                "classStyle": "main scroll_section1",
                                                 "type": "CONTAINER_WIDGET",
                                                 "hideCard": false,
                                                 "displayName": "Container",
@@ -18820,12 +18893,141 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 9,
+                                                "topRow": 8,
                                                 "bottomRow": 177,
                                                 "parentId": "ygwa9pgk95",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [],
                                                 "shouldScrollContents": true
+                                            },
+                                            {
+                                                "isVisible": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
+                                                "backgroundColor": "#ffebdd",
+                                                "widgetName": "Container8",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "15",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas21",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "rxfktv38kw",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+                                                                "imageShape": "RECTANGLE",
+                                                                "maxZoomLevel": 1,
+                                                                "enableRotation": false,
+                                                                "enableDownload": false,
+                                                                "objectFit": "contain",
+                                                                "image": "data:image/png;base64,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",
+                                                                "widgetName": "Image1",
+                                                                "version": 1,
+                                                                "animateLoading": true,
+                                                                "type": "IMAGE_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Image",
+                                                                "key": "9sltq608ib",
+                                                                "iconSVG": "/static/media/icon.52d8fb96.svg",
+                                                                "widgetId": "72nteo6i44",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 11.96875,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 8,
+                                                                "topRow": 0,
+                                                                "bottomRow": 5,
+                                                                "parentId": "cjnzmd3y83",
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "text": "Create your own bots by cloning the template – just hit the 'Clone' button located in the top right corner.",
+                                                                "fontSize": "HEADING3",
+                                                                "fontStyle": "BOLD",
+                                                                "textAlign": "LEFT",
+                                                                "textColor": "#231F20",
+                                                                "truncateButtonColor": "#FFC13D",
+                                                                "widgetName": "Text9",
+                                                                "shouldTruncate": false,
+                                                                "overflow": "NONE",
+                                                                "version": 1,
+                                                                "animateLoading": true,
+                                                                "type": "TEXT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Text",
+                                                                "key": "yl7aq842bw",
+                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                                "widgetId": "heqgbeydfd",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 4.17578125,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 8,
+                                                                "rightColumn": 64,
+                                                                "topRow": 0,
+                                                                "bottomRow": 5,
+                                                                "parentId": "cjnzmd3y83",
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": [],
+                                                                "classStyle": "warningText"
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "cjnzmd3y83",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 287.25,
+                                                        "topRow": 0,
+                                                        "bottomRow": 390,
+                                                        "parentId": "vgijmluhhb"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "warningSection",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "hcorkmuzsb",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "vgijmluhhb",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 11.96875,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 26,
+                                                "rightColumn": 63,
+                                                "topRow": 0,
+                                                "bottomRow": 7,
+                                                "parentId": "ygwa9pgk95",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ]
                                             }
                                         ],
                                         "minHeight": 400,
@@ -18906,9 +19108,9 @@
                         "IconButton2",
                         "Container6Copy1",
                         "Canvas19Copy1",
+                        "Button1Copy",
                         "telegram_token",
                         "telegram_name",
-                        "Button1",
                         "Text5",
                         "Container7",
                         "Canvas20",
@@ -18925,7 +19127,11 @@
                         "Button3",
                         "Text7",
                         "Webhook_insta",
-                        "IconButton3"
+                        "IconButton3",
+                        "Container8",
+                        "Canvas21",
+                        "Image1",
+                        "Text9"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -22884,9 +23090,9 @@
     {
         "_id": "656f3224a69a47e15535fc34",
         "applicationId": "jetsondashboard",
-        "slug": "DemoChat",
+        "slug": "AI Chat",
         "Page": {
-            "name": "DemoChat",
+            "name": "AI Chat",
             "layouts": [
                 {
                     "_id": "656f3224a69a47e15535fc35",
@@ -22898,7 +23104,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 920,
+                        "bottomRow": 950,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -22946,7 +23152,7 @@
                                                 "isFilterable": true,
                                                 "isRequired": false,
                                                 "isDisabled": false,
-                                                "animateLoading": true,
+                                                "animateLoading": false,
                                                 "type": "SELECT_WIDGET",
                                                 "hideCard": false,
                                                 "displayName": "Select",
@@ -22989,7 +23195,7 @@
                                                 "isFilterable": true,
                                                 "isRequired": false,
                                                 "isDisabled": false,
-                                                "animateLoading": true,
+                                                "animateLoading": false,
                                                 "type": "SELECT_WIDGET",
                                                 "hideCard": false,
                                                 "displayName": "Select",
@@ -23018,7 +23224,7 @@
                                                         "key": "onOptionChange"
                                                     }
                                                 ],
-                                                "onOptionChange": "{{setDefaultDB.run(() => (getAISetting.run(),getDB.run()), () => {})}}",
+                                                "onOptionChange": "{{(resetWidget(\"Chat1\",false),setDefaultDB.run(() => ((getAISetting.run(),getDB.run(),resetWidget(\"Chat1\",false)), () => {})))}}",
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onOptionChange"
@@ -23040,7 +23246,7 @@
                                                 "resetOnSubmit": true,
                                                 "isRequired": false,
                                                 "isDisabled": false,
-                                                "animateLoading": true,
+                                                "animateLoading": false,
                                                 "classStyle": "",
                                                 "inputType": "TEXT",
                                                 "buttonPosition": "right",
@@ -23108,387 +23314,74 @@
                                             },
                                             {
                                                 "isVisible": true,
-                                                "shouldScrollContents": false,
-                                                "widgetName": "Tabs1",
-                                                "animateLoading": true,
-                                                "tabsObj": {
-                                                    "tab1": {
-                                                        "label": "Friendly-Chat",
-                                                        "id": "tab1",
-                                                        "widgetId": "uapadys84h",
-                                                        "isVisible": "{{Select2.selectedOptionLabel==='Friendly-Chat'}}",
-                                                        "index": 0
-                                                    },
-                                                    "tab2": {
-                                                        "label": "HumanResources",
-                                                        "id": "tab2",
-                                                        "widgetId": "dh1u1lsl0c",
-                                                        "isVisible": "{{Select2.selectedOptionLabel==='HumanResources'}}",
-                                                        "index": 1
-                                                    },
-                                                    "tabm6ab1ku0hq": {
-                                                        "id": "tabm6ab1ku0hq",
-                                                        "index": 2,
-                                                        "label": "UBOS-Support",
-                                                        "widgetId": "xovd21quky",
-                                                        "isVisible": "{{Select2.selectedOptionLabel==='UBOS-Support'}}"
-                                                    }
-                                                },
-                                                "shouldShowTabs": false,
-                                                "defaultTab": "{{Select2.selectedOptionLabel}}",
-                                                "version": 3,
-                                                "type": "TABS_WIDGET",
+                                                "widgetName": "Chat1",
+                                                "requestInterval": "5000",
+                                                "lastMessage": 0,
+                                                "onClick": "",
+                                                "chatData": [],
+                                                "version": 1,
+                                                "type": "CHAT_WIDGET",
                                                 "hideCard": false,
-                                                "displayName": "Tabs",
-                                                "key": "jsh1hk0roj",
-                                                "iconSVG": "/static/media/icon.74a6d653.svg",
-                                                "isCanvas": true,
-                                                "widgetId": "b0clypyulc",
+                                                "displayName": "Chat",
+                                                "key": "vnjj9dwawb",
+                                                "iconSVG": "/static/media/icon.30f5197c.svg",
+                                                "isCanvas": false,
+                                                "widgetId": "r7bi8n3q89",
                                                 "renderMode": "CANVAS",
                                                 "isLoading": false,
-                                                "parentColumnSpace": 19.3125,
+                                                "parentColumnSpace": 8.34326171875,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 37,
+                                                "topRow": 6,
+                                                "bottomRow": 64,
+                                                "parentId": "5o0doljsub",
+                                                "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{Chat1.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname={{Select2.selectedOptionLabel}}",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "getChatDataUrl"
+                                                    },
+                                                    {
+                                                        "key": "postChatDataUrl"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [],
+                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname={{Select2.selectedOptionLabel}}&email={{main.user.auth_module.user.info.user.email}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "text": " Free messages left: {{Math.ceil(5 -Chat1.lastMessage/2) >0 ?Math.ceil(5 -Chat1.lastMessage/2) : 0}}",
+                                                "fontSize": "HEADING2",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#231F20",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text4",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "7drjb05nbf",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "p69h1414ly",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 9.450698852539062,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 37,
                                                 "topRow": 0,
-                                                "bottomRow": 65,
+                                                "bottomRow": 5,
                                                 "parentId": "5o0doljsub",
-                                                "children": [
-                                                    {
-                                                        "isVisible": true,
-                                                        "widgetName": "Canvas16",
-                                                        "version": 1,
-                                                        "detachFromLayout": true,
-                                                        "type": "CANVAS_WIDGET",
-                                                        "hideCard": true,
-                                                        "displayName": "Canvas",
-                                                        "key": "wrck0laxoj",
-                                                        "canExtend": true,
-                                                        "isDisabled": false,
-                                                        "shouldScrollContents": false,
-                                                        "tabId": "tab1",
-                                                        "tabName": "Friendly-Chat",
-                                                        "children": [
-                                                            {
-                                                                "isVisible": true,
-                                                                "widgetName": "_Friendly_Chat",
-                                                                "requestInterval": "2000",
-                                                                "lastMessage": 0,
-                                                                "onClick": "",
-                                                                "chatData": [],
-                                                                "version": 1,
-                                                                "type": "CHAT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Chat",
-                                                                "key": "39ipqpjign",
-                                                                "iconSVG": "/static/media/icon.30f5197c.svg",
-                                                                "isCanvas": false,
-                                                                "widgetId": "m12pi5b8an",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 15.336669921875,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 4,
-                                                                "bottomRow": 61,
-                                                                "parentId": "uapadys84h",
-                                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname=Friendly-Chat&email={{main.user.auth_module.user.info.user.email}}",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "getChatDataUrl"
-                                                                    },
-                                                                    {
-                                                                        "key": "postChatDataUrl"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{_Friendly_Chat.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=Friendly-Chat",
-                                                                "darkMode": false,
-                                                                "classStyle": "chatDemo"
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": " Free messages left: {{Math.ceil(5 -_Friendly_Chat.lastMessage/2) >0 ?Math.ceil(5 -_Friendly_Chat.lastMessage/2) : 0}}",
-                                                                "fontSize": "HEADING2",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text4",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "7drjb05nbf",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "8ubpnofg20",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.450698852539062,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
-                                                                "parentId": "uapadys84h",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "text"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": []
-                                                            }
-                                                        ],
-                                                        "minHeight": 400,
-                                                        "widgetId": "uapadys84h",
-                                                        "renderMode": "CANVAS",
-                                                        "isLoading": false,
-                                                        "parentColumnSpace": 1,
-                                                        "parentRowSpace": 1,
-                                                        "leftColumn": 0,
-                                                        "rightColumn": 463.5,
-                                                        "topRow": 0,
-                                                        "bottomRow": 630,
-                                                        "parentId": "b0clypyulc",
-                                                        "dynamicBindingPathList": [],
-                                                        "dynamicTriggerPathList": []
-                                                    },
-                                                    {
-                                                        "isVisible": true,
-                                                        "widgetName": "Canvas17",
-                                                        "version": 1,
-                                                        "detachFromLayout": true,
-                                                        "type": "CANVAS_WIDGET",
-                                                        "hideCard": true,
-                                                        "displayName": "Canvas",
-                                                        "key": "wrck0laxoj",
-                                                        "canExtend": true,
-                                                        "isDisabled": false,
-                                                        "shouldScrollContents": false,
-                                                        "tabId": "tab2",
-                                                        "tabName": "HumanResources",
-                                                        "children": [
-                                                            {
-                                                                "isVisible": true,
-                                                                "widgetName": "HumanResources",
-                                                                "requestInterval": "2000",
-                                                                "lastMessage": 0,
-                                                                "onClick": "",
-                                                                "chatData": [],
-                                                                "version": 1,
-                                                                "type": "CHAT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Chat",
-                                                                "key": "39ipqpjign",
-                                                                "iconSVG": "/static/media/icon.30f5197c.svg",
-                                                                "isCanvas": false,
-                                                                "widgetId": "8dxu8s00wv",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 15.336669921875,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 4,
-                                                                "bottomRow": 61,
-                                                                "parentId": "dh1u1lsl0c",
-                                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname=HumanResources&email={{main.user.auth_module.user.info.user.email}}",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "getChatDataUrl"
-                                                                    },
-                                                                    {
-                                                                        "key": "postChatDataUrl"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{HumanResources.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=HumanResources",
-                                                                "darkMode": false,
-                                                                "classStyle": "chatDemo"
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "Free messages left: {{Math.ceil(5 -HumanResources.lastMessage/2) >0 ?Math.ceil(5 -HumanResources.lastMessage/2) : 0}}",
-                                                                "fontSize": "HEADING2",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text3",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "7drjb05nbf",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "jib3ef6qmr",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.450698852539062,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
-                                                                "parentId": "dh1u1lsl0c",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "text"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": []
-                                                            }
-                                                        ],
-                                                        "minHeight": 400,
-                                                        "widgetId": "dh1u1lsl0c",
-                                                        "renderMode": "CANVAS",
-                                                        "isLoading": false,
-                                                        "parentColumnSpace": 1,
-                                                        "parentRowSpace": 1,
-                                                        "leftColumn": 0,
-                                                        "rightColumn": 463.5,
-                                                        "topRow": 0,
-                                                        "bottomRow": 630,
-                                                        "parentId": "b0clypyulc",
-                                                        "dynamicBindingPathList": [],
-                                                        "dynamicTriggerPathList": []
-                                                    },
-                                                    {
-                                                        "isVisible": true,
-                                                        "widgetName": "Canvas18",
-                                                        "version": 1,
-                                                        "detachFromLayout": true,
-                                                        "type": "CANVAS_WIDGET",
-                                                        "hideCard": true,
-                                                        "displayName": "Canvas",
-                                                        "key": "wrck0laxoj",
-                                                        "tabId": "tabm6ab1ku0hq",
-                                                        "tabName": "UBOS-Support",
-                                                        "containerStyle": "none",
-                                                        "canExtend": false,
-                                                        "children": [
-                                                            {
-                                                                "isVisible": true,
-                                                                "widgetName": "UBOS_Support",
-                                                                "requestInterval": "2000",
-                                                                "lastMessage": 0,
-                                                                "onClick": "",
-                                                                "chatData": [],
-                                                                "version": 1,
-                                                                "type": "CHAT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Chat",
-                                                                "key": "39ipqpjign",
-                                                                "iconSVG": "/static/media/icon.30f5197c.svg",
-                                                                "isCanvas": false,
-                                                                "widgetId": "7xvx4cwvax",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 15.336669921875,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 4,
-                                                                "bottomRow": 61,
-                                                                "parentId": "xovd21quky",
-                                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname=UBOS-Support&email={{main.user.auth_module.user.info.user.email}}",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "getChatDataUrl"
-                                                                    },
-                                                                    {
-                                                                        "key": "postChatDataUrl"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{UBOS_Support.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname=UBOS-Support",
-                                                                "darkMode": false,
-                                                                "classStyle": "chatDemo"
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "Free messages left: {{Math.ceil(5 -UBOS_Support.lastMessage/2) >0 ?Math.ceil(5 -UBOS_Support.lastMessage/2) : 0}}",
-                                                                "fontSize": "HEADING2",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text2",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "7drjb05nbf",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "loucxjpr1m",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.450698852539062,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
-                                                                "parentId": "xovd21quky",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "text"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": []
-                                                            }
-                                                        ],
-                                                        "minHeight": 710,
-                                                        "widgetId": "xovd21quky",
-                                                        "renderMode": "CANVAS",
-                                                        "isLoading": false,
-                                                        "parentColumnSpace": 1,
-                                                        "parentRowSpace": 1,
-                                                        "leftColumn": 0,
-                                                        "rightColumn": 695.25,
-                                                        "topRow": 1,
-                                                        "bottomRow": 700,
-                                                        "parentId": "b0clypyulc",
-                                                        "dynamicBindingPathList": [],
-                                                        "dynamicTriggerPathList": []
-                                                    }
-                                                ],
                                                 "dynamicBindingPathList": [
                                                     {
-                                                        "key": "defaultTab"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tab1.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tab2.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tabm6ab1ku0hq.isVisible"
+                                                        "key": "text"
                                                     }
                                                 ],
-                                                "dynamicTriggerPathList": [],
-                                                "dynamicPropertyPathList": [
-                                                    {
-                                                        "key": "tabsObj.tab1.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tab2.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tabm6ab1ku0hq.isVisible"
-                                                    }
-                                                ]
+                                                "dynamicTriggerPathList": []
                                             }
                                         ],
                                         "widgetId": "5o0doljsub",
@@ -23497,7 +23390,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": null,
                                         "topRow": 0,
-                                        "bottomRow": 670,
+                                        "bottomRow": 660,
                                         "parentId": "0pbi1c0irz"
                                     }
                                 ],
@@ -23537,16 +23430,8 @@
                         "Select2",
                         "Input1",
                         "Button1",
-                        "Tabs1",
-                        "Canvas16",
-                        "_Friendly_Chat",
-                        "Text4",
-                        "Canvas17",
-                        "HumanResources",
-                        "Text3",
-                        "Canvas18",
-                        "UBOS_Support",
-                        "Text2"
+                        "Chat1",
+                        "Text4"
                     ],
                     "deleted": false,
                     "policies": [],

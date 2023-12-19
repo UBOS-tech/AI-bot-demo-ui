@@ -70,7 +70,7 @@
             "isDefault": false
         },
         {
-            "_id": "DemoChat",
+            "_id": "AI Chat",
             "isDefault": false
         }
     ],
@@ -6634,7 +6634,7 @@
                     "canExtend": false,
                     "children": [
                         {
-                            "isVisible": true,
+                            "isVisible": "{{main.user.auth_module.user.info.user.role!=='demo'}}",
                             "backgroundColor": "",
                             "widgetName": "Container2",
                             "containerStyle": "card",
@@ -6679,7 +6679,7 @@
                                             "isLoading": false,
                                             "parentColumnSpace": 20.74365234375,
                                             "parentRowSpace": 10,
-                                            "leftColumn": 5,
+                                            "leftColumn": 0,
                                             "rightColumn": 58,
                                             "topRow": 0,
                                             "bottomRow": 4,
@@ -6690,7 +6690,8 @@
                                                 }
                                             ],
                                             "dynamicTriggerPathList": [],
-                                            "classStyle": ""
+                                            "classStyle": "",
+                                            "dynamicPropertyPathList": []
                                         },
                                         {
                                             "isVisible": true,
@@ -6755,14 +6756,23 @@
                             "isLoading": false,
                             "parentColumnSpace": 21.328125,
                             "parentRowSpace": 10,
-                            "leftColumn": 36,
+                            "leftColumn": 38,
                             "rightColumn": 64,
                             "topRow": 0,
                             "bottomRow": 6,
                             "parentId": "b8feb4cpvv",
                             "shouldScrollContents": false,
-                            "dynamicBindingPathList": [],
-                            "dynamicTriggerPathList": []
+                            "dynamicBindingPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ],
+                            "dynamicTriggerPathList": [],
+                            "dynamicPropertyPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ]
                         },
                         {
                             "isVisible": true,
@@ -6788,7 +6798,7 @@
                             "parentColumnSpace": 13.9326171875,
                             "parentRowSpace": 10,
                             "leftColumn": 0,
-                            "rightColumn": 33,
+                            "rightColumn": 18,
                             "topRow": 0,
                             "bottomRow": 5,
                             "parentId": "b8feb4cpvv",
@@ -6798,6 +6808,58 @@
                                 }
                             ],
                             "dynamicTriggerPathList": []
+                        },
+                        {
+                            "isVisible": "{{main.user.auth_module.user.info.user.role==='demo'}}",
+                            "animateLoading": true,
+                            "text": "Clone it!",
+                            "buttonColor": "#3b82ff",
+                            "buttonVariant": "SECONDARY",
+                            "placement": "CENTER",
+                            "widgetName": "Button3434",
+                            "isDisabled": false,
+                            "isDefaultClickDisabled": true,
+                            "recaptchaType": "V3",
+                            "version": 1,
+                            "classStyle": "cloneTemplateBtn",
+                            "type": "BUTTON_WIDGET",
+                            "hideCard": false,
+                            "displayName": "Button",
+                            "key": "3j6xvx0jlb",
+                            "iconSVG": "/static/media/icon.cca02633.svg",
+                            "widgetId": "d9bk4sniq3",
+                            "renderMode": "CANVAS",
+                            "isLoading": false,
+                            "parentColumnSpace": 10.34716796875,
+                            "parentRowSpace": 10,
+                            "leftColumn": 22,
+                            "rightColumn": 38,
+                            "topRow": 0,
+                            "bottomRow": 5,
+                            "parentId": "b8feb4cpvv",
+                            "borderRadius": "ROUNDED",
+                            "dynamicBindingPathList": [
+                                {
+                                    "key": "isVisible"
+                                }
+                            ],
+                            "dynamicTriggerPathList": [
+                                {
+                                    "key": "onClick"
+                                }
+                            ],
+                            "iconName": "duplicate",
+                            "iconAlign": "left",
+                            "onClick": "{{postIframeMessageToParent({\n  type: 'SET_LAYOUT_ITEM',\n  payload: {\n    id: '{\"id\":\"TemplateManager\",\"type\":\"TemplateManager\"}',\n    component:\"TemplateManager\",\n    title: 'AI Bot',\n    props: {\n  templateId: \"65397499fe34080011cedbb5\"\n    }\n  }\n})}}\n",
+                            "dynamicPropertyPathList": [
+                                {
+                                    "key": "onClick"
+                                },
+                                {
+                                    "key": "isVisible"
+                                }
+                            ],
+                            "boxShadow": "VARIANT2"
                         }
                     ],
                     "minHeight": 400,
