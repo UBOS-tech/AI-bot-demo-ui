@@ -5429,43 +5429,6 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
-                                                "animateLoading": true,
-                                                "text": "Start",
-                                                "buttonColor": "#3268a8",
-                                                "buttonVariant": "PRIMARY",
-                                                "placement": "CENTER",
-                                                "widgetName": "Button3",
-                                                "isDisabled": false,
-                                                "isDefaultClickDisabled": true,
-                                                "recaptchaType": "V3",
-                                                "version": 1,
-                                                "classStyle": "",
-                                                "type": "BUTTON_WIDGET",
-                                                "hideCard": false,
-                                                "displayName": "Button",
-                                                "key": "rkkaxzn4ny",
-                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                "widgetId": "s366dcmfv0",
-                                                "renderMode": "CANVAS",
-                                                "isLoading": false,
-                                                "parentColumnSpace": 9.40625,
-                                                "parentRowSpace": 10,
-                                                "leftColumn": 21,
-                                                "rightColumn": 43,
-                                                "topRow": 22,
-                                                "bottomRow": 27,
-                                                "parentId": "a50ozo3xdm",
-                                                "dynamicBindingPathList": [],
-                                                "dynamicTriggerPathList": [
-                                                    {
-                                                        "key": "onClick"
-                                                    }
-                                                ],
-                                                "borderRadius": "ROUNDED",
-                                                "onClick": "{{demoUser.run(() => navigateTo('Demo', {}), () => {})}}"
-                                            },
-                                            {
-                                                "isVisible": true,
                                                 "defaultImage": "https://assets.appsmith.com/widgets/default.png",
                                                 "imageShape": "RECTANGLE",
                                                 "maxZoomLevel": 1,
@@ -5496,7 +5459,7 @@
                                             },
                                             {
                                                 "isVisible": true,
-                                                "text": "{{main.URL.queryParams.email}}, welcome to your app! <br/><span style=\"font-size:20px\">Please press the button below to start your journey!</span>",
+                                                "text": "{{main.URL.queryParams.email}}, welcome to your app!",
                                                 "fontSize": "HEADING1",
                                                 "fontStyle": "BOLD",
                                                 "textAlign": "CENTER",
@@ -5520,13 +5483,43 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
                                                 "topRow": 0,
-                                                "bottomRow": 22,
+                                                "bottomRow": 12,
                                                 "parentId": "a50ozo3xdm",
                                                 "dynamicBindingPathList": [
                                                     {
                                                         "key": "text"
                                                     }
                                                 ],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+                                                "imageShape": "RECTANGLE",
+                                                "maxZoomLevel": 1,
+                                                "enableRotation": false,
+                                                "enableDownload": false,
+                                                "objectFit": "contain",
+                                                "image": "https://i.stack.imgur.com/kOnzy.gif",
+                                                "widgetName": "Image3",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "IMAGE_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Image",
+                                                "key": "o5hxghed5a",
+                                                "iconSVG": "/static/media/icon.52d8fb96.svg",
+                                                "widgetId": "bs05vj1l99",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 11.65625,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 13,
+                                                "bottomRow": 25,
+                                                "parentId": "a50ozo3xdm",
+                                                "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": []
                                             }
                                         ],
@@ -5588,9 +5581,9 @@
                         "IconButton1",
                         "IconButton2",
                         "Canvas17",
-                        "Button3",
                         "Image2",
-                        "Text6"
+                        "Text6",
+                        "Image3"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -23163,10 +23156,10 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 8.34326171875,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 38,
+                                                "leftColumn": 40,
                                                 "rightColumn": 64,
-                                                "topRow": 1,
-                                                "bottomRow": 8,
+                                                "topRow": 5,
+                                                "bottomRow": 12,
                                                 "parentId": "5o0doljsub",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -23178,7 +23171,8 @@
                                                         "key": "onOptionChange"
                                                     }
                                                 ],
-                                                "onOptionChange": "{{setModel.run(() => getAISetting.run(), () => {})}}"
+                                                "onOptionChange": "{{setModel.run(() => getAISetting.run(), () => {})}}",
+                                                "classStyle": "selectWithoutCross"
                                             },
                                             {
                                                 "isVisible": true,
@@ -23190,7 +23184,7 @@
                                                 "options": "{{getDB.data}}",
                                                 "serverSideFiltering": false,
                                                 "widgetName": "Select2",
-                                                "defaultOptionValue": "{{getAISetting.data.filter(e=>e.selected===true)[0].collection}}",
+                                                "defaultOptionValue": "{{getAISetting.data.filter(e=>e.selected==true).length > 0 ? getAISetting.data.filter(e=>e.selected==true)[0].collection : getAISetting.data[0].collection }}",
                                                 "version": 1,
                                                 "isFilterable": true,
                                                 "isRequired": false,
@@ -23206,10 +23200,10 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 8.34326171875,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 38,
+                                                "leftColumn": 40,
                                                 "rightColumn": 64,
-                                                "topRow": 8,
-                                                "bottomRow": 15,
+                                                "topRow": 12,
+                                                "bottomRow": 19,
                                                 "parentId": "5o0doljsub",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -23229,7 +23223,8 @@
                                                     {
                                                         "key": "onOptionChange"
                                                     }
-                                                ]
+                                                ],
+                                                "classStyle": "selectWithoutCross"
                                             },
                                             {
                                                 "isVisible": true,
@@ -23260,10 +23255,10 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 8.34326171875,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 38,
+                                                "leftColumn": 40,
                                                 "rightColumn": 64,
-                                                "topRow": 16,
-                                                "bottomRow": 41,
+                                                "topRow": 19,
+                                                "bottomRow": 44,
                                                 "parentId": "5o0doljsub",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -23295,10 +23290,10 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 8.34326171875,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 38,
+                                                "leftColumn": 40,
                                                 "rightColumn": 64,
-                                                "topRow": 41,
-                                                "bottomRow": 45,
+                                                "topRow": 44,
+                                                "bottomRow": 48,
                                                 "parentId": "5o0doljsub",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
@@ -23332,9 +23327,9 @@
                                                 "parentColumnSpace": 8.34326171875,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
-                                                "rightColumn": 37,
-                                                "topRow": 6,
-                                                "bottomRow": 64,
+                                                "rightColumn": 40,
+                                                "topRow": 5,
+                                                "bottomRow": 65,
                                                 "parentId": "5o0doljsub",
                                                 "getChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?number={{Chat1.lastMessage}}&email={{main.user.auth_module.user.info.user.email}}&dbname={{Select2.selectedOptionLabel}}",
                                                 "dynamicBindingPathList": [
@@ -23349,8 +23344,8 @@
                                                 "postChatDataUrl": "{{main.env.nodeUrl}}/demoUserChat?prompt={{getAISetting.data.filter(e=>e.selected===true)[0].prompt}}&model={{getAISetting.data.filter(e=>e.selected===true)[0].model}}&dbname={{Select2.selectedOptionLabel}}&email={{main.user.auth_module.user.info.user.email}}"
                                             },
                                             {
-                                                "isVisible": true,
-                                                "text": " Free messages left: {{Math.ceil(5 -Chat1.lastMessage/2) >0 ?Math.ceil(5 -Chat1.lastMessage/2) : 0}}",
+                                                "isVisible": "{{getDemoCredentials.data===false}}",
+                                                "text": "{{(getDemoCredentials.data==false && Math.ceil(5 -Chat1.lastMessage/2) < 0)  ? 'No more free messages available. Please save your OpenAI API key to continue.' : 'Free messages left: ' + (Math.ceil(5 -Chat1.lastMessage/2) >0 ?Math.ceil(5 -Chat1.lastMessage/2) : 0)}}",
                                                 "fontSize": "HEADING2",
                                                 "fontStyle": "BOLD",
                                                 "textAlign": "LEFT",
@@ -23372,16 +23367,113 @@
                                                 "parentColumnSpace": 9.450698852539062,
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
-                                                "rightColumn": 37,
+                                                "rightColumn": 40,
                                                 "topRow": 0,
-                                                "bottomRow": 5,
+                                                "bottomRow": 4,
                                                 "parentId": "5o0doljsub",
                                                 "dynamicBindingPathList": [
                                                     {
                                                         "key": "text"
+                                                    },
+                                                    {
+                                                        "key": "isVisible"
                                                     }
                                                 ],
-                                                "dynamicTriggerPathList": []
+                                                "dynamicTriggerPathList": [],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": "{{getDemoCredentials.data==false && Math.ceil(5 -Chat1.lastMessage/2) <0}}",
+                                                "animateLoading": true,
+                                                "text": "Save Open AI Key",
+                                                "buttonColor": "#3b82ff",
+                                                "buttonVariant": "PRIMARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button3435",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "jny9edp3fp",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "widgetId": "0zyfynrgo6",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 11.5439453125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 42,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "5o0doljsub",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED",
+                                                "onClick": "{{showModal('Modal1')}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": "{{getDemoCredentials.data==false && Math.ceil(5 -Chat1.lastMessage/2) <0}}",
+                                                "iconName": "info-sign",
+                                                "borderRadius": "CIRCLE",
+                                                "boxShadow": "NONE",
+                                                "buttonColor": "#3b82ff",
+                                                "buttonVariant": "TERTIARY",
+                                                "isDisabled": false,
+                                                "widgetName": "IconButton1",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "ICON_BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Icon Button",
+                                                "key": "obxoffpjsj",
+                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                                "widgetId": "ek09yxom2c",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 11.5439453125,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 40,
+                                                "rightColumn": 42,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "5o0doljsub",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "onClick": "{{navigateTo('https://community.ubos.tech/vika/customersupportchatbot-1ac8', {},'NEW_WINDOW')}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ]
                                             }
                                         ],
                                         "widgetId": "5o0doljsub",
@@ -23390,7 +23482,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": null,
                                         "topRow": 0,
-                                        "bottomRow": 660,
+                                        "bottomRow": 670,
                                         "parentId": "0pbi1c0irz"
                                     }
                                 ],
@@ -23415,6 +23507,196 @@
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
                                 "shouldScrollContents": false
+                            },
+                            {
+                                "width": 456,
+                                "height": 240,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "Modal1",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas16",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "hrkekt9h4k",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "iconName": "cross",
+                                                "borderRadius": "SHARP",
+                                                "boxShadow": "NONE",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "TERTIARY",
+                                                "isDisabled": false,
+                                                "widgetName": "IconButton2",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "ICON_BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Icon Button",
+                                                "key": "obxoffpjsj",
+                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                                "iconSize": 24,
+                                                "widgetId": "h1tjsmgfop",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 61,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "jnbu11hzz0",
+                                                "onClick": "{{closeModal('Modal1')}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "text": "Save your OpenAI key",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#231F20",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text5",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "a17f8bx51k",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "9r57w0dymn",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 0,
+                                                "rightColumn": 61,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "jnbu11hzz0",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Save",
+                                                "buttonColor": "#3b82ff",
+                                                "buttonVariant": "PRIMARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button3437",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "jny9edp3fp",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "xh4wwku180",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 47,
+                                                "rightColumn": 64,
+                                                "topRow": 18,
+                                                "bottomRow": 22,
+                                                "parentId": "jnbu11hzz0",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ],
+                                                "borderRadius": "ROUNDED",
+                                                "onClick": "{{saveCredentialsOpenAI.run(() => (getDemoCredentials.run(),closeModal('Modal1')), () => {})}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "label": "",
+                                                "labelPosition": "Left",
+                                                "labelAlignment": "left",
+                                                "labelWidth": 5,
+                                                "widgetName": "Input2",
+                                                "version": 2,
+                                                "defaultText": "",
+                                                "iconAlign": "left",
+                                                "autoFocus": false,
+                                                "labelStyle": "",
+                                                "resetOnSubmit": true,
+                                                "isRequired": false,
+                                                "isDisabled": false,
+                                                "animateLoading": true,
+                                                "classStyle": "",
+                                                "inputType": "TEXT",
+                                                "buttonPosition": "right",
+                                                "type": "INPUT_WIDGET_V2",
+                                                "hideCard": false,
+                                                "displayName": "Input",
+                                                "key": "iqsd19jo3k",
+                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                "widgetId": "n42jblmacj",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 6.9375,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 63,
+                                                "topRow": 8,
+                                                "bottomRow": 12,
+                                                "parentId": "jnbu11hzz0",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [],
+                                                "placeholderText": "sk-bcATn3YfPXg8f5d4o5gwT3BlbkFJMWXn7Z*******"
+                                            }
+                                        ],
+                                        "minHeight": 240,
+                                        "widgetId": "jnbu11hzz0",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 0,
+                                        "topRow": 0,
+                                        "bottomRow": 240,
+                                        "parentId": "ht5x21uvck"
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "jrvriybspc",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "ht5x21uvck",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 1,
+                                "parentRowSpace": 1,
+                                "leftColumn": 0,
+                                "rightColumn": 0,
+                                "topRow": 0,
+                                "bottomRow": 0,
+                                "parentId": "0"
                             }
                         ],
                         "snapRows": 92,
@@ -23431,7 +23713,15 @@
                         "Input1",
                         "Button1",
                         "Chat1",
-                        "Text4"
+                        "Text4",
+                        "Button3435",
+                        "IconButton1",
+                        "Modal1",
+                        "Canvas16",
+                        "IconButton2",
+                        "Text5",
+                        "Button3437",
+                        "Input2"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -23455,6 +23745,17 @@
                                 "name": "getDB",
                                 "pluginType": "API",
                                 "jsonPathKeys": [],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "658aa95f95e9421ebbb89fc7",
+                                "id": "658aa95f95e9421ebbb89fc7",
+                                "confirmBeforeExecute": false,
+                                "name": "getDemoCredentials",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
                                 "timeoutInMillisecond": 10000
                             }
                         ]

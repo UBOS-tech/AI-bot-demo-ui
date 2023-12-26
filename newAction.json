@@ -2299,7 +2299,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:13:14.157Z",
-        "updatedAt": "2023-10-31T22:55:29.098Z",
+        "updatedAt": "2023-12-26T11:12:54.509Z",
         "deleted": false,
         "policies": [
             {
@@ -7346,7 +7346,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-08-08T19:16:59.846Z",
-        "updatedAt": "2023-12-19T12:10:28.983Z",
+        "updatedAt": "2023-12-26T11:12:58.907Z",
         "deleted": false,
         "policies": [
             {
@@ -8052,7 +8052,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-20T08:48:38.778Z",
-        "updatedAt": "2023-12-13T10:36:25.795Z",
+        "updatedAt": "2023-12-26T10:09:28.464Z",
         "deleted": false,
         "policies": [
             {
@@ -9727,7 +9727,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-05T14:13:45.691Z",
-        "updatedAt": "2023-12-18T09:08:27.728Z",
+        "updatedAt": "2023-12-26T11:13:01.091Z",
         "deleted": false,
         "policies": [
             {
@@ -9791,23 +9791,24 @@
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "queryParameters[0].value"
+                    "key": "datasourceUrl"
                 },
                 {
-                    "key": "datasourceUrl"
+                    "key": "queryParameters[0].value"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.role",
                 "main.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-11T09:09:40.718Z",
-        "updatedAt": "2023-12-13T10:34:10.300Z",
+        "updatedAt": "2023-12-26T11:23:46.308Z",
         "deleted": false,
         "policies": [
             {
@@ -9973,7 +9974,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-11T09:17:55.448Z",
-        "updatedAt": "2023-12-13T10:35:04.430Z",
+        "updatedAt": "2023-12-26T11:38:27.415Z",
         "deleted": false,
         "policies": [
             {
@@ -10139,7 +10140,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-11T10:09:32.454Z",
-        "updatedAt": "2023-12-13T10:35:44.048Z",
+        "updatedAt": "2023-12-26T11:38:06.784Z",
         "deleted": false,
         "policies": [
             {
@@ -10371,7 +10372,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-13T10:23:40.287Z",
-        "updatedAt": "2023-12-13T10:36:20.109Z",
+        "updatedAt": "2023-12-26T10:22:38.233Z",
         "deleted": false,
         "policies": [
             {
@@ -10466,5 +10467,168 @@
             "async () => {\n\t\t//use async-await or promises\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "658aa66a95e9421ebbb89fc6",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "saveCredentialsOpenAI",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/saveCredentialsOpenAI"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Chat",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\"openai_api\":{{JSON.stringify(Input2.text)}},\n\"openai_api_model\":{{JSON.stringify('gpt-3.5-turbo')}},\n\"role\": \"{{main.user.auth_module.user.info.user.role}}\",\n\"email\": \"{{main.user.auth_module.user.info.user.email}}\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "JSON.stringify(Input2.text)",
+                "JSON.stringify('gpt-3.5-turbo')",
+                "main.user.auth_module.user.info.user.email",
+                "main.user.auth_module.user.info.user.role"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2023-12-26T10:09:46.420Z",
+        "updatedAt": "2023-12-26T11:24:14.475Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "658aa95f95e9421ebbb89fc7",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getDemoCredentials",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getDemoCredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "AI Chat",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [
+                    {
+                        "key": "email",
+                        "value": "{{main.user.auth_module.user.info.user.email}}"
+                    }
+                ],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "queryParameters[0].value"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "main.user.auth_module.user.info.user.role",
+                "main.user.auth_module.user.info.user.email"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2023-12-26T10:22:23.037Z",
+        "updatedAt": "2023-12-26T11:23:56.918Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
