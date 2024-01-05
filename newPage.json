@@ -24316,8 +24316,8 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 26,
-                                                "bottomRow": 59,
+                                                "topRow": 25,
+                                                "bottomRow": 53,
                                                 "parentId": "1svjajxskn",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -24329,10 +24329,10 @@
                                             {
                                                 "isVisible": true,
                                                 "iconName": "cross",
-                                                "borderRadius": "SHARP",
+                                                "borderRadius": "CIRCLE",
                                                 "boxShadow": "NONE",
                                                 "buttonColor": "#2E3D49",
-                                                "buttonVariant": "TERTIARY",
+                                                "buttonVariant": "SECONDARY",
                                                 "isDisabled": false,
                                                 "widgetName": "IconButton1",
                                                 "version": 1,
@@ -24412,8 +24412,8 @@
                                                 "isLoading": false,
                                                 "leftColumn": 51,
                                                 "rightColumn": 63,
-                                                "topRow": 60,
-                                                "bottomRow": 65,
+                                                "topRow": 55,
+                                                "bottomRow": 60,
                                                 "parentId": "1svjajxskn",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
@@ -24423,7 +24423,12 @@
                                                 ],
                                                 "boxShadow": "NONE",
                                                 "borderRadius": "ROUNDED",
-                                                "onClick": "{{updateVectorDB.run(() => closeModal('Edit_Vector_Modal'), () => showAlert('Oops something went wrong 😔','error'))}}"
+                                                "onClick": "{{\nupdateVectorDB.run(() => (closeModal('Edit_Vector_Modal'),\nshowAlert('Vector successfully updatated 🚀','success'),\n\t\t\t\n(DB_select.selectedOptionLabel.includes('pinecone') && showAlert('Pinecone need few minutes to process your changes ⏳','info'))),\n() => showAlert('Oops something went wrong 😔','error'))\n}}",
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "isVisible": true,
@@ -24457,7 +24462,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
                                                 "topRow": 6,
-                                                "bottomRow": 25,
+                                                "bottomRow": 24,
                                                 "parentId": "1svjajxskn",
                                                 "dynamicBindingPathList": [
                                                     {
@@ -24476,7 +24481,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 332.25,
                                         "topRow": 0,
-                                        "bottomRow": 680,
+                                        "bottomRow": 670,
                                         "parentId": "kjaq96rlkw",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
@@ -24502,7 +24507,7 @@
                             },
                             {
                                 "width": 853.0999999999999,
-                                "height": 796,
+                                "height": 838,
                                 "canEscapeKeyClose": true,
                                 "animateLoading": true,
                                 "detachFromLayout": true,
@@ -24526,10 +24531,10 @@
                                             {
                                                 "isVisible": true,
                                                 "iconName": "cross",
-                                                "borderRadius": "SHARP",
+                                                "borderRadius": "CIRCLE",
                                                 "boxShadow": "NONE",
                                                 "buttonColor": "#2E3D49",
-                                                "buttonVariant": "TERTIARY",
+                                                "buttonVariant": "SECONDARY",
                                                 "isDisabled": false,
                                                 "widgetName": "IconButton2",
                                                 "version": 1,
@@ -24632,29 +24637,127 @@
                                                     "__root_schema__": {
                                                         "children": {
                                                             "data": {
-                                                                "children": {},
-                                                                "dataType": "string",
-                                                                "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.data))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                                                                "fieldType": "Text Input",
-                                                                "sourceData": "no response from server",
+                                                                "children": {
+                                                                    "__array_item__": {
+                                                                        "children": {
+                                                                            "question": {
+                                                                                "children": {},
+                                                                                "dataType": "string",
+                                                                                "fieldType": "Text Input",
+                                                                                "sourceData": "Are there remote work opportunities at UBOS?",
+                                                                                "isCustomField": false,
+                                                                                "accessor": "question",
+                                                                                "identifier": "question",
+                                                                                "position": 0,
+                                                                                "originalIdentifier": "question",
+                                                                                "iconAlign": "left",
+                                                                                "isDisabled": false,
+                                                                                "isRequired": false,
+                                                                                "isSpellCheck": false,
+                                                                                "isVisible": true,
+                                                                                "label": "Question"
+                                                                            }
+                                                                        },
+                                                                        "dataType": "object",
+                                                                        "fieldType": "Object",
+                                                                        "sourceData": {
+                                                                            "question": "Are there remote work opportunities at UBOS?"
+                                                                        },
+                                                                        "isCustomField": false,
+                                                                        "accessor": "__array_item__",
+                                                                        "identifier": "__array_item__",
+                                                                        "position": -1,
+                                                                        "originalIdentifier": "__array_item__",
+                                                                        "isDisabled": false,
+                                                                        "isRequired": false,
+                                                                        "isVisible": true,
+                                                                        "label": "Array Item"
+                                                                    }
+                                                                },
+                                                                "dataType": "array",
+                                                                "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.data))(Enrich_JSONForm.sourceData, Enrich_JSONForm.formData, Enrich_JSONForm.fieldState)}}",
+                                                                "fieldType": "Array",
+                                                                "sourceData": [
+                                                                    {
+                                                                        "question": "What technical skills does UBOS look for in potential hires?"
+                                                                    },
+                                                                    {
+                                                                        "question": "What are the office locations of UBOS?"
+                                                                    },
+                                                                    {
+                                                                        "question": "Are there remote work opportunities for experienced developers at UBOS?"
+                                                                    },
+                                                                    {
+                                                                        "question": "What are the areas of expertise valued by UBOS?"
+                                                                    },
+                                                                    {
+                                                                        "question": "Does UBOS provide onboarding roadmaps for engineers, managers, and designers?"
+                                                                    },
+                                                                    {
+                                                                        "question": "Are mentors assigned to new hires at UBOS?"
+                                                                    },
+                                                                    {
+                                                                        "question": "What programming languages are valued by UBOS?"
+                                                                    },
+                                                                    {
+                                                                        "question": "What skills are valued in design and UX at UBOS?"
+                                                                    },
+                                                                    {
+                                                                        "question": "Where are the office locations of UBOS?"
+                                                                    },
+                                                                    {
+                                                                        "question": "Are there remote work opportunities at UBOS?"
+                                                                    }
+                                                                ],
                                                                 "isCustomField": false,
                                                                 "accessor": "data",
                                                                 "identifier": "data",
                                                                 "position": 0,
                                                                 "originalIdentifier": "data",
-                                                                "iconAlign": "left",
+                                                                "backgroundColor": "#edf2f7",
+                                                                "isCollapsible": true,
                                                                 "isDisabled": false,
                                                                 "isRequired": false,
-                                                                "isSpellCheck": false,
                                                                 "isVisible": true,
                                                                 "label": "Data"
                                                             }
                                                         },
                                                         "dataType": "object",
-                                                        "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                                                        "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(Enrich_JSONForm.sourceData, Enrich_JSONForm.formData, Enrich_JSONForm.fieldState)}}",
                                                         "fieldType": "Object",
                                                         "sourceData": {
-                                                            "data": "no response from server"
+                                                            "data": [
+                                                                {
+                                                                    "question": "What technical skills does UBOS look for in potential hires?"
+                                                                },
+                                                                {
+                                                                    "question": "What are the office locations of UBOS?"
+                                                                },
+                                                                {
+                                                                    "question": "Are there remote work opportunities for experienced developers at UBOS?"
+                                                                },
+                                                                {
+                                                                    "question": "What are the areas of expertise valued by UBOS?"
+                                                                },
+                                                                {
+                                                                    "question": "Does UBOS provide onboarding roadmaps for engineers, managers, and designers?"
+                                                                },
+                                                                {
+                                                                    "question": "Are mentors assigned to new hires at UBOS?"
+                                                                },
+                                                                {
+                                                                    "question": "What programming languages are valued by UBOS?"
+                                                                },
+                                                                {
+                                                                    "question": "What skills are valued in design and UX at UBOS?"
+                                                                },
+                                                                {
+                                                                    "question": "Where are the office locations of UBOS?"
+                                                                },
+                                                                {
+                                                                    "question": "Are there remote work opportunities at UBOS?"
+                                                                }
+                                                            ]
                                                         },
                                                         "isCustomField": false,
                                                         "accessor": "__root_schema__",
@@ -24705,6 +24808,9 @@
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
+                                                    },
+                                                    {
+                                                        "key": "onSubmit"
                                                     }
                                                 ],
                                                 "dynamicBindingPathList": [
@@ -24723,10 +24829,10 @@
                                                         "key": "onSubmit"
                                                     }
                                                 ],
-                                                "onSubmit": "{{updateEnrichedVector.run(() => closeModal('Enrich_Vector_Modal'), () => showAlert('Oops something went wrong 😔','error'))}}"
+                                                "onSubmit": "{{\nupdateEnrichedVector.run(() => (closeModal('Enrich_Vector_Modal'),\nshowAlert('Vector successfully updatated 🚀','success'),\n\t\t\t\n(DB_select.selectedOptionLabel.includes('pinecone') && showAlert('Pinecone need few minutes to process your changes ⏳','info'))),\n() => showAlert('Oops something went wrong 😔','error'))\n}}"
                                             }
                                         ],
-                                        "minHeight": 796,
+                                        "minHeight": 838,
                                         "widgetId": "owijjkszp9",
                                         "renderMode": "CANVAS",
                                         "isLoading": false,
@@ -24735,7 +24841,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 332.25,
                                         "topRow": 0,
-                                        "bottomRow": 790,
+                                        "bottomRow": 830,
                                         "parentId": "9d4iu7ccwt",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
@@ -24913,14 +25019,14 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
-                                                                "labelText": "*Language",
+                                                                "labelText": "Language",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
                                                                 "options": "[\n  {\n    \"label\": \"Ukrainian\",\n    \"value\": \"Ukrainian\"\n  },\n\t{\n    \"label\": \"Portuguese\",\n    \"value\": \"Portuguese\"\n  },\n  {\n    \"label\": \"English\",\n    \"value\": \"English\"\n  },\n  {\n    \"label\": \"Spanish\",\n    \"value\": \"Spanish\"\n  },\n  {\n    \"label\": \"Polish\",\n    \"value\": \"Polish\"\n  }\n]",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "language",
-                                                                "defaultOptionValue": "{{getDefaultCredsForUI.data.language}}",
+                                                                "defaultOptionValue": "{{\ngetDefaultCredsForUI.data.language ?\n\tgetDefaultCredsForUI.data.language :\n\t{\n    \"label\": \"English\",\n    \"value\": \"English\"\n  }\n}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": true,
@@ -24947,19 +25053,20 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "labelStyle": "BOLD"
+                                                                "labelStyle": "BOLD",
+                                                                "classStyle": "modelTestingSelector"
                                                             },
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
-                                                                "labelText": "*Answer length",
+                                                                "labelText": "Answer length",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
                                                                 "options": "[\n  {\n    \"label\": \"Small\",\n    \"value\": \"Small\"\n  },\n  {\n    \"label\": \"Large\",\n    \"value\": \"Large\"\n  },\n  {\n    \"label\": \"Medium\",\n    \"value\": \"Medium\"\n  }\n]",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "answer_length",
-                                                                "defaultOptionValue": "{{getDefaultCredsForUI.data.answer_length}}",
+                                                                "defaultOptionValue": "{{\ngetDefaultCredsForUI.data.answer_length ?\n\tgetDefaultCredsForUI.data.answer_length :\n\t{\n    \"label\": \"Small\",\n    \"value\": \"Small\"\n  }\n}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": true,
@@ -24986,19 +25093,20 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "labelStyle": "BOLD"
+                                                                "labelStyle": "BOLD",
+                                                                "classStyle": "modelTestingSelector"
                                                             },
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
-                                                                "labelText": "*Tone",
+                                                                "labelText": "Tone",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
                                                                 "options": "[\n  {\n    \"label\": \"Formal\",\n    \"value\": \"Formal\"\n  },\n  {\n    \"label\": \"Informal\",\n    \"value\": \"Informal\"\n  }\n]",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "tone",
-                                                                "defaultOptionValue": "{{getDefaultCredsForUI.data.tone}}",
+                                                                "defaultOptionValue": "{{\ngetDefaultCredsForUI.data.tone ?\n\tgetDefaultCredsForUI.data.tone :\n\t{\n    \"label\": \"Formal\",\n    \"value\": \"Formal\"\n  }\n}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": true,
@@ -25025,19 +25133,20 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "labelStyle": "BOLD"
+                                                                "labelStyle": "BOLD",
+                                                                "classStyle": "modelTestingSelector"
                                                             },
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
-                                                                "labelText": "*Answer as",
+                                                                "labelText": "Answer as",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
                                                                 "options": "[\n  {\n    \"label\": \"Assistant\",\n    \"value\": \"Assistant\"\n  },\n  {\n    \"label\": \"Sales consultant\",\n    \"value\": \"Sales consultant\"\n  },\n  {\n    \"label\": \"Technical support\",\n    \"value\": \"Technical support\"\n  }\n]",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "answer_as",
-                                                                "defaultOptionValue": "{{getDefaultCredsForUI.data.answer_as}}",
+                                                                "defaultOptionValue": "{{\ngetDefaultCredsForUI.data.answer_as ?\n\tgetDefaultCredsForUI.data.answer_as :\n\t{\n    \"label\": \"Assistant\",\n    \"value\": \"Assistant\"\n  }\n}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": true,
@@ -25064,19 +25173,20 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "labelStyle": "BOLD"
+                                                                "labelStyle": "BOLD",
+                                                                "classStyle": "modelTestingSelector"
                                                             },
                                                             {
                                                                 "isVisible": true,
                                                                 "placeholderText": "Select option",
-                                                                "labelText": "*AI model",
+                                                                "labelText": "AI model",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": 5,
                                                                 "options": "[\n  {\n    \"label\": \"gpt-3.5-turbo\",\n    \"value\": \"gpt-3.5-turbo\"\n  },\n\t  {\n    \"label\": \"gpt-3.5-turbo-16k\",\n    \"value\": \"gpt-3.5-turbo-16k\"\n  },\n  {\n    \"label\": \"gpt-4\",\n    \"value\": \"gpt-4\"\n  },\n\t {\n    \"label\": \"gpt-4-32k\",\n    \"value\": \"gpt-4-32k\"\n  },\n\t{\n\t\"label\":\"gpt-4-1106-preview\",\n\t   \"value\": \"gpt-4-1106-preview\"\n\t}\n]",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "AI_model",
-                                                                "defaultOptionValue": "{{getDefaultCredsForUI.data.AI_model}}",
+                                                                "defaultOptionValue": "{{\ngetDefaultCredsForUI.data.AI_model ? getDefaultCredsForUI.data.AI_model : \n\t{\n    \"label\": \"gpt-3.5-turbo\",\n    \"value\": \"gpt-3.5-turbo\"\n\t}\n}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": true,
@@ -25103,7 +25213,8 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "labelStyle": "BOLD"
+                                                                "labelStyle": "BOLD",
+                                                                "classStyle": "modelTestingSelector"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -25176,7 +25287,8 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "labelStyle": "BOLD"
+                                                                "labelStyle": "BOLD",
+                                                                "classStyle": "modelTestingSelector"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -25659,7 +25771,7 @@
                                                                     "step": 62,
                                                                     "status": 75,
                                                                     "question": 290,
-                                                                    "answer": 692,
+                                                                    "answer": 714,
                                                                     "customColumn1": 60
                                                                 },
                                                                 "columnOrder": [
@@ -25785,7 +25897,12 @@
                                                                 "borderRadius": "ROUNDED",
                                                                 "iconName": "send-message",
                                                                 "iconAlign": "left",
-                                                                "onClick": "{{sendMessage.run(() => getHistory.run(), () => showAlert('Oops something went wrong 😔','error'))}}"
+                                                                "onClick": "{{\nsendMessage.run(() => getHistory.run(), () => showAlert('🔄 Try to refresh the answers. ','info'))\n}}",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -25817,6 +25934,45 @@
                                                                 "parentId": "5ujgmby9bx",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "text": "Refresh answers",
+                                                                "buttonColor": "#3366FF",
+                                                                "buttonVariant": "SECONDARY",
+                                                                "placement": "CENTER",
+                                                                "widgetName": "Button3436",
+                                                                "isDisabled": false,
+                                                                "isDefaultClickDisabled": true,
+                                                                "recaptchaType": "V3",
+                                                                "version": 1,
+                                                                "classStyle": "",
+                                                                "type": "BUTTON_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Button",
+                                                                "key": "ek5xdb595w",
+                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                "widgetId": "ri9m8t8ap5",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 16.71435546875,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 52,
+                                                                "rightColumn": 64,
+                                                                "topRow": 0,
+                                                                "bottomRow": 4,
+                                                                "parentId": "5ujgmby9bx",
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ],
+                                                                "iconName": "refresh",
+                                                                "iconAlign": "left",
+                                                                "borderRadius": "ROUNDED",
+                                                                "onClick": "{{getHistory.run()}}"
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -26090,7 +26246,7 @@
                                                                 "label": "Time taken to respond (sec):",
                                                                 "labelPosition": "Left",
                                                                 "labelAlignment": "left",
-                                                                "labelWidth": "14",
+                                                                "labelWidth": "20",
                                                                 "widgetName": "Input4",
                                                                 "version": 2,
                                                                 "defaultText": "{{(Table_of_vectors.selectedRow.endDate - Table_of_vectors.selectedRow.startDate) / 1000}}",
@@ -26115,7 +26271,7 @@
                                                                 "parentColumnSpace": 14.610937499999999,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 24,
+                                                                "rightColumn": 30,
                                                                 "topRow": 43,
                                                                 "bottomRow": 47,
                                                                 "parentId": "uhw1lzzt8u",
@@ -26910,7 +27066,7 @@
                                                                         "label": "Distance:",
                                                                         "labelPosition": "Left",
                                                                         "labelAlignment": "left",
-                                                                        "labelWidth": "5",
+                                                                        "labelWidth": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '7';\n              })();\n            })}}",
                                                                         "widgetName": "Input2",
                                                                         "version": 2,
                                                                         "defaultText": "{{List1.listData.map((currentItem) => currentItem.distance)}}",
@@ -26988,7 +27144,7 @@
                                                                         "label": "Document:",
                                                                         "labelPosition": "Left",
                                                                         "labelAlignment": "left",
-                                                                        "labelWidth": "6",
+                                                                        "labelWidth": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '8';\n              })();\n            })}}",
                                                                         "widgetName": "Input3",
                                                                         "version": 2,
                                                                         "defaultText": "{{List1.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  currentItem.document;\n              })();\n            })}}",
@@ -27469,7 +27625,7 @@
                                                                                                                 "label": "Distance:",
                                                                                                                 "labelPosition": "Left",
                                                                                                                 "labelAlignment": "left",
-                                                                                                                "labelWidth": "5",
+                                                                                                                "labelWidth": "7",
                                                                                                                 "widgetName": "Input2",
                                                                                                                 "version": 2,
                                                                                                                 "defaultText": "{{currentItem.distance}}",
@@ -27494,7 +27650,7 @@
                                                                                                                 "parentColumnSpace": 14.173437499999999,
                                                                                                                 "parentRowSpace": 10,
                                                                                                                 "leftColumn": 7,
-                                                                                                                "rightColumn": 21,
+                                                                                                                "rightColumn": 25,
                                                                                                                 "topRow": 0,
                                                                                                                 "bottomRow": 4,
                                                                                                                 "parentId": "kh45u5ssd8",
@@ -27547,7 +27703,7 @@
                                                                                                                 "label": "Document:",
                                                                                                                 "labelPosition": "Left",
                                                                                                                 "labelAlignment": "left",
-                                                                                                                "labelWidth": "6",
+                                                                                                                "labelWidth": "8",
                                                                                                                 "widgetName": "Input3",
                                                                                                                 "version": 2,
                                                                                                                 "defaultText": "{{currentItem.document}}",
@@ -27571,7 +27727,7 @@
                                                                                                                 "isLoading": false,
                                                                                                                 "parentColumnSpace": 14.173437499999999,
                                                                                                                 "parentRowSpace": 10,
-                                                                                                                "leftColumn": 22,
+                                                                                                                "leftColumn": 25,
                                                                                                                 "rightColumn": 64,
                                                                                                                 "topRow": 0,
                                                                                                                 "bottomRow": 4,
@@ -27974,6 +28130,7 @@
                         "message_to_model",
                         "send_button",
                         "Text9",
+                        "Button3436",
                         "Modal_Message_Details",
                         "Canvas19",
                         "Close_modal_X",

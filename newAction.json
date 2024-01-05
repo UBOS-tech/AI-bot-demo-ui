@@ -11032,7 +11032,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-27T10:58:58.784Z",
-        "updatedAt": "2023-12-29T13:28:39.072Z",
+        "updatedAt": "2024-01-05T14:00:34.688Z",
         "deleted": false,
         "policies": [
             {
@@ -11383,7 +11383,7 @@
             "executeOnLoad": false,
             "pageId": "Model Testing",
             "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
+                "timeoutInMillisecond": "40000",
                 "encodeParamsToggle": true,
                 "httpMethod": "POST",
                 "headers": [
@@ -11422,7 +11422,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-27T11:06:24.885Z",
-        "updatedAt": "2023-12-27T11:06:47.784Z",
+        "updatedAt": "2024-01-05T15:05:59.505Z",
         "deleted": false,
         "policies": [
             {
