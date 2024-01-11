@@ -17321,7 +17321,7 @@
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
-                                                                                "text": "Append to Body: Paste content at the end",
+                                                                                "text": "And add the last one to BODY as well, but exactly before the closing  &#60;&#47;body&#62; tag",
                                                                                 "fontSize": "PARAGRAPH",
                                                                                 "fontStyle": "",
                                                                                 "textAlign": "LEFT",
@@ -17529,7 +17529,7 @@
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
-                                                                                "text": "Append to the Body",
+                                                                                "text": "Add this piece of code to the BODY of your HTML.  &#60;body&#62; ANYWHERE HERE &#60;&#47;body&#62;",
                                                                                 "fontSize": "PARAGRAPH",
                                                                                 "fontStyle": "",
                                                                                 "textAlign": "LEFT",
@@ -17560,7 +17560,7 @@
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
-                                                                                "text": "Paste at the Head",
+                                                                                "text": "Paste the code below into the HEAD of your HTML document.  &#60;head&#62; HERE &#60;&#47;head&#62;",
                                                                                 "fontSize": "PARAGRAPH",
                                                                                 "fontStyle": "",
                                                                                 "textAlign": "LEFT",
@@ -25556,7 +25556,7 @@
                                                 "schema": {
                                                     "__root_schema__": {
                                                         "children": {
-                                                            "Enriched_data_from_AI": {
+                                                            "data": {
                                                                 "children": {
                                                                     "__array_item__": {
                                                                         "children": {
@@ -25564,7 +25564,7 @@
                                                                                 "children": {},
                                                                                 "dataType": "string",
                                                                                 "fieldType": "Text Input",
-                                                                                "sourceData": "How can UBOS simplify application deployment?",
+                                                                                "sourceData": "What are the requirements for obtaining a mono bank card with a credit limit up to 100,000 UAH?",
                                                                                 "isCustomField": false,
                                                                                 "accessor": "question",
                                                                                 "identifier": "question",
@@ -25581,7 +25581,7 @@
                                                                         "dataType": "object",
                                                                         "fieldType": "Object",
                                                                         "sourceData": {
-                                                                            "question": "How can UBOS simplify application deployment?"
+                                                                            "question": "What are the requirements for obtaining a mono bank card with a credit limit up to 100,000 UAH?"
                                                                         },
                                                                         "isCustomField": false,
                                                                         "accessor": "__array_item__",
@@ -25595,87 +25595,87 @@
                                                                     }
                                                                 },
                                                                 "dataType": "array",
-                                                                "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"Enriched data from AI\"]))(Enrich_JSONForm.sourceData, Enrich_JSONForm.formData, Enrich_JSONForm.fieldState)}}",
+                                                                "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.data))(Enrich_JSONForm.sourceData, Enrich_JSONForm.formData, Enrich_JSONForm.fieldState)}}",
                                                                 "fieldType": "Array",
                                                                 "sourceData": [
                                                                     {
-                                                                        "question": "What is UBOS?"
+                                                                        "question": "What is the purpose of the Support Card?"
                                                                     },
                                                                     {
-                                                                        "question": "What is the purpose of UBOS?"
+                                                                        "question": "What is the purpose of the Recovery Card for receiving government assistance?"
                                                                     },
                                                                     {
-                                                                        "question": "Who does UBOS cater to?"
+                                                                        "question": "What is the purpose of the Recovery Card for receiving payments from the government program?"
                                                                     },
                                                                     {
-                                                                        "question": "What does UBOS offer to developers?"
+                                                                        "question": "What is the purpose of the mono x ATB Card for additional discounts in ATB stores?"
                                                                     },
                                                                     {
-                                                                        "question": "What is the convenience provided by UBOS?"
+                                                                        "question": "What is the credit limit for the mono Card with a credit limit of up to 100,000 UAH?"
                                                                     },
                                                                     {
-                                                                        "question": "How can UBOS templates be used?"
+                                                                        "question": "How is the credit limit calculated for the mono Card?"
                                                                     },
                                                                     {
-                                                                        "question": "What can you do with UBOS templates?"
+                                                                        "question": "What documents are required to obtain the mono Card?"
                                                                     },
                                                                     {
-                                                                        "question": "What are the benefits of using UBOS templates?"
+                                                                        "question": "How can I obtain the monobank card?"
                                                                     },
                                                                     {
-                                                                        "question": "What can you deploy using UBOS templates?"
+                                                                        "question": "What documents are required to obtain a mono bank card with a credit limit up to 100,000 UAH?"
                                                                     },
                                                                     {
-                                                                        "question": "How can UBOS simplify application deployment?"
+                                                                        "question": "What are the requirements for obtaining a mono bank card with a credit limit up to 100,000 UAH?"
                                                                     }
                                                                 ],
                                                                 "isCustomField": false,
-                                                                "accessor": "Enriched data from AI",
-                                                                "identifier": "Enriched_data_from_AI",
+                                                                "accessor": "data",
+                                                                "identifier": "data",
                                                                 "position": 0,
-                                                                "originalIdentifier": "Enriched data from AI",
+                                                                "originalIdentifier": "data",
                                                                 "backgroundColor": "#edf2f7",
                                                                 "isCollapsible": true,
                                                                 "isDisabled": false,
                                                                 "isRequired": false,
                                                                 "isVisible": true,
-                                                                "label": "Enriched Data From AI"
+                                                                "label": "Data"
                                                             }
                                                         },
                                                         "dataType": "object",
                                                         "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(Enrich_JSONForm.sourceData, Enrich_JSONForm.formData, Enrich_JSONForm.fieldState)}}",
                                                         "fieldType": "Object",
                                                         "sourceData": {
-                                                            "Enriched data from AI": [
+                                                            "data": [
                                                                 {
-                                                                    "question": "What is UBOS?"
+                                                                    "question": "What is the purpose of the Support Card?"
                                                                 },
                                                                 {
-                                                                    "question": "What is the purpose of UBOS?"
+                                                                    "question": "What is the purpose of the Recovery Card for receiving government assistance?"
                                                                 },
                                                                 {
-                                                                    "question": "Who does UBOS cater to?"
+                                                                    "question": "What is the purpose of the Recovery Card for receiving payments from the government program?"
                                                                 },
                                                                 {
-                                                                    "question": "What does UBOS offer to developers?"
+                                                                    "question": "What is the purpose of the mono x ATB Card for additional discounts in ATB stores?"
                                                                 },
                                                                 {
-                                                                    "question": "What is the convenience provided by UBOS?"
+                                                                    "question": "What is the credit limit for the mono Card with a credit limit of up to 100,000 UAH?"
                                                                 },
                                                                 {
-                                                                    "question": "How can UBOS templates be used?"
+                                                                    "question": "How is the credit limit calculated for the mono Card?"
                                                                 },
                                                                 {
-                                                                    "question": "What can you do with UBOS templates?"
+                                                                    "question": "What documents are required to obtain the mono Card?"
                                                                 },
                                                                 {
-                                                                    "question": "What are the benefits of using UBOS templates?"
+                                                                    "question": "How can I obtain the monobank card?"
                                                                 },
                                                                 {
-                                                                    "question": "What can you deploy using UBOS templates?"
+                                                                    "question": "What documents are required to obtain a mono bank card with a credit limit up to 100,000 UAH?"
                                                                 },
                                                                 {
-                                                                    "question": "How can UBOS simplify application deployment?"
+                                                                    "question": "What are the requirements for obtaining a mono bank card with a credit limit up to 100,000 UAH?"
                                                                 }
                                                             ]
                                                         },
@@ -25707,7 +25707,7 @@
                                                     "buttonColor": "#03B365",
                                                     "buttonVariant": "SECONDARY"
                                                 },
-                                                "sourceData": "{\"Enriched data from AI\": {{enrichQuestions.data}}}",
+                                                "sourceData": "{\"data\": {{enrichQuestions.data}}}",
                                                 "submitButtonLabel": "Update VDB",
                                                 "resetButtonLabel": "Reset",
                                                 "type": "JSON_FORM_WIDGET",
@@ -25741,7 +25741,7 @@
                                                         "key": "sourceData"
                                                     },
                                                     {
-                                                        "key": "schema.__root_schema__.children.Enriched_data_from_AI.defaultValue"
+                                                        "key": "schema.__root_schema__.children.data.defaultValue"
                                                     }
                                                 ],
                                                 "dynamicTriggerPathList": [
