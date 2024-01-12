@@ -17564,7 +17564,7 @@
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
-                                                                                "text": "Paste the code below into the HEAD of your HTML document.  &#60;head&#62; HERE &#60;&#47;head&#62;",
+                                                                                "text": "Paste the code below into the HEAD of your HTML document.  &#60;head&#62; HERE &#60;&#47;head&#62; ",
                                                                                 "fontSize": "PARAGRAPH",
                                                                                 "fontStyle": "",
                                                                                 "textAlign": "LEFT",
