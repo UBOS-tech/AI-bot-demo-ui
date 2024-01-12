@@ -17423,7 +17423,7 @@
                                                                                 "labelWidth": 5,
                                                                                 "widgetName": "Input1",
                                                                                 "version": 2,
-                                                                                "defaultText": "<script src=\"https://cdn.jsdelivr.net/gh/logspace-ai/langflow-embedded-chat@main/dist/build/static/js/bundle.min.js\"></script>",
+                                                                                "defaultText": "<script src=\"\n{{main.env.nodeUrl}}/ai-bot-chat@main/dist/build/static/js/bundle.min.js\"></script>",
                                                                                 "iconAlign": "right",
                                                                                 "autoFocus": false,
                                                                                 "labelStyle": "",
@@ -17449,7 +17449,11 @@
                                                                                 "topRow": 8,
                                                                                 "bottomRow": 12,
                                                                                 "parentId": "z1zkljhch7",
-                                                                                "dynamicBindingPathList": [],
+                                                                                "dynamicBindingPathList": [
+                                                                                    {
+                                                                                        "key": "defaultText"
+                                                                                    }
+                                                                                ],
                                                                                 "dynamicTriggerPathList": []
                                                                             },
                                                                             {
