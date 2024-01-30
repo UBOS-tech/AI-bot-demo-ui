@@ -11255,10 +11255,10 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "right",
                                                                 "labelWidth": "13",
-                                                                "options": "{{getIDbase.data.map(e=> {\n\treturn {\n\t\t\"label\": e.name,\n    \"value\": e._id\n}\n})}}",
+                                                                "options": "{{getIDbase.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
-                                                                "defaultOptionValue": "{{getIDbase.data.filter(e=>e.select===true)[0]._id ? getIDbase.data.filter(e=>e.select===true)[0]._id : getIDbase.data[0]._id}}",
+                                                                "defaultOptionValue": "{{getIDbase.data.filter(e=>e.select===true).length>0 ? getIDbase.data.filter(e=>e.select===true)[0] : getIDbase.data[0]}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -11292,7 +11292,7 @@
                                                                         "key": "onOptionChange"
                                                                     }
                                                                 ],
-                                                                "classStyle": "select_input",
+                                                                "classStyle": "select_input selectWithoutCross",
                                                                 "onOptionChange": "{{changeMainbase.run(() => (getIDbase.run(),getKnowlegeFiles.run()), () => {})}}",
                                                                 "dynamicPropertyPathList": [
                                                                     {
