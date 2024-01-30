@@ -8610,12 +8610,12 @@
         }
     ],
     "version": "V1",
-    "gitApplicationMetadata": {
-        "browserSupportedRemoteUrl": "https://github.com/d-hubych/ubos-test-ui",
+ "gitApplicationMetadata": {
+        "browserSupportedRemoteUrl": "https://github.com/UBOS-tech/AI-bot-demo-ui",
         "defaultApplicationId": "jetsondashboard",
         "defaultBranchName": "main",
         "isRepoPrivate": true,
-        "remoteUrl": "git@github.com:d-hubych/ubos-test-ui.git",
-        "repoName": "ubos-test-ui"
+        "remoteUrl": "git@github.com:UBOS-tech/AI-bot-demo-ui.git",
+        "repoName": "AI-bot-demo-ui"
     }
 }
