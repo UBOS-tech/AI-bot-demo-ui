@@ -8610,7 +8610,7 @@
         }
     ],
     "version": "V1",
- "gitApplicationMetadata": {
+    "gitApplicationMetadata": {
         "browserSupportedRemoteUrl": "https://github.com/UBOS-tech/AI-bot-demo-ui",
         "defaultApplicationId": "jetsondashboard",
         "defaultBranchName": "main",
