@@ -9134,7 +9134,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-26T14:11:57.177Z",
-        "updatedAt": "2024-01-22T17:52:44.160Z",
+        "updatedAt": "2024-02-08T12:55:17.071Z",
         "deleted": false,
         "policies": [
             {
@@ -12231,7 +12231,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-22T17:26:46.785Z",
-        "updatedAt": "2024-01-23T10:43:57.087Z",
+        "updatedAt": "2024-02-08T12:56:17.803Z",
         "deleted": false,
         "policies": [
             {
@@ -12302,6 +12302,72 @@
         },
         "createdAt": "2024-01-22T17:52:10.216Z",
         "updatedAt": "2024-01-23T13:30:51.742Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65c5355d61e490d750173bae",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getDb",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getBaseKnowlege"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Demo",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-02-08T20:11:09.130Z",
+        "updatedAt": "2024-02-08T20:11:18.881Z",
         "deleted": false,
         "policies": [
             {

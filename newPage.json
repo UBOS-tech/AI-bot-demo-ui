@@ -15615,7 +15615,7 @@
                                                                                     }
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [],
-                                                                                "classStyle": "{{getenv.data.prompts.ANSWER_AS==\"\" &&getenv.data.prompts.ANSWER_LENGTH == \"\" &&getenv.data.prompts.LANGUAGE== \"\" &&getenv.data.prompts.TONE== \"\" &&getenv.data.prompts.PROMPT_CUSTOM== \"\"? \"done\" :\"\"}}"
+                                                                                "classStyle": "{{getCustomPrompts.data[0].ANSWER_AS==\"\" &&getCustomPrompts.data[0].ANSWER_LENGTH == \"\" &&getCustomPrompts.data[0].LANGUAGE== \"\" &&getCustomPrompts.data[0].TONE== \"\" &&getCustomPrompts.data[0].PROMPT_CUSTOM== \"\"? \"done\" :\"\"}}"
                                                                             }
                                                                         ],
                                                                         "minHeight": 400,
@@ -20282,6 +20282,54 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
+                                                "placeholderText": "Select option",
+                                                "labelText": "Knowledge base",
+                                                "labelPosition": "Top",
+                                                "labelAlignment": "left",
+                                                "labelWidth": 5,
+                                                "options": "{{getDb.data}}",
+                                                "serverSideFiltering": false,
+                                                "widgetName": "Select2",
+                                                "defaultOptionValue": "{{getDb.data[0]}}",
+                                                "version": 1,
+                                                "isFilterable": true,
+                                                "isRequired": false,
+                                                "isDisabled": false,
+                                                "animateLoading": false,
+                                                "type": "SELECT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Select",
+                                                "key": "mqk36eii2j",
+                                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                                "widgetId": "m6izlcqol6",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 8.34326171875,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 0,
+                                                "bottomRow": 7,
+                                                "parentId": "5o0doljsub",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "options"
+                                                    },
+                                                    {
+                                                        "key": "defaultOptionValue"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onOptionChange"
+                                                    }
+                                                ],
+                                                "onOptionChange": "",
+                                                "dynamicPropertyPathList": [],
+                                                "classStyle": "selectWithoutCross"
+                                            },
+                                            {
+                                                "isVisible": true,
                                                 "widgetName": "Chat1",
                                                 "requestInterval": "2000",
                                                 "lastMessage": 0,
@@ -20301,8 +20349,8 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 0,
-                                                "bottomRow": 63,
+                                                "topRow": 7,
+                                                "bottomRow": 65,
                                                 "parentId": "5o0doljsub",
                                                 "postChatDataUrl": "{{main.env.nodeUrl}}/demo?email={{main.user.auth_module.user.info.user.email}}",
                                                 "dynamicBindingPathList": [
@@ -20323,7 +20371,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": null,
                                         "topRow": 0,
-                                        "bottomRow": 650,
+                                        "bottomRow": 670,
                                         "parentId": "0pbi1c0irz"
                                     }
                                 ],
@@ -20359,12 +20407,25 @@
                         "MainContainer",
                         "GridLayout1",
                         "GridLayoutCanvas1",
+                        "Select2",
                         "Chat1"
                     ],
                     "deleted": false,
                     "policies": [],
                     "layoutOnLoadActions": [
-                        []
+                        [
+                            {
+                                "_id": "65c5355d61e490d750173bae",
+                                "id": "65c5355d61e490d750173bae",
+                                "confirmBeforeExecute": false,
+                                "name": "getDb",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
                     ],
                     "layoutOnCloseActions": [
                         []
@@ -24595,7 +24656,7 @@
                                             {
                                                 "isVisible": true,
                                                 "placeholderText": "Select option",
-                                                "labelText": "Knowladge bage",
+                                                "labelText": "Knowledge base",
                                                 "labelPosition": "Top",
                                                 "labelAlignment": "left",
                                                 "labelWidth": 5,
