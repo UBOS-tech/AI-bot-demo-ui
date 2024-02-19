@@ -6590,7 +6590,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( _id.text)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"nameBase\":{{JSON.stringify(namebase.text)}},\n\t\"email\": \"sadsad@sad.ds\"\n}",
+                "body": "{\n\t\"link\":{{JSON.stringify(link.text)}},\n\t\"name\": {{JSON.stringify(link.text)}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Link\",\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "path": ""
             },
             "dynamicBindingPathList": [
@@ -6606,15 +6606,16 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(link.text)",
-                "JSON.stringify( _id.text)",
+                "JSON.stringify( Select1.selectedOptionValue)",
                 "JSON.stringify(type.text)",
-                "JSON.stringify(namebase.text)"
+                "JSON.stringify(Select1.selectedOptionLabel)",
+                "appsmith.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-26T07:44:29.057Z",
-        "updatedAt": "2023-12-13T10:37:44.271Z",
+        "updatedAt": "2024-02-19T12:52:09.208Z",
         "deleted": false,
         "policies": [
             {
@@ -7095,7 +7096,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/deleteBaseObject?id={{main.store.idToDeleteOb}}&type={{type_knowledgebase.selectedOptionValue}}&name={{name_knowledgebase.text}}"
+                    "url": "{{main.env.nodeUrl}}/deleteBaseObject"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -7114,7 +7115,20 @@
                         "value": "text/plain"
                     }
                 ],
-                "queryParameters": [],
+                "queryParameters": [
+                    {
+                        "key": "id",
+                        "value": "{{main.store.idToDeleteOb}}"
+                    },
+                    {
+                        "key": "type",
+                        "value": "{{type.text}}"
+                    },
+                    {
+                        "value": "{{Select1.selectedOptionLabel}}",
+                        "key": "name"
+                    }
+                ],
                 "body": "",
                 "bodyFormData": [],
                 "formData": {
@@ -7129,6 +7143,9 @@
             },
             "dynamicBindingPathList": [
                 {
+                    "key": "datasourceUrl"
+                },
+                {
                     "key": "queryParameters[0].value"
                 },
                 {
@@ -7136,9 +7153,6 @@
                 },
                 {
                     "key": "queryParameters[2].value"
-                },
-                {
-                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -7146,15 +7160,15 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "main.store.idToDeleteOb",
-                "type_knowledgebase.",
-                "name_knowledgebase.text",
-                "type_knowledgebase.selectedOptionValue"
+                "type.t",
+                "Select1.selectedOptionLabel",
+                "type.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-07-02T19:19:14.150Z",
-        "updatedAt": "2024-02-14T15:56:40.576Z",
+        "updatedAt": "2024-02-19T12:48:50.322Z",
         "deleted": false,
         "policies": [
             {
@@ -7461,7 +7475,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify( _id.text)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"nameBase\":{{JSON.stringify(namebase.text)}},\n\t\"email\": \"sadsad@sad.ds\"\n}",
+                "body": "{\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -7485,18 +7499,20 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(\"manual\")",
-                "JSON.stringify( _id.text)",
+                "JSON.stringify(Select1.)",
                 "JSON.stringify(manualanswer.text)",
                 "JSON.stringify(manualques.text)",
                 "JSON.stringify(type.text)",
-                "JSON.stringify(namebase.text)",
-                "main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-11-01T14:17:31.993Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-11T11:10:14.655Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-12T09:42:47.141Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-13T10:37:47.090Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "JSON.stringify(Select1.selectedOptionLabel)",
+                "appsmith.user.auth_module.user.info.user.email",
+                "main.env.nodeUrl,JSON.stringify(Select1.selectedOptionLabel),2023-09-04T13:29:20.709Z,2024-02-19T13:16:43.297Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2023-09-04T13:29:20.709Z,2024-02-19T13:16:47.586Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(sel),2023-09-04T13:29:20.709Z,2024-02-19T13:16:49.064Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(Select1.),2023-09-04T13:29:20.709Z,2024-02-19T13:16:50.444Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(Select1.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-09-04T13:29:20.709Z",
-        "updatedAt": "2024-02-14T16:27:31.157Z",
+        "updatedAt": "2024-02-19T13:16:52.637Z",
         "deleted": false,
         "policies": [
             {
@@ -7738,96 +7754,6 @@
         },
         "createdAt": "2023-10-12T13:23:29.623Z",
         "updatedAt": "2023-12-13T10:37:51.381Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "652ae56dff0d1890fd5b921b",
-        "applicationId": "jetsondashboard",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "deleteVector",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/deleteVector?id={{Table5.selectedRow.id}}&typeBase={{type_knowledgebase}}&nameBase={{namebase}}"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "Training",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "DELETE",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "text/plain"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "body": "",
-                "path": ""
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "queryParameters[0].value"
-                },
-                {
-                    "key": "queryParameters[1].value"
-                },
-                {
-                    "key": "queryParameters[2].value"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nodeUrl",
-                "Table5.selectedRow.id",
-                "type_knowledgebase",
-                "namebase?.text",
-                "namebase"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-10-14T19:01:01.037Z",
-        "updatedAt": "2024-02-14T15:44:17.581Z",
         "deleted": false,
         "policies": [
             {
@@ -9339,13 +9265,13 @@
                 "JSON.stringify(name_knowledgebase.text)",
                 "JSON.stringify(isSelectbase.isSwitchedOn)",
                 "main.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,2023-10-31T11:26:33.701Z,2023-12-12T11:56:45.263Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2023-10-31T11:26:33.701Z,2023-12-13T10:36:44.646Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-31T11:26:33.701Z",
-        "updatedAt": "2023-12-13T10:36:44.646Z",
+        "updatedAt": "2024-02-19T12:48:44.652Z",
         "deleted": false,
         "policies": [
             {
@@ -9475,7 +9401,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"link\": {{JSON.stringify(\"text\")}},\n\t\"name\": {{JSON.stringify(\"myText\")}},\n\t\"id\": {{JSON.stringify( _id.text)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(namebase.text)}},\n\t\"email\": \"sadsad@sad.ds\"\n}",
+                "body": "{\n\t\"link\": {{JSON.stringify(\"text\")}},\n\t\"name\": {{JSON.stringify(\"myText\")}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -9500,16 +9426,18 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(\"text\")",
                 "JSON.stringify(\"myText\")",
-                "JSON.stringify( _id.text)",
+                "JSON.stringify( Select1.se)",
                 "JSON.stringify(type.text)",
                 "JSON.stringify(RichTextEditor1.text)",
-                "JSON.stringify(namebase.text)"
+                "JSON.stringify(Select1.selectedOptionLabel)",
+                "appsmith.user.auth_module.user.info.user.email",
+                "JSON.stringify( Select1.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-11-01T13:21:05.761Z",
-        "updatedAt": "2023-12-13T10:37:45.970Z",
+        "updatedAt": "2024-02-19T13:15:10.466Z",
         "deleted": false,
         "policies": [
             {

@@ -7701,7 +7701,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1150,
+                        "bottomRow": 1060,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -7711,14 +7711,14 @@
                         "leftColumn": 0,
                         "children": [
                             {
-                                "isVisible": true,
-                                "text": "{{\ngetIDbase.data.filter(e=>e.select===true).length>0 ? (getIDbase.data.filter(e=>e.select===true)[0].name + ' ' + getIDbase.data.filter(e=>e.select===true)[0].type) : getIDbase.data[0]\n}}",
+                                "isVisible": false,
+                                "text": "{{Select1.selectedOptionValue}}",
                                 "fontSize": "PARAGRAPH",
                                 "fontStyle": "BOLD",
                                 "textAlign": "LEFT",
                                 "textColor": "#231F20",
                                 "truncateButtonColor": "#FFC13D",
-                                "widgetName": "Text15Copy",
+                                "widgetName": "_id",
                                 "shouldTruncate": false,
                                 "overflow": "NONE",
                                 "version": 1,
@@ -7726,25 +7726,24 @@
                                 "type": "TEXT_WIDGET",
                                 "hideCard": false,
                                 "displayName": "Text",
-                                "key": "66q0pf5ytu",
+                                "key": "mj2lzo7m7g",
                                 "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "hsxuyut281",
+                                "widgetId": "tmduj8ucj2",
                                 "renderMode": "CANVAS",
                                 "isLoading": false,
-                                "parentColumnSpace": 19.5625,
+                                "parentColumnSpace": 15.640625,
                                 "parentRowSpace": 10,
-                                "leftColumn": 29,
-                                "rightColumn": 45,
-                                "topRow": 90,
-                                "bottomRow": 113,
+                                "leftColumn": 8,
+                                "rightColumn": 24,
+                                "topRow": 100,
+                                "bottomRow": 104,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
                                         "key": "text"
                                     }
                                 ],
-                                "dynamicTriggerPathList": [],
-                                "backgroundColor": "#DD4B34"
+                                "dynamicTriggerPathList": []
                             },
                             {
                                 "width": 524,
@@ -12097,14 +12096,14 @@
                                 "parentId": "0"
                             },
                             {
-                                "isVisible": true,
-                                "text": "{{\ngetIDbase.data.filter(e=>e.select===true).length>0 ? getIDbase.data.filter(e=>e.select===true)[0] : getIDbase.data[0]\n}}",
+                                "isVisible": false,
+                                "text": "{{getIDbase.data.find(e=>e._id===Select1.selectedOptionValue).type}}",
                                 "fontSize": "PARAGRAPH",
                                 "fontStyle": "BOLD",
                                 "textAlign": "LEFT",
                                 "textColor": "#231F20",
                                 "truncateButtonColor": "#FFC13D",
-                                "widgetName": "Text15",
+                                "widgetName": "type",
                                 "shouldTruncate": false,
                                 "overflow": "NONE",
                                 "version": 1,
@@ -12112,25 +12111,59 @@
                                 "type": "TEXT_WIDGET",
                                 "hideCard": false,
                                 "displayName": "Text",
-                                "key": "66q0pf5ytu",
+                                "key": "mj2lzo7m7g",
                                 "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "3d3ci3muo1",
+                                "widgetId": "cxhiiawhjv",
                                 "renderMode": "CANVAS",
                                 "isLoading": false,
-                                "parentColumnSpace": 19.5625,
+                                "parentColumnSpace": 15.640625,
                                 "parentRowSpace": 10,
-                                "leftColumn": 12,
-                                "rightColumn": 28,
+                                "leftColumn": 8,
+                                "rightColumn": 24,
                                 "topRow": 90,
-                                "bottomRow": 113,
+                                "bottomRow": 94,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
                                         "key": "text"
                                     }
                                 ],
-                                "dynamicTriggerPathList": [],
-                                "backgroundColor": "#DD4B34"
+                                "dynamicTriggerPathList": []
+                            },
+                            {
+                                "isVisible": false,
+                                "text": "{{Select1.selectedOptionLabel}}",
+                                "fontSize": "PARAGRAPH",
+                                "fontStyle": "BOLD",
+                                "textAlign": "LEFT",
+                                "textColor": "#231F20",
+                                "truncateButtonColor": "#FFC13D",
+                                "widgetName": "namebase",
+                                "shouldTruncate": false,
+                                "overflow": "NONE",
+                                "version": 1,
+                                "animateLoading": true,
+                                "type": "TEXT_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Text",
+                                "key": "mj2lzo7m7g",
+                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                "widgetId": "ji1qybre0g",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 15.640625,
+                                "parentRowSpace": 10,
+                                "leftColumn": 8,
+                                "rightColumn": 24,
+                                "topRow": 95,
+                                "bottomRow": 99,
+                                "parentId": "0",
+                                "dynamicBindingPathList": [
+                                    {
+                                        "key": "text"
+                                    }
+                                ],
+                                "dynamicTriggerPathList": []
                             }
                         ],
                         "snapRows": 60,
@@ -12140,7 +12173,7 @@
                     },
                     "widgetNames": [
                         "MainContainer",
-                        "Text15Copy",
+                        "_id",
                         "Modal8",
                         "Canvas24CopyCopy1",
                         "IconButton2CopyCopy1",
@@ -12230,7 +12263,8 @@
                         "isSelectbase",
                         "Button18",
                         "Text14",
-                        "Text15"
+                        "type",
+                        "namebase"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -15581,7 +15615,7 @@
                                                                                     }
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [],
-                                                                                "classStyle": "{{getCustomPrompts.data[0].ANSWER_AS==\"\" &&getCustomPrompts.data[0].ANSWER_LENGTH == \"\" &&getCustomPrompts.data[0].LANGUAGE== \"\" &&getCustomPrompts.data[0].TONE== \"\" &&getCustomPrompts.data[0].PROMPT_CUSTOM== \"\"? \"done\" :\"\"}}"
+                                                                                "classStyle": "{{getCustomPrompts.data ? \"\" :\"done\"}}"
                                                                             }
                                                                         ],
                                                                         "minHeight": 400,
@@ -17739,7 +17773,7 @@
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [],
                                                                                 "backgroundColor": "",
-                                                                                "classStyle": "{{getenvsbots.data.meta.META_PAGEID==\"\" && getenvsbots.data.meta.META_TOKEN== \"\" ? \"done\" :\"\"}}"
+                                                                                "classStyle": "{{getenvsbots.data.instagram.META_PAGEID==\"\" && getenvsbots.data.instagram.META_TOKEN== \"\" ? \"done\" :\"\"}}"
                                                                             }
                                                                         ],
                                                                         "minHeight": 400,
@@ -19003,7 +19037,7 @@
                                                                                 "labelWidth": 5,
                                                                                 "widgetName": "insta_id",
                                                                                 "version": 2,
-                                                                                "defaultText": "{{getenvsbots.data.meta.META_PAGEID}}",
+                                                                                "defaultText": "{{getenvsbots.data.instagram.META_PAGEID}}",
                                                                                 "iconAlign": "left",
                                                                                 "autoFocus": false,
                                                                                 "labelStyle": "",
@@ -19045,7 +19079,7 @@
                                                                                 "labelWidth": 5,
                                                                                 "widgetName": "insta_token",
                                                                                 "version": 2,
-                                                                                "defaultText": "{{getenvsbots.data.meta.META_TOKEN}}",
+                                                                                "defaultText": "{{getenvsbots.data.instagram.META_TOKEN}}",
                                                                                 "iconAlign": "left",
                                                                                 "autoFocus": false,
                                                                                 "labelStyle": "",
@@ -19543,7 +19577,7 @@
                                                                                                 "labelWidth": 5,
                                                                                                 "widgetName": "Input2",
                                                                                                 "version": 2,
-                                                                                                "defaultText": "    <langflow-chat\n      id=\"langflow-chat-element\"\n      chat_input_field=\"input\"\n      host_url=\"{{main.env.nodeUrl}}\"\n      flow_id=\"customChat\"\n      style=\"position: absolute; bottom: 18px; right: 18px\"\n    ></langflow-chat>",
+                                                                                                "defaultText": "    <langflow-chat\n      id=\"langflow-chat-element\"\n      chat_input_field=\"input\"\n      host_url=\"{{main.env.nodeUrl}}\"\n      flow_id=\"customChat\"\n      style=\"position: fixed; bottom: 18px; right: 18px; z-index:99999\"\n    ></langflow-chat>",
                                                                                                 "iconAlign": "left",
                                                                                                 "autoFocus": false,
                                                                                                 "labelStyle": "",
@@ -20318,7 +20352,7 @@
                                                 "topRow": 7,
                                                 "bottomRow": 65,
                                                 "parentId": "5o0doljsub",
-                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demo?email={{main.user.auth_module.user.info.user.email}}",
+                                                "postChatDataUrl": "{{main.env.nodeUrl}}/demo?email={{main.user.auth_module.user.info.user.email}}&db={{Select2.selectedOptionLabel}}&type={{getDb.data.find(e=>e._id===Select2.selectedOptionValue).type}}&idDB={{Select2.selectedOptionValue}}",
                                                 "dynamicBindingPathList": [
                                                     {
                                                         "key": "postChatDataUrl"
