@@ -7701,7 +7701,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1470,
+                        "bottomRow": 1150,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -7712,13 +7712,13 @@
                         "children": [
                             {
                                 "isVisible": true,
-                                "text": "{{getIDbase.data.filter(e=>e.select===true)[0].name}}",
+                                "text": "{{\ngetIDbase.data.filter(e=>e.select===true).length>0 ? (getIDbase.data.filter(e=>e.select===true)[0].name + ' ' + getIDbase.data.filter(e=>e.select===true)[0].type) : getIDbase.data[0]\n}}",
                                 "fontSize": "PARAGRAPH",
                                 "fontStyle": "BOLD",
                                 "textAlign": "LEFT",
                                 "textColor": "#231F20",
                                 "truncateButtonColor": "#FFC13D",
-                                "widgetName": "namebase",
+                                "widgetName": "Text15Copy",
                                 "shouldTruncate": false,
                                 "overflow": "NONE",
                                 "version": 1,
@@ -7726,59 +7726,25 @@
                                 "type": "TEXT_WIDGET",
                                 "hideCard": false,
                                 "displayName": "Text",
-                                "key": "ivbm9ekt39",
+                                "key": "66q0pf5ytu",
                                 "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "gy8fk618m1",
+                                "widgetId": "hsxuyut281",
                                 "renderMode": "CANVAS",
                                 "isLoading": false,
-                                "parentColumnSpace": 9.59375,
+                                "parentColumnSpace": 19.5625,
                                 "parentRowSpace": 10,
-                                "leftColumn": 22,
-                                "rightColumn": 38,
-                                "topRow": 141,
-                                "bottomRow": 145,
+                                "leftColumn": 29,
+                                "rightColumn": 45,
+                                "topRow": 90,
+                                "bottomRow": 113,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
                                         "key": "text"
                                     }
                                 ],
-                                "dynamicTriggerPathList": []
-                            },
-                            {
-                                "isVisible": true,
-                                "text": "{{getIDbase.data.filter(e=>e.select===true)[0].type}}",
-                                "fontSize": "PARAGRAPH",
-                                "fontStyle": "BOLD",
-                                "textAlign": "LEFT",
-                                "textColor": "#231F20",
-                                "truncateButtonColor": "#FFC13D",
-                                "widgetName": "type",
-                                "shouldTruncate": false,
-                                "overflow": "NONE",
-                                "version": 1,
-                                "animateLoading": true,
-                                "type": "TEXT_WIDGET",
-                                "hideCard": false,
-                                "displayName": "Text",
-                                "key": "ivbm9ekt39",
-                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "742i5hoeu4",
-                                "renderMode": "CANVAS",
-                                "isLoading": false,
-                                "parentColumnSpace": 9.59375,
-                                "parentRowSpace": 10,
-                                "leftColumn": 22,
-                                "rightColumn": 38,
-                                "topRow": 136,
-                                "bottomRow": 140,
-                                "parentId": "0",
-                                "dynamicBindingPathList": [
-                                    {
-                                        "key": "text"
-                                    }
-                                ],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [],
+                                "backgroundColor": "#DD4B34"
                             },
                             {
                                 "width": 524,
@@ -11290,7 +11256,7 @@
                                                                 "options": "{{getIDbase.data}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
-                                                                "defaultOptionValue": "{{getIDbase.data.filter(e=>e.select===true).length>0 ? getIDbase.data.filter(e=>e.select===true)[0] : getIDbase.data[0]}}",
+                                                                "defaultOptionValue": "{{\ngetIDbase.data.filter(e=>e.select===true).length>0 ? getIDbase.data.filter(e=>e.select===true)[0] : getIDbase.data[0]\n}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -12131,14 +12097,14 @@
                                 "parentId": "0"
                             },
                             {
-                                "isVisible": false,
-                                "text": "{{getIDbase.data.filter(e=>e.select===true)[0]._id}}",
+                                "isVisible": true,
+                                "text": "{{\ngetIDbase.data.filter(e=>e.select===true).length>0 ? getIDbase.data.filter(e=>e.select===true)[0] : getIDbase.data[0]\n}}",
                                 "fontSize": "PARAGRAPH",
                                 "fontStyle": "BOLD",
                                 "textAlign": "LEFT",
                                 "textColor": "#231F20",
                                 "truncateButtonColor": "#FFC13D",
-                                "widgetName": "_id",
+                                "widgetName": "Text15",
                                 "shouldTruncate": false,
                                 "overflow": "NONE",
                                 "version": 1,
@@ -12146,24 +12112,25 @@
                                 "type": "TEXT_WIDGET",
                                 "hideCard": false,
                                 "displayName": "Text",
-                                "key": "ivbm9ekt39",
+                                "key": "66q0pf5ytu",
                                 "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "20nhs0n9ic",
+                                "widgetId": "3d3ci3muo1",
                                 "renderMode": "CANVAS",
                                 "isLoading": false,
-                                "parentColumnSpace": 9.59375,
+                                "parentColumnSpace": 19.5625,
                                 "parentRowSpace": 10,
-                                "leftColumn": 22,
-                                "rightColumn": 38,
-                                "topRow": 131,
-                                "bottomRow": 135,
+                                "leftColumn": 12,
+                                "rightColumn": 28,
+                                "topRow": 90,
+                                "bottomRow": 113,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
                                         "key": "text"
                                     }
                                 ],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [],
+                                "backgroundColor": "#DD4B34"
                             }
                         ],
                         "snapRows": 60,
@@ -12173,8 +12140,7 @@
                     },
                     "widgetNames": [
                         "MainContainer",
-                        "namebase",
-                        "type",
+                        "Text15Copy",
                         "Modal8",
                         "Canvas24CopyCopy1",
                         "IconButton2CopyCopy1",
@@ -12264,7 +12230,7 @@
                         "isSelectbase",
                         "Button18",
                         "Text14",
-                        "_id"
+                        "Text15"
                     ],
                     "deleted": false,
                     "policies": [],

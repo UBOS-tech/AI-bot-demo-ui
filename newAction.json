@@ -7009,7 +7009,7 @@
                 "headers": [
                     {
                         "key": "content-type",
-                        "value": "text/plain"
+                        "value": "application/json"
                     }
                 ],
                 "queryParameters": [
@@ -7029,7 +7029,7 @@
                 "body": "",
                 "bodyFormData": [],
                 "formData": {
-                    "apiContentType": "none"
+                    "apiContentType": "application/json"
                 },
                 "pluginSpecifiedTemplates": [
                     {
@@ -7064,7 +7064,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:49:37.661Z",
-        "updatedAt": "2023-12-13T10:38:00.423Z",
+        "updatedAt": "2024-02-14T15:42:56.961Z",
         "deleted": false,
         "policies": [
             {
@@ -7095,7 +7095,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/deleteBaseObject"
+                    "url": "{{main.env.nodeUrl}}/deleteBaseObject?id={{main.store.idToDeleteOb}}&type={{type_knowledgebase.selectedOptionValue}}&name={{name_knowledgebase.text}}"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -7114,20 +7114,7 @@
                         "value": "text/plain"
                     }
                 ],
-                "queryParameters": [
-                    {
-                        "key": "id",
-                        "value": "{{main.store.idToDeleteOb}}"
-                    },
-                    {
-                        "key": "type",
-                        "value": "{{type.text}}"
-                    },
-                    {
-                        "key": "name",
-                        "value": "{{namebase.text}}"
-                    }
-                ],
+                "queryParameters": [],
                 "body": "",
                 "bodyFormData": [],
                 "formData": {
@@ -7137,12 +7124,10 @@
                     {
                         "value": true
                     }
-                ]
+                ],
+                "path": ""
             },
             "dynamicBindingPathList": [
-                {
-                    "key": "datasourceUrl"
-                },
                 {
                     "key": "queryParameters[0].value"
                 },
@@ -7151,6 +7136,9 @@
                 },
                 {
                     "key": "queryParameters[2].value"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -7158,14 +7146,15 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "main.store.idToDeleteOb",
-                "type.text",
-                "namebase.text"
+                "type_knowledgebase.",
+                "name_knowledgebase.text",
+                "type_knowledgebase.selectedOptionValue"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-07-02T19:19:14.150Z",
-        "updatedAt": "2023-12-13T10:36:45.571Z",
+        "updatedAt": "2024-02-14T15:56:40.576Z",
         "deleted": false,
         "policies": [
             {
@@ -7501,13 +7490,13 @@
                 "JSON.stringify(manualques.text)",
                 "JSON.stringify(type.text)",
                 "JSON.stringify(namebase.text)",
-                "main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-11-01T14:17:19.373Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-11-01T14:17:31.993Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-11T11:10:14.655Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-12T09:42:47.141Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-11-01T14:17:31.993Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-11T11:10:14.655Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-12T09:42:47.141Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2023-12-13T10:37:47.090Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-09-04T13:29:20.709Z",
-        "updatedAt": "2023-12-13T10:37:47.090Z",
+        "updatedAt": "2024-02-14T16:27:31.157Z",
         "deleted": false,
         "policies": [
             {
@@ -7678,7 +7667,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-11T19:42:54.215Z",
-        "updatedAt": "2023-12-19T14:49:16.717Z",
+        "updatedAt": "2024-02-14T16:46:13.987Z",
         "deleted": false,
         "policies": [
             {
@@ -7779,7 +7768,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nodeUrl}}/deleteVector"
+                    "url": "{{main.env.nodeUrl}}/deleteVector?id={{Table5.selectedRow.id}}&typeBase={{type_knowledgebase}}&nameBase={{namebase}}"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -7798,20 +7787,7 @@
                         "value": "text/plain"
                     }
                 ],
-                "queryParameters": [
-                    {
-                        "key": "id",
-                        "value": "{{Table5.selectedRow.id}}"
-                    },
-                    {
-                        "key": "typeBase",
-                        "value": "{{type?.text}}"
-                    },
-                    {
-                        "key": "nameBase",
-                        "value": "{{namebase?.text}}"
-                    }
-                ],
+                "queryParameters": [],
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -7826,9 +7802,6 @@
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "datasourceUrl"
-                },
-                {
                     "key": "queryParameters[0].value"
                 },
                 {
@@ -7836,6 +7809,9 @@
                 },
                 {
                     "key": "queryParameters[2].value"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -7843,14 +7819,15 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "Table5.selectedRow.id",
-                "type?.text",
-                "namebase?.text"
+                "type_knowledgebase",
+                "namebase?.text",
+                "namebase"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-14T19:01:01.037Z",
-        "updatedAt": "2023-12-13T10:36:46.449Z",
+        "updatedAt": "2024-02-14T15:44:17.581Z",
         "deleted": false,
         "policies": [
             {
@@ -9439,13 +9416,15 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "JSON.stringify(Select1.selectedOptionValue)"
+                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(Select1.selectedOptionLabel)",
+                "JSON.stringify(Select1.selectedOptionLabe)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-31T21:38:45.412Z",
-        "updatedAt": "2023-12-13T10:36:42.149Z",
+        "updatedAt": "2024-02-14T16:44:16.997Z",
         "deleted": false,
         "policies": [
             {
@@ -11925,7 +11904,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T09:09:56.036Z",
-        "updatedAt": "2024-01-15T10:07:55.363Z",
+        "updatedAt": "2024-02-14T16:07:56.713Z",
         "deleted": false,
         "policies": [
             {
