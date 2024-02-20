@@ -17256,7 +17256,7 @@
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [],
                                                                                 "backgroundColor": "",
-                                                                                "classStyle": "{{getenvsbots.data.customChat.knowledge_baseName== \"\" ? \"done\" :\"\"}}"
+                                                                                "classStyle": "{{getenvsbots.data.customChat.id_base== \"\" ? \"done\" :\"\"}}"
                                                                             }
                                                                         ],
                                                                         "minHeight": 400,
