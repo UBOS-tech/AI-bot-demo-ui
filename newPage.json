@@ -14970,7 +14970,7 @@
                                                                                 "leftColumn": 0,
                                                                                 "rightColumn": 38,
                                                                                 "topRow": 5,
-                                                                                "bottomRow": 15,
+                                                                                "bottomRow": 12,
                                                                                 "parentId": "xjdjm9acl0",
                                                                                 "dynamicBindingPathList": [
                                                                                     {
@@ -17256,7 +17256,7 @@
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [],
                                                                                 "backgroundColor": "",
-                                                                                "classStyle": "{{getenvsbots.data.customChat.knowledge_baseName== \"\" ? \"done\" :\"\"}}"
+                                                                                "classStyle": "{{getenvsbots.data.customChat.id_base== \"\" ? \"done\" :\"\"}}"
                                                                             }
                                                                         ],
                                                                         "minHeight": 400,
