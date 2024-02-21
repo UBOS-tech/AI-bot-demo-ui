@@ -14226,7 +14226,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1060,
+                        "bottomRow": 1220,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -14609,7 +14609,7 @@
                                                                                 "options": "{{getAllBase.data.map(e=>{\nreturn{\n\t \"label\": e.name +\" \"+ e.type,\n    \"value\": e._id\n}})}}",
                                                                                 "serverSideFiltering": false,
                                                                                 "widgetName": "knowledge_base",
-                                                                                "defaultOptionValue": "{{getenv.data.prompts?.ID?getenv.data.prompts?.ID : getAllBase.data[0]._id}}",
+                                                                                "defaultOptionValue": "{{\ngetAllBase.data[0]._id\n}}",
                                                                                 "version": 1,
                                                                                 "isFilterable": true,
                                                                                 "isRequired": false,
@@ -15615,7 +15615,7 @@
                                                                                     }
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [],
-                                                                                "classStyle": "{{getCustomPrompts.data ? \"\" :\"done\"}}"
+                                                                                "classStyle": "{{(getenv.data.otherTechVars?.isPromptDefault === false) ? \"\" :\"done\"}}"
                                                                             }
                                                                         ],
                                                                         "minHeight": 400,
@@ -16840,6 +16840,37 @@
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
                                 "shouldScrollContents": true
+                            },
+                            {
+                                "isVisible": true,
+                                "text": "",
+                                "fontSize": "PARAGRAPH",
+                                "fontStyle": "BOLD",
+                                "textAlign": "LEFT",
+                                "textColor": "#231F20",
+                                "truncateButtonColor": "#FFC13D",
+                                "widgetName": "Text17",
+                                "shouldTruncate": false,
+                                "overflow": "NONE",
+                                "version": 1,
+                                "animateLoading": true,
+                                "type": "TEXT_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Text",
+                                "key": "vpapxsnerw",
+                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                "widgetId": "q6y4n2x1t7",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 13.21875,
+                                "parentRowSpace": 10,
+                                "leftColumn": 10,
+                                "rightColumn": 26,
+                                "topRow": 107,
+                                "bottomRow": 120,
+                                "parentId": "0",
+                                "dynamicBindingPathList": [],
+                                "dynamicTriggerPathList": []
                             }
                         ],
                         "snapRows": 60,
@@ -16922,7 +16953,8 @@
                         "Canvas27",
                         "Image2",
                         "Text2",
-                        "Text16"
+                        "Text16",
+                        "Text17"
                     ],
                     "deleted": false,
                     "policies": [],
