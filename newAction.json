@@ -7960,7 +7960,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-20T08:48:38.778Z",
-        "updatedAt": "2024-01-17T10:21:53.361Z",
+        "updatedAt": "2024-02-21T13:27:23.107Z",
         "deleted": false,
         "policies": [
             {
@@ -9037,7 +9037,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-26T14:11:57.177Z",
-        "updatedAt": "2024-02-08T12:55:17.071Z",
+        "updatedAt": "2024-02-21T13:47:10.901Z",
         "deleted": false,
         "policies": [
             {
@@ -9507,7 +9507,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-11-01T19:42:11.740Z",
-        "updatedAt": "2024-01-22T17:53:07.463Z",
+        "updatedAt": "2024-02-21T11:16:37.813Z",
         "deleted": false,
         "policies": [
             {
@@ -12024,7 +12024,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
+            "executeOnLoad": true,
             "pageId": "AI Setup",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -12052,7 +12052,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T17:06:58.886Z",
-        "updatedAt": "2024-01-22T17:52:47.699Z",
+        "updatedAt": "2024-02-21T11:17:50.512Z",
         "deleted": false,
         "policies": [
             {
@@ -12103,7 +12103,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"answer_length\":{{JSON.stringify(answer_length.selectedOptionLabel)}},\n\t\"answer_as\":{{JSON.stringify(answer_as.selectedOptionLabel)}},\n\t\"tone\":{{JSON.stringify(tone.selectedOptionLabel)}},\n\t\"language\":{{JSON.stringify(language.selectedOptionLabel)}},\n\t\"prompt_custom\":{{JSON.stringify(prompt_custom.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base.selectedOptionValue)}}\n}",
+                "body": "{\n\t\"answer_length\":{{JSON.stringify(answer_length.selectedOptionLabel)}},\n\t\"answer_as\":{{JSON.stringify(answer_as.selectedOptionLabel)}},\n\t\"tone\":{{JSON.stringify(tone.selectedOptionLabel)}},\n\t\"language\":{{JSON.stringify(language.selectedOptionLabel)}},\n\t\"prompt_custom\":{{JSON.stringify(prompt_custom.text)}},\n\t\"knowledge_base\":{{JSON.stringify(knowledge_base.selectedOptionLabel)}},\n\t\"id_base\":{{JSON.stringify(knowledge_base.selectedOptionValue)}},\n\t\"isPromptDefault\": false\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -12116,10 +12116,10 @@
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "datasourceUrl"
+                    "key": "body"
                 },
                 {
-                    "key": "body"
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
@@ -12138,7 +12138,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-22T17:26:46.785Z",
-        "updatedAt": "2024-02-08T12:56:17.803Z",
+        "updatedAt": "2024-02-21T11:45:24.220Z",
         "deleted": false,
         "policies": [
             {
@@ -12208,7 +12208,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-22T17:52:10.216Z",
-        "updatedAt": "2024-01-23T13:30:51.742Z",
+        "updatedAt": "2024-02-21T11:22:37.241Z",
         "deleted": false,
         "policies": [
             {
