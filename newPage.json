@@ -18040,7 +18040,7 @@
                                                                             {
                                                                                 "isVisible": true,
                                                                                 "placeholderText": "Select option",
-                                                                                "labelText": "Knowledge base",
+                                                                                "labelText": "Knowledge base (If not selected, the chatbot will work only with GPT)",
                                                                                 "labelPosition": "Top",
                                                                                 "labelAlignment": "left",
                                                                                 "labelWidth": 5,
@@ -18392,7 +18392,7 @@
                                                                             {
                                                                                 "isVisible": true,
                                                                                 "placeholderText": "Select option",
-                                                                                "labelText": "Knowledge base",
+                                                                                "labelText": "Knowledge base (If not selected, the chatbot will work only with GPT)",
                                                                                 "labelPosition": "Top",
                                                                                 "labelAlignment": "left",
                                                                                 "labelWidth": 5,
@@ -18668,7 +18668,7 @@
                                                                             {
                                                                                 "isVisible": true,
                                                                                 "placeholderText": "Select option",
-                                                                                "labelText": "Knowledge base",
+                                                                                "labelText": "Knowledge base (If not selected, the chatbot will work only with GPT)",
                                                                                 "labelPosition": "Top",
                                                                                 "labelAlignment": "left",
                                                                                 "labelWidth": 5,
@@ -19020,7 +19020,7 @@
                                                                             {
                                                                                 "isVisible": true,
                                                                                 "placeholderText": "Select option",
-                                                                                "labelText": "Knowledge base",
+                                                                                "labelText": "Knowledge base (If not selected, the chatbot will work only with GPT)",
                                                                                 "labelPosition": "Top",
                                                                                 "labelAlignment": "left",
                                                                                 "labelWidth": 5,
@@ -19776,7 +19776,7 @@
                                                                             {
                                                                                 "isVisible": true,
                                                                                 "placeholderText": "Select option",
-                                                                                "labelText": "Knowledge base",
+                                                                                "labelText": "Knowledge base (If not selected, the chatbot will work only with GPT)",
                                                                                 "labelPosition": "Top",
                                                                                 "labelAlignment": "left",
                                                                                 "labelWidth": 5,
