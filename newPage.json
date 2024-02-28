@@ -7701,7 +7701,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1060,
+                        "bottomRow": 1110,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -7710,41 +7710,6 @@
                         "parentColumnSpace": 1,
                         "leftColumn": 0,
                         "children": [
-                            {
-                                "isVisible": false,
-                                "text": "{{Select1.selectedOptionValue}}",
-                                "fontSize": "PARAGRAPH",
-                                "fontStyle": "BOLD",
-                                "textAlign": "LEFT",
-                                "textColor": "#231F20",
-                                "truncateButtonColor": "#FFC13D",
-                                "widgetName": "_id",
-                                "shouldTruncate": false,
-                                "overflow": "NONE",
-                                "version": 1,
-                                "animateLoading": true,
-                                "type": "TEXT_WIDGET",
-                                "hideCard": false,
-                                "displayName": "Text",
-                                "key": "mj2lzo7m7g",
-                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "tmduj8ucj2",
-                                "renderMode": "CANVAS",
-                                "isLoading": false,
-                                "parentColumnSpace": 15.640625,
-                                "parentRowSpace": 10,
-                                "leftColumn": 8,
-                                "rightColumn": 24,
-                                "topRow": 100,
-                                "bottomRow": 104,
-                                "parentId": "0",
-                                "dynamicBindingPathList": [
-                                    {
-                                        "key": "text"
-                                    }
-                                ],
-                                "dynamicTriggerPathList": []
-                            },
                             {
                                 "width": 524,
                                 "height": 312,
@@ -8901,7 +8866,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
                                                 "topRow": 19,
-                                                "bottomRow": 72,
+                                                "bottomRow": 68,
                                                 "parentId": "gjtqa9136u",
                                                 "children": [
                                                     {
@@ -8925,7 +8890,7 @@
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#999",
+                                                                "textColor": "#bbb",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text4Copy1",
                                                                 "shouldTruncate": false,
@@ -8942,10 +8907,10 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 8.0693359375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 52,
-                                                                "topRow": 4,
-                                                                "bottomRow": 8,
+                                                                "leftColumn": 9,
+                                                                "rightColumn": 40,
+                                                                "topRow": 0,
+                                                                "bottomRow": 4,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -9183,7 +9148,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": "true",
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "Delete",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#DD4B34",
@@ -9206,7 +9171,7 @@
                                                                         "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "View",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#3b82ff",
@@ -9214,7 +9179,7 @@
                                                                         "labelColor": "#FFFFFF",
                                                                         "iconName": "eye-open",
                                                                         "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Edit vectors'))}}",
-                                                                        "onClick": "{{navigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": type.text,\n\t\"typeName\":namebase.text},)}}",
+                                                                        "onClick": "{{\nnavigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\": Select1.selectedOptionLabel.split(' ')[0],\n\"link\": currentRow.url})\n}}",
                                                                         "borderRadius": "CIRCLE",
                                                                         "buttonVariant": "TERTIARY"
                                                                     },
@@ -9251,7 +9216,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "Update",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#215484",
@@ -9274,7 +9239,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "Delete",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#DD4B34",
@@ -9295,7 +9260,7 @@
                                                                         "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "View",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#3b82ff",
@@ -9315,7 +9280,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "dd",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#008080 ",
@@ -9337,7 +9302,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "Update",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#215484",
@@ -9354,12 +9319,15 @@
                                                                     "step": 62,
                                                                     "status": 295,
                                                                     "url": 311,
-                                                                    "name": 114,
+                                                                    "name": 197,
                                                                     "customColumn1": 60,
                                                                     "customColumn2": 60,
                                                                     "customColumn3": 60,
                                                                     "customColumn4": 60,
-                                                                    "createdAt": 300
+                                                                    "createdAt": 300,
+                                                                    "_id": 294,
+                                                                    "knowledgeBaseId": 328,
+                                                                    "vectors": 271
                                                                 },
                                                                 "columnOrder": [
                                                                     "url",
@@ -9396,8 +9364,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 20,
-                                                                "bottomRow": 47,
+                                                                "topRow": 16,
+                                                                "bottomRow": 44,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicTriggerPathList": [
                                                                     {
@@ -9464,8 +9432,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 36,
-                                                                "topRow": 8,
-                                                                "bottomRow": 16,
+                                                                "topRow": 4,
+                                                                "bottomRow": 12,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [],
@@ -9476,12 +9444,12 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "animateLoading": true,
-                                                                "text": "Train Bot",
+                                                                "text": "Save",
                                                                 "buttonColor": "#3268a8",
                                                                 "buttonVariant": "SECONDARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button3",
-                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
+                                                                "isDisabled": "{{\nlink.text.length < 10 ||\nmain.user.auth_module.user.info.user.role ==='demo'\n}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -9498,8 +9466,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 36,
                                                                 "rightColumn": 45,
-                                                                "topRow": 11,
-                                                                "bottomRow": 16,
+                                                                "topRow": 7,
+                                                                "bottomRow": 12,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicBindingPathList": [
                                                                     {
@@ -9512,7 +9480,7 @@
                                                                     }
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
-                                                                "onClick": "{{saveLink.run(() => (getKnowlegeFiles.run(),showAlert(\"Successfully updated\",\"info\")), () => {})}}",
+                                                                "onClick": "{{\nsaveLink.run(() => (getKnowlegeFiles.run(),showAlert(\"Successfully updated\",\"info\")), () => {})\n}}",
                                                                 "dynamicPropertyPathList": [
                                                                     {
                                                                         "key": "onClick"
@@ -9521,7 +9489,9 @@
                                                                         "key": "isDisabled"
                                                                     }
                                                                 ],
-                                                                "tooltip": "We will be fetching all  data and training the ChatGPT model on them."
+                                                                "tooltip": "We will be fetching all  data and training the ChatGPT model on them.",
+                                                                "iconName": "add-to-artifact",
+                                                                "iconAlign": "left"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -9547,9 +9517,11 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 16,
-                                                                "bottomRow": 20,
-                                                                "parentId": "ihc06jbcex"
+                                                                "topRow": 12,
+                                                                "bottomRow": 16,
+                                                                "parentId": "ihc06jbcex",
+                                                                "dynamicBindingPathList": [],
+                                                                "dynamicTriggerPathList": []
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -9575,7 +9547,7 @@
                                                                 "parentColumnSpace": 9.060546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 36,
+                                                                "rightColumn": 9,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "ihc06jbcex",
@@ -9593,7 +9565,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 282.046875,
                                                         "topRow": 0,
-                                                        "bottomRow": 490,
+                                                        "bottomRow": 460,
                                                         "parentId": "mw49kdef9m",
                                                         "dynamicBindingPathList": [],
                                                         "dynamicTriggerPathList": []
@@ -9664,25 +9636,7 @@
                                                                         "key": "primaryColumns.customColumn1.buttonLabel"
                                                                     },
                                                                     {
-                                                                        "key": "derivedColumns.customColumn2.buttonLabel"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.buttonLabel"
-                                                                    },
-                                                                    {
-                                                                        "key": "derivedColumns.customColumn2.isDisabled"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.isDisabled"
-                                                                    },
-                                                                    {
                                                                         "key": "primaryColumns.totaCharacters.computedValue"
-                                                                    },
-                                                                    {
-                                                                        "key": "derivedColumns.customColumn3.buttonLabel"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn3.buttonLabel"
                                                                     },
                                                                     {
                                                                         "key": "derivedColumns.customColumn1.isDisabled"
@@ -9692,6 +9646,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn1.isCellVisible"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.demo.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -9875,29 +9832,6 @@
                                                                         "borderRadius": "CIRCLE",
                                                                         "buttonVariant": "TERTIARY"
                                                                     },
-                                                                    "customColumn2": {
-                                                                        "index": 10,
-                                                                        "width": 150,
-                                                                        "id": "customColumn2",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#3b82ff",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "eye-open",
-                                                                        "buttonLabel": "{{Table2.sanitizedTableData.map((currentRow) => ( 'Edit vectors'))}}",
-                                                                        "onClick": "{{navigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": type.text,\n\t\"typeName\":namebase.text},)}}",
-                                                                        "buttonVariant": "TERTIARY",
-                                                                        "borderRadius": "CIRCLE"
-                                                                    },
                                                                     "totaCharacters": {
                                                                         "index": 9,
                                                                         "width": 150,
@@ -9914,28 +9848,6 @@
                                                                         "isDerived": false,
                                                                         "label": "Total Characters",
                                                                         "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.totaCharacters))}}"
-                                                                    },
-                                                                    "customColumn3": {
-                                                                        "index": 12,
-                                                                        "width": 150,
-                                                                        "id": "customColumn3",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": " #215484",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "refresh",
-                                                                        "buttonLabel": "{{Table2.sanitizedTableData.map((currentRow) => ( 'Action'))}}",
-                                                                        "buttonVariant": "TERTIARY",
-                                                                        "onClick": "{{getKnowlegeFiles.run()}}"
                                                                     },
                                                                     "customColumn4": {
                                                                         "index": 13,
@@ -9957,6 +9869,23 @@
                                                                         "iconName": "changes",
                                                                         "buttonVariant": "TERTIARY",
                                                                         "onClick": "{{showModal('Modal5')}}"
+                                                                    },
+                                                                    "demo": {
+                                                                        "index": 7,
+                                                                        "width": 150,
+                                                                        "id": "demo",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "demo",
+                                                                        "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.demo))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -9971,7 +9900,7 @@
                                                                         "isDisabled": true,
                                                                         "isCellVisible": "{{Table2.sanitizedTableData.map((currentRow) => ( appsmith.user.auth_module.user.info.user.role !== 'demo'))}}",
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "1",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#DD4B34",
@@ -9980,48 +9909,6 @@
                                                                         "iconName": "trash",
                                                                         "buttonLabel": "{{Table2.sanitizedTableData.map((currentRow) => ( 'Delete'))}}",
                                                                         "onClick": "{{JSObject2.myFun2(Table2.selectedRow._id)}}"
-                                                                    },
-                                                                    "customColumn2": {
-                                                                        "index": 10,
-                                                                        "width": 150,
-                                                                        "id": "customColumn2",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "Edit",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#3b82ff",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "eye-open",
-                                                                        "buttonLabel": "{{Table2.sanitizedTableData.map((currentRow) => ( 'Edit vectors'))}}"
-                                                                    },
-                                                                    "customColumn3": {
-                                                                        "index": 12,
-                                                                        "width": 150,
-                                                                        "id": "customColumn3",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": " #215484",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "refresh",
-                                                                        "buttonLabel": "{{Table2.sanitizedTableData.map((currentRow) => ( 'Action'))}}",
-                                                                        "buttonVariant": "TERTIARY",
-                                                                        "onClick": "{{getKnowlegeFiles.run()}}"
                                                                     },
                                                                     "customColumn4": {
                                                                         "index": 13,
@@ -10034,7 +9921,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "",
+                                                                        "label": "4",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#008080",
@@ -10056,23 +9943,23 @@
                                                                     "customColumn1": 60,
                                                                     "totaCharacters": 228,
                                                                     "createdAt": 157,
-                                                                    "file": 305
+                                                                    "file": 305,
+                                                                    "_id": 337
                                                                 },
                                                                 "columnOrder": [
-                                                                    "file",
-                                                                    "createdAt",
-                                                                    "status",
-                                                                    "totaCharacters",
-                                                                    "customColumn2",
-                                                                    "customColumn1",
-                                                                    "customColumn4",
-                                                                    "customColumn3",
                                                                     "_id",
                                                                     "knowledgeBaseId",
                                                                     "name",
                                                                     "type",
+                                                                    "file",
                                                                     "vectors",
-                                                                    "deleted"
+                                                                    "status",
+                                                                    "demo",
+                                                                    "deleted",
+                                                                    "createdAt",
+                                                                    "totaCharacters",
+                                                                    "customColumn1",
+                                                                    "customColumn4"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -10094,18 +9981,12 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 21,
-                                                                "bottomRow": 48,
+                                                                "topRow": 16,
+                                                                "bottomRow": 44,
                                                                 "parentId": "k2agajmtvu",
                                                                 "dynamicTriggerPathList": [
                                                                     {
                                                                         "key": "primaryColumns.customColumn1.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn3.onClick"
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn4.onClick"
@@ -10113,19 +9994,13 @@
                                                                 ],
                                                                 "dynamicPropertyPathList": [
                                                                     {
-                                                                        "key": "primaryColumns.customColumn2.isDisabled"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn3.onClick"
-                                                                    },
-                                                                    {
                                                                         "key": "primaryColumns.customColumn4.onClick"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.customColumn2.onClick"
+                                                                        "key": "primaryColumns.customColumn1.isCellVisible"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.customColumn1.isCellVisible"
+                                                                        "key": "primaryColumns.customColumn1.onClick"
                                                                     }
                                                                 ]
                                                             },
@@ -10153,8 +10028,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 17,
-                                                                "bottomRow": 21,
+                                                                "topRow": 12,
+                                                                "bottomRow": 16,
                                                                 "parentId": "k2agajmtvu"
                                                             },
                                                             {
@@ -10163,7 +10038,7 @@
                                                                 "valueRes": null,
                                                                 "classStyle": "",
                                                                 "textStyle": "HEADING",
-                                                                "uploadUrl": "{{main.env.nodeUrl}}/updateObjectsBase?id={{_id.text}}&typeBase={{JSON.stringify(type.text)}}&nameBase={{JSON.stringify(namebase.text)}}",
+                                                                "uploadUrl": "{{main.env.nodeUrl}}/updateObjectsBase?id={{Select1.selectedOptionValue}}&typeBase={{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}}&nameBase={{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}}\n\n",
                                                                 "validType": "",
                                                                 "textAlign": "CENTER",
                                                                 "response": null,
@@ -10185,8 +10060,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 31,
-                                                                "topRow": 8,
-                                                                "bottomRow": 15,
+                                                                "topRow": 4,
+                                                                "bottomRow": 11,
                                                                 "parentId": "k2agajmtvu",
                                                                 "uploadButtonText": "upload",
                                                                 "dynamicBindingPathList": [
@@ -10215,11 +10090,11 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "\n\nAdd all the files on which you want to train your bot (.txt .pdf .xlsx)<a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n\n\n",
+                                                                "text": "\n\nAdd all the files on which you want to train your bot (.txt .pdf .xlsx)<a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432</span>\n    </a> \n\n",
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#999",
+                                                                "textColor": "#bbb",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text4",
                                                                 "shouldTruncate": false,
@@ -10236,10 +10111,10 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 8.0693359375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 4,
-                                                                "bottomRow": 8,
+                                                                "leftColumn": 4,
+                                                                "rightColumn": 37,
+                                                                "topRow": 0,
+                                                                "bottomRow": 4,
                                                                 "parentId": "k2agajmtvu",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -10268,7 +10143,7 @@
                                                                 "parentColumnSpace": 9.060546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 33,
+                                                                "rightColumn": 4,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "k2agajmtvu",
@@ -10285,7 +10160,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 282.046875,
                                                         "topRow": 0,
-                                                        "bottomRow": 500,
+                                                        "bottomRow": 460,
                                                         "parentId": "mw49kdef9m",
                                                         "dynamicBindingPathList": [],
                                                         "dynamicTriggerPathList": []
@@ -10378,7 +10253,7 @@
                                                                         "labelColor": "#FFFFFF",
                                                                         "iconName": "eye-open",
                                                                         "buttonLabel": "{{Table5.sanitizedTableData.map((currentRow) => ( 'Edit'))}}",
-                                                                        "onClick": "{{navigateTo('Vectors',{\"id\": getKnowlegeFiles.data.sortdata.Manual[0]._id,\t\"typeBase\": type.text,\n\t\"typeName\":namebase.text})}}",
+                                                                        "onClick": "{{\nnavigateTo('Vectors',{\"id\": Select1.selectedOptionValue,\n\"typeBase\": Select1.selectedOptionLabel.split(' ')[1], \"typeName\": Select1.selectedOptionLabel.split(' ')[0]})\n}}",
                                                                         "horizontalAlignment": "LEFT",
                                                                         "borderRadius": "CIRCLE",
                                                                         "buttonVariant": "TERTIARY"
@@ -10403,7 +10278,7 @@
                                                                         "iconName": "trash",
                                                                         "menuButtonLabel": "{{Table5.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
                                                                         "buttonLabel": "{{Table5.sanitizedTableData.map((currentRow) => ( 'Delete'))}}",
-                                                                        "onClick": "{{deleteVector.run();getKnowlegeFiles.run()}} ",
+                                                                        "onClick": "{{deleteVector.run(() => getKnowlegeFiles.run(), () => showAlert('Oops something went wrong 😔','error'))}}",
                                                                         "horizontalAlignment": "LEFT",
                                                                         "borderRadius": "CIRCLE",
                                                                         "buttonVariant": "TERTIARY"
@@ -10545,7 +10420,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": " Answer",
+                                                                        "label": "1",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#DD4B34",
@@ -10558,7 +10433,7 @@
                                                                         "horizontalAlignment": "LEFT"
                                                                     }
                                                                 },
-                                                                "tableData": "{{getKnowlegeFiles.data.sortdata.Manual[0].vectors.map(e => ({ ...e.metadata, ...e }))}}\n",
+                                                                "tableData": "{{getKnowlegeFiles.data.sortdata.Manual[0].vectors.map(e => ({ ...e.metadata, ...e }))\n}}\n",
                                                                 "columnSizeMap": {
                                                                     "task": 245,
                                                                     "step": 62,
@@ -10600,8 +10475,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 25,
-                                                                "bottomRow": 49,
+                                                                "topRow": 21,
+                                                                "bottomRow": 45,
                                                                 "parentId": "lzfnfil2re",
                                                                 "dynamicTriggerPathList": [
                                                                     {
@@ -10612,9 +10487,6 @@
                                                                     }
                                                                 ],
                                                                 "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn2.onClick"
-                                                                    },
                                                                     {
                                                                         "key": "primaryColumns.customColumn1.onClick"
                                                                     }
@@ -10651,8 +10523,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 29,
-                                                                "topRow": 8,
-                                                                "bottomRow": 21,
+                                                                "topRow": 4,
+                                                                "bottomRow": 17,
                                                                 "parentId": "lzfnfil2re",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [],
@@ -10691,8 +10563,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 29,
                                                                 "rightColumn": 60,
-                                                                "topRow": 8,
-                                                                "bottomRow": 21,
+                                                                "topRow": 4,
+                                                                "bottomRow": 17,
                                                                 "parentId": "lzfnfil2re",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [],
@@ -10725,17 +10597,17 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 21,
-                                                                "bottomRow": 25,
+                                                                "topRow": 17,
+                                                                "bottomRow": 21,
                                                                 "parentId": "lzfnfil2re"
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "\n\nInput single Q&A to train your bot <a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n \n\n",
+                                                                "text": "\n\nInput single Q&A to train your bot <a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n \n",
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#999",
+                                                                "textColor": "#bbb",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text4Copy2",
                                                                 "shouldTruncate": false,
@@ -10752,10 +10624,10 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 8.0693359375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 39,
-                                                                "topRow": 4,
-                                                                "bottomRow": 8,
+                                                                "leftColumn": 16,
+                                                                "rightColumn": 36,
+                                                                "topRow": 0,
+                                                                "bottomRow": 4,
                                                                 "parentId": "lzfnfil2re",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -10784,7 +10656,7 @@
                                                                 "parentColumnSpace": 9.060546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 31,
+                                                                "rightColumn": 16,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "lzfnfil2re",
@@ -10796,10 +10668,10 @@
                                                                 "animateLoading": true,
                                                                 "text": "",
                                                                 "buttonColor": "#3268a8",
-                                                                "buttonVariant": "TERTIARY",
+                                                                "buttonVariant": "SECONDARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button14",
-                                                                "isDisabled": "{{appsmith.user.auth_module.user.info.user.role ==='demo'}}",
+                                                                "isDisabled": "{{\nmanualques.text.length === 0 || manualanswer.text.length === 0 ||\nappsmith.user.auth_module.user.info.user.role ==='demo'\n}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -10816,8 +10688,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 60,
                                                                 "rightColumn": 64,
-                                                                "topRow": 17,
-                                                                "bottomRow": 21,
+                                                                "topRow": 13,
+                                                                "bottomRow": 17,
                                                                 "parentId": "lzfnfil2re",
                                                                 "tooltip": "We will be fetching all  data and training the ChatGPT model on them.",
                                                                 "dynamicBindingPathList": [
@@ -10841,7 +10713,7 @@
                                                                 "borderRadius": "ROUNDED",
                                                                 "iconName": "add-to-artifact",
                                                                 "iconAlign": "left",
-                                                                "onClick": "{{saveVector.run(() => (getKnowlegeFiles.run(),showAlert(\"Successfully updated\",\"info\")), () => {})}}"
+                                                                "onClick": "{{\nsaveVector.run(() => (\ngetKnowlegeFiles.run(),\nresetWidget(\"manualques\", true),\nresetWidget(\"manualanswer\", true),\nshowAlert(\"Successfully updated\",\"info\")),\n() => {})\n}}"
                                                             }
                                                         ],
                                                         "minHeight": 630,
@@ -10880,7 +10752,7 @@
                                                                 "buttonVariant": "SECONDARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button14Copy",
-                                                                "isDisabled": "{{appsmith.user.auth_module.user.info.user.role ==='demo'}}",
+                                                                "isDisabled": "{{RichTextEditor1.text.length === 0}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -10895,10 +10767,10 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 12.896484375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 45,
+                                                                "leftColumn": 52,
                                                                 "rightColumn": 64,
-                                                                "topRow": 3,
-                                                                "bottomRow": 7,
+                                                                "topRow": 0,
+                                                                "bottomRow": 5,
                                                                 "parentId": "r8gv8x6gwm",
                                                                 "tooltip": "We will be fetching all  data and training the ChatGPT model on them.",
                                                                 "dynamicBindingPathList": [
@@ -10913,16 +10785,16 @@
                                                                 ],
                                                                 "dynamicPropertyPathList": [
                                                                     {
-                                                                        "key": "isDisabled"
+                                                                        "key": "onClick"
                                                                     },
                                                                     {
-                                                                        "key": "onClick"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
                                                                 "iconName": "add-to-artifact",
                                                                 "iconAlign": "left",
-                                                                "onClick": "{{savetext.run(() => (getKnowlegeFiles.run(),showAlert(\"Successfully updated\",\"info\")), () => {})}}"
+                                                                "onClick": "{{\nsavetext.run(() => (getKnowlegeFiles.run(), resetWidget(\"RichTextEditor1\",true),\nshowAlert(\"Successfully updated\",\"info\")\n),\n() => {})\n}}"
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -10948,7 +10820,7 @@
                                                                 "parentColumnSpace": 7.76953125,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 37,
+                                                                "rightColumn": 11,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "r8gv8x6gwm",
@@ -10958,11 +10830,11 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "\nWrite or copy and paste text <a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n ",
+                                                                "text": "\nWrite or copy and paste text <a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n",
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#999",
+                                                                "textColor": "#bbb",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text12",
                                                                 "shouldTruncate": false,
@@ -10979,10 +10851,10 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 7.76953125,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 37,
-                                                                "topRow": 4,
-                                                                "bottomRow": 8,
+                                                                "leftColumn": 11,
+                                                                "rightColumn": 28,
+                                                                "topRow": 0,
+                                                                "bottomRow": 4,
                                                                 "parentId": "r8gv8x6gwm",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
@@ -11008,10 +10880,10 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 13.137939453125,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 41,
-                                                                "rightColumn": 45,
-                                                                "topRow": 3,
-                                                                "bottomRow": 7,
+                                                                "leftColumn": 48,
+                                                                "rightColumn": 52,
+                                                                "topRow": 0,
+                                                                "bottomRow": 5,
                                                                 "parentId": "r8gv8x6gwm",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [
@@ -11019,7 +10891,7 @@
                                                                         "key": "onClick"
                                                                     }
                                                                 ],
-                                                                "onClick": "{{navigateTo('Vectors',{'id': _id.text,\n\t\"typeBase\": type.text,\n\t\"typeName\":namebase.text},)}}",
+                                                                "onClick": "{{\nnavigateTo('Vectors',{'id': Select1.selectedOptionValue,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\": Select1.selectedOptionLabel.split(' ')[0]},)\n}}",
                                                                 "dynamicPropertyPathList": [
                                                                     {
                                                                         "key": "onClick"
@@ -11057,8 +10929,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 9,
-                                                                "bottomRow": 43,
+                                                                "topRow": 5,
+                                                                "bottomRow": 44,
                                                                 "parentId": "r8gv8x6gwm",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [],
@@ -11252,10 +11124,10 @@
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "right",
                                                                 "labelWidth": "13",
-                                                                "options": "{{getIDbase.data}}",
+                                                                "options": "{{getAllBases.data.map(e=>{\nreturn{\n\t \"label\": e.name +\" \"+ e.type,\n    \"value\": e._id\n}})}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
-                                                                "defaultOptionValue": "{{\ngetIDbase.data.filter(e=>e.select===true).length>0 ? getIDbase.data.filter(e=>e.select===true)[0] : getIDbase.data[0]\n}}",
+                                                                "defaultOptionValue": "{{getAllBases.data[0]}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -11271,8 +11143,8 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 6.935546875,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 31,
-                                                                "rightColumn": 61,
+                                                                "leftColumn": 25,
+                                                                "rightColumn": 50,
                                                                 "topRow": 0,
                                                                 "bottomRow": 8,
                                                                 "parentId": "z6rqbb5eq4",
@@ -11305,7 +11177,7 @@
                                                                 "labelWidth": 5,
                                                                 "widgetName": "Input1",
                                                                 "version": 2,
-                                                                "defaultText": "KNOWLEDGE BASE: {{getIDbase?.data.length>0 ?getIDbase.data.filter(e=>e.select===true)[0]?.name :\"\"}}\nTYPE: {{getIDbase?.data.length>0 ?getIDbase.data.filter(e=>e.select===true)[0]?.type:\"\"}}",
+                                                                "defaultText": "KNOWLEDGE BASE: {{Select1.selectedOptionLabel.split(' ')[0]}}\nTYPE: {{Select1.selectedOptionLabel.split(' ')[1]}}",
                                                                 "iconAlign": "left",
                                                                 "autoFocus": false,
                                                                 "labelStyle": "",
@@ -11327,7 +11199,7 @@
                                                                 "parentColumnSpace": 6.935546875,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 30,
+                                                                "rightColumn": 25,
                                                                 "topRow": 0,
                                                                 "bottomRow": 8,
                                                                 "parentId": "z6rqbb5eq4",
@@ -11340,44 +11212,136 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "iconName": "new-layers",
-                                                                "borderRadius": "CIRCLE",
-                                                                "boxShadow": "NONE",
-                                                                "buttonColor": "#3268a8",
-                                                                "buttonVariant": "TERTIARY",
-                                                                "isDisabled": "{{check_pinecone.data.openai.filledFields !==2 || appsmith.user.auth_module.user.info.user.role ==='demo'}}",
-                                                                "widgetName": "IconButton3Copy",
+                                                                "widgetName": "ButtonsTraining",
+                                                                "orientation": "horizontal",
+                                                                "buttonVariant": "PRIMARY",
                                                                 "version": 1,
                                                                 "animateLoading": true,
-                                                                "type": "ICON_BUTTON_WIDGET",
+                                                                "groupButtons": {
+                                                                    "groupButton1": {
+                                                                        "label": "",
+                                                                        "iconName": "eye-open",
+                                                                        "id": "groupButton1",
+                                                                        "widgetId": "",
+                                                                        "buttonColor": "#edf2f7",
+                                                                        "buttonType": "SIMPLE",
+                                                                        "placement": "CENTER",
+                                                                        "isVisible": true,
+                                                                        "isDisabled": "{{currentRow.status === 'Source saved'}}",
+                                                                        "index": 0,
+                                                                        "menuItems": {},
+                                                                        "onClick": "{{navigateTo('Vectors',{'id': Select1.selectedOptionValue,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\":Select1.selectedOptionLabel.split(' ')[0]},'SAME_WINDOW')}}"
+                                                                    },
+                                                                    "groupButton2": {
+                                                                        "label": "",
+                                                                        "iconName": "refresh",
+                                                                        "id": "groupButton2",
+                                                                        "buttonColor": "#edf2f7",
+                                                                        "buttonType": "SIMPLE",
+                                                                        "placement": "CENTER",
+                                                                        "widgetId": "",
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "index": 1,
+                                                                        "menuItems": {},
+                                                                        "onClick": "{{getKnowlegeFiles.run()}}"
+                                                                    },
+                                                                    "groupButton3": {
+                                                                        "label": "",
+                                                                        "iconName": "new-layers",
+                                                                        "id": "groupButton3",
+                                                                        "buttonType": "SIMPLE",
+                                                                        "placement": "CENTER",
+                                                                        "buttonColor": "#edf2f7",
+                                                                        "widgetId": "",
+                                                                        "isVisible": true,
+                                                                        "isDisabled": "{{check_pinecone.data.openai.filledFields !==2 || appsmith.user.auth_module.user.info.user.role ==='demo'}}",
+                                                                        "index": 2,
+                                                                        "menuItems": {
+                                                                            "menuItem1": {
+                                                                                "label": "First Option",
+                                                                                "backgroundColor": "#FFFFFF",
+                                                                                "id": "menuItem1",
+                                                                                "widgetId": "",
+                                                                                "onClick": "",
+                                                                                "isVisible": true,
+                                                                                "isDisabled": false,
+                                                                                "index": 0
+                                                                            },
+                                                                            "menuItem2": {
+                                                                                "label": "Second Option",
+                                                                                "backgroundColor": "#FFFFFF",
+                                                                                "id": "menuItem2",
+                                                                                "widgetId": "",
+                                                                                "onClick": "",
+                                                                                "isVisible": true,
+                                                                                "isDisabled": false,
+                                                                                "index": 1
+                                                                            },
+                                                                            "menuItem3": {
+                                                                                "label": "Delete",
+                                                                                "iconName": "trash",
+                                                                                "iconColor": "#FFFFFF",
+                                                                                "iconAlign": "right",
+                                                                                "textColor": "#FFFFFF",
+                                                                                "backgroundColor": "#DD4B34",
+                                                                                "id": "menuItem3",
+                                                                                "widgetId": "",
+                                                                                "onClick": "",
+                                                                                "isVisible": true,
+                                                                                "isDisabled": false,
+                                                                                "index": 2
+                                                                            }
+                                                                        },
+                                                                        "onClick": "{{showModal('Modal9')}}"
+                                                                    }
+                                                                },
+                                                                "classStyle": "buttonsTraining",
+                                                                "type": "BUTTON_GROUP_WIDGET",
                                                                 "hideCard": false,
-                                                                "displayName": "Icon Button",
-                                                                "key": "sw7bdh33vm",
-                                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
-                                                                "widgetId": "u5bvkodl1q",
+                                                                "displayName": "Button Group",
+                                                                "key": "fkb8g4ay1o",
+                                                                "iconSVG": "/static/media/icon.d6773218.svg",
+                                                                "isCanvas": false,
+                                                                "widgetId": "exx2kb0agg",
                                                                 "renderMode": "CANVAS",
                                                                 "isLoading": false,
-                                                                "parentColumnSpace": 8.1826171875,
+                                                                "parentColumnSpace": 19.5625,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 61,
+                                                                "leftColumn": 50,
                                                                 "rightColumn": 64,
-                                                                "topRow": 4,
+                                                                "topRow": 0,
                                                                 "bottomRow": 8,
                                                                 "parentId": "z6rqbb5eq4",
                                                                 "dynamicBindingPathList": [
                                                                     {
-                                                                        "key": "isDisabled"
+                                                                        "key": "groupButtons.groupButton3.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "groupButtons.groupButton1.isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
                                                                     {
-                                                                        "key": "onClick"
+                                                                        "key": "groupButtons.groupButton3.onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "groupButtons.groupButton2.onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "groupButtons.groupButton1.onClick"
                                                                     }
                                                                 ],
-                                                                "onClick": "{{showModal('Modal9')}}",
+                                                                "borderRadius": "ROUNDED",
                                                                 "dynamicPropertyPathList": [
                                                                     {
-                                                                        "key": "isDisabled"
+                                                                        "key": "groupButtons.groupButton3.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "groupButtons.groupButton2.onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "groupButtons.groupButton1.isDisabled"
                                                                     }
                                                                 ]
                                                             }
@@ -11426,7 +11390,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 319.5,
                                         "topRow": 0,
-                                        "bottomRow": 740,
+                                        "bottomRow": 700,
                                         "parentId": "c79nhhvksf"
                                     }
                                 ],
@@ -11446,7 +11410,7 @@
                                 "leftColumn": 7,
                                 "rightColumn": 64,
                                 "topRow": 7,
-                                "bottomRow": 87,
+                                "bottomRow": 75,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
@@ -11711,7 +11675,7 @@
                             },
                             {
                                 "width": 574,
-                                "height": 424,
+                                "height": 380,
                                 "canEscapeKeyClose": true,
                                 "animateLoading": true,
                                 "detachFromLayout": true,
@@ -11903,42 +11867,6 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "label": "Do you want to make this your main base?",
-                                                                "defaultSwitchState": false,
-                                                                "widgetName": "isSelectbase",
-                                                                "alignWidget": "LEFT",
-                                                                "version": 1,
-                                                                "isDisabled": "{{main.user.auth_module.user.info.user.role==='demo'}}",
-                                                                "animateLoading": true,
-                                                                "type": "SWITCH_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Switch",
-                                                                "key": "k1gnthh3cd",
-                                                                "iconSVG": "/static/media/icon.a3115bc1.svg",
-                                                                "widgetId": "ftr2of2zk7",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 8.78125,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 19,
-                                                                "bottomRow": 23,
-                                                                "parentId": "uonrdwcwbe",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isDisabled"
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Save",
                                                                 "buttonColor": "#3268a8",
@@ -11962,8 +11890,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 48,
                                                                 "rightColumn": 64,
-                                                                "topRow": 27,
-                                                                "bottomRow": 31,
+                                                                "topRow": 24,
+                                                                "bottomRow": 28,
                                                                 "parentId": "uonrdwcwbe",
                                                                 "dynamicPropertyPathList": [
                                                                     {
@@ -12017,8 +11945,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 23,
-                                                                "bottomRow": 27,
+                                                                "topRow": 19,
+                                                                "bottomRow": 23,
                                                                 "parentId": "uonrdwcwbe",
                                                                 "dynamicBindingPathList": [
                                                                     {
@@ -12060,11 +11988,11 @@
                                                 "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 6,
-                                                "bottomRow": 40,
+                                                "bottomRow": 36,
                                                 "parentId": "xa1x3jfrhs"
                                             }
                                         ],
-                                        "minHeight": 424,
+                                        "minHeight": 380,
                                         "widgetId": "xa1x3jfrhs",
                                         "renderMode": "CANVAS",
                                         "isLoading": false,
@@ -12073,7 +12001,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 261.9375,
                                         "topRow": 0,
-                                        "bottomRow": 420,
+                                        "bottomRow": 380,
                                         "parentId": "d39jsvu3os"
                                     }
                                 ],
@@ -12097,72 +12025,153 @@
                             },
                             {
                                 "isVisible": false,
-                                "text": "{{getIDbase.data.find(e=>e._id===Select1.selectedOptionValue).type}}",
-                                "fontSize": "PARAGRAPH",
-                                "fontStyle": "BOLD",
-                                "textAlign": "LEFT",
-                                "textColor": "#231F20",
-                                "truncateButtonColor": "#FFC13D",
-                                "widgetName": "type",
-                                "shouldTruncate": false,
-                                "overflow": "NONE",
-                                "version": 1,
+                                "backgroundColor": "",
+                                "widgetName": "Technical_variables",
+                                "containerStyle": "card",
+                                "borderColor": "#DD4B34",
+                                "borderWidth": "5",
+                                "borderRadius": "0",
+                                "boxShadow": "NONE",
                                 "animateLoading": true,
-                                "type": "TEXT_WIDGET",
-                                "hideCard": false,
-                                "displayName": "Text",
-                                "key": "mj2lzo7m7g",
-                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "cxhiiawhjv",
-                                "renderMode": "CANVAS",
-                                "isLoading": false,
-                                "parentColumnSpace": 15.640625,
-                                "parentRowSpace": 10,
-                                "leftColumn": 8,
-                                "rightColumn": 24,
-                                "topRow": 90,
-                                "bottomRow": 94,
-                                "parentId": "0",
-                                "dynamicBindingPathList": [
+                                "children": [
                                     {
-                                        "key": "text"
+                                        "isVisible": true,
+                                        "widgetName": "Canvas34",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "gbdqooj5d4",
+                                        "containerStyle": "none",
+                                        "canExtend": false,
+                                        "children": [
+                                            {
+                                                "isVisible": false,
+                                                "text": "{{getIDbase.data.find(e=>e._id===Select1.selectedOptionValue).type",
+                                                "fontSize": "PARAGRAPH",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#231F20",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "type",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "mj2lzo7m7g",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "cxhiiawhjv",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 15.640625,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 60,
+                                                "topRow": 0,
+                                                "bottomRow": 4,
+                                                "parentId": "l4lyly7y66",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": false,
+                                                "text": "{{Select1.selectedOptionLabel",
+                                                "fontSize": "PARAGRAPH",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#231F20",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "namebase",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "mj2lzo7m7g",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "ji1qybre0g",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 15.640625,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 58,
+                                                "topRow": 5,
+                                                "bottomRow": 9,
+                                                "parentId": "l4lyly7y66",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": false,
+                                                "text": "{{Select1.selectedOptionValue",
+                                                "fontSize": "PARAGRAPH",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#231F20",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "_id",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "mj2lzo7m7g",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "tmduj8ucj2",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 15.640625,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 60,
+                                                "topRow": 10,
+                                                "bottomRow": 14,
+                                                "parentId": "l4lyly7y66",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            }
+                                        ],
+                                        "minHeight": 400,
+                                        "widgetId": "l4lyly7y66",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 469.5,
+                                        "topRow": 0,
+                                        "bottomRow": 390,
+                                        "parentId": "j2rev8eizw"
                                     }
                                 ],
-                                "dynamicTriggerPathList": []
-                            },
-                            {
-                                "isVisible": false,
-                                "text": "{{Select1.selectedOptionLabel}}",
-                                "fontSize": "PARAGRAPH",
-                                "fontStyle": "BOLD",
-                                "textAlign": "LEFT",
-                                "textColor": "#231F20",
-                                "truncateButtonColor": "#FFC13D",
-                                "widgetName": "namebase",
-                                "shouldTruncate": false,
-                                "overflow": "NONE",
                                 "version": 1,
-                                "animateLoading": true,
-                                "type": "TEXT_WIDGET",
+                                "classStyle": "",
+                                "type": "CONTAINER_WIDGET",
                                 "hideCard": false,
-                                "displayName": "Text",
-                                "key": "mj2lzo7m7g",
-                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "ji1qybre0g",
+                                "displayName": "Container",
+                                "key": "urvsrb8rhm",
+                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                "isCanvas": true,
+                                "widgetId": "j2rev8eizw",
                                 "renderMode": "CANVAS",
                                 "isLoading": false,
-                                "parentColumnSpace": 15.640625,
+                                "parentColumnSpace": 19.5625,
                                 "parentRowSpace": 10,
-                                "leftColumn": 8,
-                                "rightColumn": 24,
-                                "topRow": 95,
-                                "bottomRow": 99,
+                                "leftColumn": 7,
+                                "rightColumn": 34,
+                                "topRow": 80,
+                                "bottomRow": 109,
                                 "parentId": "0",
-                                "dynamicBindingPathList": [
-                                    {
-                                        "key": "text"
-                                    }
-                                ],
+                                "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": []
                             }
                         ],
@@ -12173,7 +12182,6 @@
                     },
                     "widgetNames": [
                         "MainContainer",
-                        "_id",
                         "Modal8",
                         "Canvas24CopyCopy1",
                         "IconButton2CopyCopy1",
@@ -12243,7 +12251,7 @@
                         "Canvas29",
                         "Select1",
                         "Input1",
-                        "IconButton3Copy",
+                        "ButtonsTraining",
                         "Modal4",
                         "Canvas24",
                         "IconButton2",
@@ -12260,11 +12268,13 @@
                         "Canvas33",
                         "name_knowledgebase",
                         "type_knowledgebase",
-                        "isSelectbase",
                         "Button18",
                         "Text14",
+                        "Technical_variables",
+                        "Canvas34",
                         "type",
-                        "namebase"
+                        "namebase",
+                        "_id"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -12320,6 +12330,17 @@
                                 "pluginType": "API",
                                 "jsonPathKeys": [],
                                 "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "65dc96a061e490d750173baf",
+                                "id": "65dc96a061e490d750173baf",
+                                "confirmBeforeExecute": false,
+                                "name": "getAllBases",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
+                                ],
+                                "timeoutInMillisecond": 10000
                             }
                         ]
                     ],
@@ -12362,7 +12383,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1370,
+                        "bottomRow": 1400,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -12396,8 +12417,8 @@
                                 "parentRowSpace": 10,
                                 "leftColumn": 13,
                                 "rightColumn": 29,
-                                "topRow": 109,
-                                "bottomRow": 113,
+                                "topRow": 114,
+                                "bottomRow": 118,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
@@ -13091,9 +13112,6 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customColumn1.isDisabled"
-                                                    },
-                                                    {
-                                                        "key": "primaryColumns.url.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -13193,23 +13211,6 @@
                                                         "buttonVariant": "TERTIARY",
                                                         "verticalAlignment": "LEFT",
                                                         "horizontalAlignment": "LEFT"
-                                                    },
-                                                    "url": {
-                                                        "index": 3,
-                                                        "width": 150,
-                                                        "id": "url",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "LEFT",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isDisabled": false,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "url",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.url))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -13260,7 +13261,7 @@
                                                         "horizontalAlignment": "LEFT"
                                                     }
                                                 },
-                                                "tableData": "{{main.URL.queryParams.typeBase !==\"chroma\" ? getVectors.data.matches.map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.metadata?.question,\n\t\tresult: e?.metadata?.result,\n\t\turl:e?.metadata?.url }\n\t\n}) :getVectors.data.metadatas[0].map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.question,\n\t\tresult: e?.result,\n\t\turl:e?.url }\n\t\n})\n}} ",
+                                                "tableData": "{{main.URL.queryParams.typeBase !==\"chroma\" ? getVectors.data.matches.filter(e => e.link == main.URL.queryParams.link).map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.metadata?.question,\n\t\tresult: e?.metadata?.result,\n\t\turl:e?.metadata?.url }\n\t\n}) : getVectors.data.metadatas[0].filter(e => e.link == main.URL.queryParams.link).map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.question,\n\t\tresult: e?.result,\n\t\turl:e?.url }\n\t\n})\n}} \n\n",
                                                 "columnSizeMap": {
                                                     "task": 245,
                                                     "step": 62,
@@ -13275,7 +13276,6 @@
                                                     "_id",
                                                     "question",
                                                     "result",
-                                                    "url",
                                                     "customColumn1",
                                                     "customColumn2"
                                                 ],
@@ -14062,8 +14062,8 @@
                                 "parentRowSpace": 10,
                                 "leftColumn": 0,
                                 "rightColumn": 64,
-                                "topRow": 115,
-                                "bottomRow": 135,
+                                "topRow": 118,
+                                "bottomRow": 138,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
@@ -14127,6 +14127,41 @@
                                     }
                                 ],
                                 "classStyle": "list"
+                            },
+                            {
+                                "isVisible": true,
+                                "text": "{{\ngetVectors.data.metadatas[0].filter(e => e.link == main.URL.queryParams.link)\n}}",
+                                "fontSize": "PARAGRAPH",
+                                "fontStyle": "BOLD",
+                                "textAlign": "LEFT",
+                                "textColor": "#231F20",
+                                "truncateButtonColor": "#FFC13D",
+                                "widgetName": "Text6",
+                                "shouldTruncate": false,
+                                "overflow": "SCROLL",
+                                "version": 1,
+                                "animateLoading": true,
+                                "type": "TEXT_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Text",
+                                "key": "iuwktdbvzd",
+                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                "widgetId": "z2fp9i0nrj",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 20.171875,
+                                "parentRowSpace": 10,
+                                "leftColumn": 28,
+                                "rightColumn": 56,
+                                "topRow": 82,
+                                "bottomRow": 111,
+                                "parentId": "0",
+                                "dynamicBindingPathList": [
+                                    {
+                                        "key": "text"
+                                    }
+                                ],
+                                "dynamicTriggerPathList": []
                             }
                         ],
                         "snapRows": 60,
@@ -14167,7 +14202,8 @@
                         "Text3",
                         "Text4",
                         "IconButton1",
-                        "IconButton2"
+                        "IconButton2",
+                        "Text6"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -14226,7 +14262,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1220,
+                        "bottomRow": 1060,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -16840,37 +16876,6 @@
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
                                 "shouldScrollContents": true
-                            },
-                            {
-                                "isVisible": true,
-                                "text": "",
-                                "fontSize": "PARAGRAPH",
-                                "fontStyle": "BOLD",
-                                "textAlign": "LEFT",
-                                "textColor": "#231F20",
-                                "truncateButtonColor": "#FFC13D",
-                                "widgetName": "Text17",
-                                "shouldTruncate": false,
-                                "overflow": "NONE",
-                                "version": 1,
-                                "animateLoading": true,
-                                "type": "TEXT_WIDGET",
-                                "hideCard": false,
-                                "displayName": "Text",
-                                "key": "vpapxsnerw",
-                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "q6y4n2x1t7",
-                                "renderMode": "CANVAS",
-                                "isLoading": false,
-                                "parentColumnSpace": 13.21875,
-                                "parentRowSpace": 10,
-                                "leftColumn": 10,
-                                "rightColumn": 26,
-                                "topRow": 107,
-                                "bottomRow": 120,
-                                "parentId": "0",
-                                "dynamicBindingPathList": [],
-                                "dynamicTriggerPathList": []
                             }
                         ],
                         "snapRows": 60,
@@ -16953,8 +16958,7 @@
                         "Canvas27",
                         "Image2",
                         "Text2",
-                        "Text16",
-                        "Text17"
+                        "Text16"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -17057,7 +17061,7 @@
                         "snapColumns": 64,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 2860,
+                        "bottomRow": 2890,
                         "parentRowSpace": 1,
                         "type": "CANVAS_WIDGET",
                         "detachFromLayout": true,
@@ -18431,7 +18435,7 @@
                                                                                 "dynamicTriggerPathList": [],
                                                                                 "labelStyle": "",
                                                                                 "classStyle": "select_input ",
-                                                                                "labelTextSize": "HEADING3"
+                                                                                "labelTextSize": "PARAGRAPH"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -18525,7 +18529,7 @@
                                                                                 ],
                                                                                 "dynamicTriggerPathList": [],
                                                                                 "placeholderText": "Type your Telegram bot token ",
-                                                                                "labelTextSize": "HEADING3"
+                                                                                "labelTextSize": "PARAGRAPH"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -18569,7 +18573,7 @@
                                                                                 "dynamicTriggerPathList": [],
                                                                                 "placeholderText": "Type your Telegram bot name ",
                                                                                 "maxChars": "",
-                                                                                "labelTextSize": "HEADING3",
+                                                                                "labelTextSize": "PARAGRAPH",
                                                                                 "tooltip": ""
                                                                             },
                                                                             {
@@ -20102,7 +20106,7 @@
                                 "leftColumn": 7,
                                 "rightColumn": 64,
                                 "topRow": 7,
-                                "bottomRow": 284,
+                                "bottomRow": 287,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
