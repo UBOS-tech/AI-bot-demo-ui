@@ -8886,11 +8886,11 @@
                                                         "children": [
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "\n\n\nAdd all the website URLs on which you want to train your bot.<a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n\n\n",
+                                                                "text": "\n\n\nAdd all the website URLs on which you want to train your bot.<a href=\"https://community.ubos.tech/vika/how-to-training-bot-by-different-types-of-source-46h9\" target=\"_blank\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n\n\n",
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#bbb",
+                                                                "textColor": "#777",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text4Copy1",
                                                                 "shouldTruncate": false,
@@ -8907,8 +8907,8 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 8.0693359375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 9,
-                                                                "rightColumn": 40,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 31,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "ihc06jbcex",
@@ -8976,6 +8976,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn2.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.source.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -9148,7 +9151,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": "true",
                                                                         "isDerived": true,
-                                                                        "label": "Delete",
+                                                                        "label": "",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#DD4B34",
@@ -9171,7 +9174,7 @@
                                                                         "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "View",
+                                                                        "label": "",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#3b82ff",
@@ -9179,7 +9182,7 @@
                                                                         "labelColor": "#FFFFFF",
                                                                         "iconName": "eye-open",
                                                                         "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Edit vectors'))}}",
-                                                                        "onClick": "{{\nnavigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\": Select1.selectedOptionLabel.split(' ')[0],\n\"link\": currentRow.url})\n}}",
+                                                                        "onClick": "{{\nnavigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\": Select1.selectedOptionLabel.split(' ')[0],\n\"source\": currentRow.url})\n}}",
                                                                         "borderRadius": "CIRCLE",
                                                                         "buttonVariant": "TERTIARY"
                                                                     },
@@ -9225,6 +9228,23 @@
                                                                         "iconName": "refresh",
                                                                         "onClick": "{{getKnowlegeFiles.run()}}",
                                                                         "buttonVariant": "TERTIARY"
+                                                                    },
+                                                                    "source": {
+                                                                        "index": 9,
+                                                                        "width": 150,
+                                                                        "id": "source",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "source",
+                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.source))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -9260,7 +9280,7 @@
                                                                         "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "View",
+                                                                        "label": "Vie",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#3b82ff",
@@ -9330,18 +9350,19 @@
                                                                     "vectors": 271
                                                                 },
                                                                 "columnOrder": [
-                                                                    "url",
-                                                                    "name",
-                                                                    "status",
-                                                                    "createdAt",
-                                                                    "customColumn2",
-                                                                    "customColumn1",
                                                                     "_id",
                                                                     "knowledgeBaseId",
+                                                                    "url",
                                                                     "type",
+                                                                    "name",
                                                                     "vectors",
-                                                                    "customColumn3",
+                                                                    "status",
                                                                     "deleted",
+                                                                    "createdAt",
+                                                                    "source",
+                                                                    "customColumn1",
+                                                                    "customColumn2",
+                                                                    "customColumn3",
                                                                     "customColumn4"
                                                                 ],
                                                                 "enableClientSideSearch": true,
@@ -9364,8 +9385,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 16,
-                                                                "bottomRow": 44,
+                                                                "topRow": 13,
+                                                                "bottomRow": 45,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicTriggerPathList": [
                                                                     {
@@ -9403,7 +9424,7 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "label": "Website URL",
+                                                                "label": "",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
                                                                 "labelWidth": "4",
@@ -9433,7 +9454,7 @@
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 36,
                                                                 "topRow": 4,
-                                                                "bottomRow": 12,
+                                                                "bottomRow": 9,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": [],
@@ -9466,8 +9487,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 36,
                                                                 "rightColumn": 45,
-                                                                "topRow": 7,
-                                                                "bottomRow": 12,
+                                                                "topRow": 4,
+                                                                "bottomRow": 9,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicBindingPathList": [
                                                                     {
@@ -9517,43 +9538,11 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 12,
-                                                                "bottomRow": 16,
+                                                                "topRow": 9,
+                                                                "bottomRow": 13,
                                                                 "parentId": "ihc06jbcex",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "Website URLs",
-                                                                "fontSize": "HEADING2",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text8",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "3gewu2rcrk",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "f8mc01q7wc",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.060546875,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 9,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
-                                                                "parentId": "ihc06jbcex",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": [],
-                                                                "classStyle": "icon"
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -9565,7 +9554,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 282.046875,
                                                         "topRow": 0,
-                                                        "bottomRow": 460,
+                                                        "bottomRow": 470,
                                                         "parentId": "mw49kdef9m",
                                                         "dynamicBindingPathList": [],
                                                         "dynamicTriggerPathList": []
@@ -9648,7 +9637,13 @@
                                                                         "key": "primaryColumns.customColumn1.isCellVisible"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.demo.computedValue"
+                                                                        "key": "derivedColumns.customColumn5.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn5.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.source.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -9870,10 +9865,33 @@
                                                                         "buttonVariant": "TERTIARY",
                                                                         "onClick": "{{showModal('Modal5')}}"
                                                                     },
-                                                                    "demo": {
-                                                                        "index": 7,
+                                                                    "customColumn5": {
+                                                                        "index": 13,
                                                                         "width": 150,
-                                                                        "id": "demo",
+                                                                        "id": "customColumn5",
+                                                                        "columnType": "iconButton",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": true,
+                                                                        "label": "",
+                                                                        "computedValue": "",
+                                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                                        "buttonColor": "#3b82ff",
+                                                                        "menuColor": "#03B365",
+                                                                        "labelColor": "#FFFFFF",
+                                                                        "iconName": "eye-open",
+                                                                        "buttonVariant": "TERTIARY",
+                                                                        "boxShadow": "NONE",
+                                                                        "borderRadius": "CIRCLE",
+                                                                        "onClick": "{{navigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\": Select1.selectedOptionLabel.split(' ')[0],\n\"source\": currentRow.source},)}}"
+                                                                    },
+                                                                    "source": {
+                                                                        "index": 10,
+                                                                        "width": 150,
+                                                                        "id": "source",
                                                                         "horizontalAlignment": "LEFT",
                                                                         "verticalAlignment": "CENTER",
                                                                         "columnType": "text",
@@ -9884,8 +9902,8 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": false,
-                                                                        "label": "demo",
-                                                                        "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.demo))}}"
+                                                                        "label": "source",
+                                                                        "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.source))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -9900,7 +9918,7 @@
                                                                         "isDisabled": true,
                                                                         "isCellVisible": "{{Table2.sanitizedTableData.map((currentRow) => ( appsmith.user.auth_module.user.info.user.role !== 'demo'))}}",
                                                                         "isDerived": true,
-                                                                        "label": "1",
+                                                                        "label": "🗑",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#DD4B34",
@@ -9921,7 +9939,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "4",
+                                                                        "label": "1",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#008080",
@@ -9930,6 +9948,29 @@
                                                                         "iconName": "changes",
                                                                         "buttonVariant": "TERTIARY",
                                                                         "onClick": "{{showModal('Modal5')}}"
+                                                                    },
+                                                                    "customColumn5": {
+                                                                        "index": 13,
+                                                                        "width": 150,
+                                                                        "id": "customColumn5",
+                                                                        "columnType": "iconButton",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": true,
+                                                                        "isDisabled": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.status === 'Source saved'))}}",
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": true,
+                                                                        "label": "👁",
+                                                                        "computedValue": "",
+                                                                        "buttonStyle": "rgb(3, 179, 101)",
+                                                                        "buttonColor": "#3b82ff",
+                                                                        "menuColor": "#03B365",
+                                                                        "labelColor": "#FFFFFF",
+                                                                        "iconName": "eye-open",
+                                                                        "buttonVariant": "TERTIARY",
+                                                                        "boxShadow": "NONE",
+                                                                        "borderRadius": "CIRCLE",
+                                                                        "onClick": "{{navigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": type.text,\n\t\"typeName\":namebase.text,\n\"source\": 'AAA-TETS-FILE-FIX-ME'},)}}"
                                                                     }
                                                                 },
                                                                 "tableData": "{{[...getKnowlegeFiles.data.sortdata.Files ,...getKnowlegeFiles.data.sortdata.FAQ]}}",
@@ -9941,10 +9982,12 @@
                                                                     "customColumn3": 60,
                                                                     "customColumn2": 60,
                                                                     "customColumn1": 60,
-                                                                    "totaCharacters": 228,
+                                                                    "totaCharacters": 164,
                                                                     "createdAt": 157,
                                                                     "file": 305,
-                                                                    "_id": 337
+                                                                    "_id": 337,
+                                                                    "source": 344,
+                                                                    "customColumn5": 60
                                                                 },
                                                                 "columnOrder": [
                                                                     "_id",
@@ -9954,10 +9997,11 @@
                                                                     "file",
                                                                     "vectors",
                                                                     "status",
-                                                                    "demo",
                                                                     "deleted",
                                                                     "createdAt",
                                                                     "totaCharacters",
+                                                                    "source",
+                                                                    "customColumn5",
                                                                     "customColumn1",
                                                                     "customColumn4"
                                                                 ],
@@ -9990,6 +10034,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn4.onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn5.onClick"
                                                                     }
                                                                 ],
                                                                 "dynamicPropertyPathList": [
@@ -10001,6 +10048,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn1.onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn5.isDisabled"
                                                                     }
                                                                 ]
                                                             },
@@ -10038,7 +10088,7 @@
                                                                 "valueRes": null,
                                                                 "classStyle": "",
                                                                 "textStyle": "HEADING",
-                                                                "uploadUrl": "{{main.env.nodeUrl}}/updateObjectsBase?id={{Select1.selectedOptionValue}}&typeBase={{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}}&nameBase={{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}}\n\n",
+                                                                "uploadUrl": "{{main.env.nodeUrl}}/updateObjectsBase?id={{Select1.selectedOptionValue}}&typeBase={{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}}&nameBase={{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}}\n",
                                                                 "validType": "",
                                                                 "textAlign": "CENTER",
                                                                 "response": null,
@@ -10090,11 +10140,11 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "\n\nAdd all the files on which you want to train your bot (.txt .pdf .xlsx)<a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432</span>\n    </a> \n\n",
+                                                                "text": "\n\nAdd all the files on which you want to train your bot (.txt .pdf .xlsx)<a href=\"https://community.ubos.tech/vika/how-to-training-bot-by-different-types-of-source-46h9\" target=\"_blank\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n\n",
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#bbb",
+                                                                "textColor": "#777",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text4",
                                                                 "shouldTruncate": false,
@@ -10111,39 +10161,8 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 8.0693359375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 4,
-                                                                "rightColumn": 37,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
-                                                                "parentId": "k2agajmtvu",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": []
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "Files",
-                                                                "fontSize": "HEADING2",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text10",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "3gewu2rcrk",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "ofz50p24e5",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.060546875,
-                                                                "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 4,
+                                                                "rightColumn": 33,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "k2agajmtvu",
@@ -10231,6 +10250,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.metadata.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.source.computedValue"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -10253,7 +10275,7 @@
                                                                         "labelColor": "#FFFFFF",
                                                                         "iconName": "eye-open",
                                                                         "buttonLabel": "{{Table5.sanitizedTableData.map((currentRow) => ( 'Edit'))}}",
-                                                                        "onClick": "{{\nnavigateTo('Vectors',{\"id\": Select1.selectedOptionValue,\n\"typeBase\": Select1.selectedOptionLabel.split(' ')[1], \"typeName\": Select1.selectedOptionLabel.split(' ')[0]})\n}}",
+                                                                        "onClick": "{{\nnavigateTo('Vectors',{\"id\": Select1.selectedOptionValue,\n\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\"typeName\": Select1.selectedOptionLabel.split(' ')[0],\n\"source\": currentRow.source})\n}}",
                                                                         "horizontalAlignment": "LEFT",
                                                                         "borderRadius": "CIRCLE",
                                                                         "buttonVariant": "TERTIARY"
@@ -10384,6 +10406,23 @@
                                                                         "isDerived": false,
                                                                         "label": "metadata",
                                                                         "computedValue": "{{Table5.sanitizedTableData.map((currentRow) => ( currentRow.metadata))}}"
+                                                                    },
+                                                                    "source": {
+                                                                        "index": 6,
+                                                                        "width": 150,
+                                                                        "id": "source",
+                                                                        "horizontalAlignment": "LEFT",
+                                                                        "verticalAlignment": "CENTER",
+                                                                        "columnType": "text",
+                                                                        "textSize": "PARAGRAPH",
+                                                                        "enableFilter": true,
+                                                                        "enableSort": true,
+                                                                        "isVisible": false,
+                                                                        "isDisabled": false,
+                                                                        "isCellVisible": true,
+                                                                        "isDerived": false,
+                                                                        "label": "source",
+                                                                        "computedValue": "{{Table5.sanitizedTableData.map((currentRow) => ( currentRow.source))}}"
                                                                     }
                                                                 },
                                                                 "derivedColumns": {
@@ -10398,7 +10437,7 @@
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
-                                                                        "label": "Question",
+                                                                        "label": "1",
                                                                         "computedValue": "",
                                                                         "buttonStyle": "rgb(3, 179, 101)",
                                                                         "buttonColor": "#3b82ff",
@@ -10441,19 +10480,20 @@
                                                                     "name": 130,
                                                                     "createdAt": 203,
                                                                     "customColumn1": 60,
-                                                                    "question": 466,
-                                                                    "result": 449,
+                                                                    "question": 536,
+                                                                    "result": 542,
                                                                     "customColumn2": 60
                                                                 },
                                                                 "columnOrder": [
+                                                                    "url",
                                                                     "question",
                                                                     "result",
-                                                                    "customColumn1",
-                                                                    "customColumn2",
-                                                                    "url",
                                                                     "id",
                                                                     "pinecone",
-                                                                    "metadata"
+                                                                    "metadata",
+                                                                    "source",
+                                                                    "customColumn1",
+                                                                    "customColumn2"
                                                                 ],
                                                                 "enableClientSideSearch": true,
                                                                 "isVisibleSearch": true,
@@ -10603,11 +10643,11 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "\n\nInput single Q&A to train your bot <a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n \n",
+                                                                "text": "\n\nInput single Q&A to train your bot <a href=\"https://community.ubos.tech/vika/how-to-training-bot-by-different-types-of-source-46h9\" target=\"_blank\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n \n",
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#bbb",
+                                                                "textColor": "#777",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text4Copy2",
                                                                 "shouldTruncate": false,
@@ -10624,39 +10664,8 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 8.0693359375,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 16,
-                                                                "rightColumn": 36,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
-                                                                "parentId": "lzfnfil2re",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": []
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "Frequently asked questions",
-                                                                "fontSize": "HEADING2",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text9",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "3gewu2rcrk",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "e6e58sveut",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 9.060546875,
-                                                                "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 16,
+                                                                "rightColumn": 20,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "lzfnfil2re",
@@ -10798,43 +10807,11 @@
                                                             },
                                                             {
                                                                 "isVisible": true,
-                                                                "text": "Manually add text",
-                                                                "fontSize": "HEADING2",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text11",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "5hkomt4oi1",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "9u78m6fqh8",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 7.76953125,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 11,
-                                                                "topRow": 0,
-                                                                "bottomRow": 4,
-                                                                "parentId": "r8gv8x6gwm",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": [],
-                                                                "classStyle": "title"
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "\nWrite or copy and paste text <a href=\"#\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n",
+                                                                "text": "\nWrite or copy and paste text <a href=\"https://community.ubos.tech/vika/how-to-training-bot-by-different-types-of-source-46h9\" target=\"_blank\" style=\"text-decoration: none;\"> <span >&#9432;</span>\n    </a> \n",
                                                                 "fontSize": "PARAGRAPH",
                                                                 "fontStyle": "BOLD",
                                                                 "textAlign": "LEFT",
-                                                                "textColor": "#bbb",
+                                                                "textColor": "#777",
                                                                 "truncateButtonColor": "#FFC13D",
                                                                 "widgetName": "Text12",
                                                                 "shouldTruncate": false,
@@ -10851,52 +10828,13 @@
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 7.76953125,
                                                                 "parentRowSpace": 10,
-                                                                "leftColumn": 11,
-                                                                "rightColumn": 28,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 17,
                                                                 "topRow": 0,
                                                                 "bottomRow": 4,
                                                                 "parentId": "r8gv8x6gwm",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "iconName": "eye-open",
-                                                                "borderRadius": "CIRCLE",
-                                                                "boxShadow": "NONE",
-                                                                "buttonColor": "#3366FF",
-                                                                "buttonVariant": "SECONDARY",
-                                                                "isDisabled": false,
-                                                                "widgetName": "IconButton5",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "ICON_BUTTON_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Icon Button",
-                                                                "key": "tnj5z2n687",
-                                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
-                                                                "widgetId": "y3qb4fxjsm",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 13.137939453125,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 48,
-                                                                "rightColumn": 52,
-                                                                "topRow": 0,
-                                                                "bottomRow": 5,
-                                                                "parentId": "r8gv8x6gwm",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ],
-                                                                "onClick": "{{\nnavigateTo('Vectors',{'id': Select1.selectedOptionValue,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\": Select1.selectedOptionLabel.split(' ')[0]},)\n}}",
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -11230,7 +11168,7 @@
                                                                         "isDisabled": "{{currentRow.status === 'Source saved'}}",
                                                                         "index": 0,
                                                                         "menuItems": {},
-                                                                        "onClick": "{{navigateTo('Vectors',{'id': Select1.selectedOptionValue,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\":Select1.selectedOptionLabel.split(' ')[0]},'SAME_WINDOW')}}"
+                                                                        "onClick": "{{navigateTo('Vectors',{'id': Select1.selectedOptionValue,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\":Select1.selectedOptionLabel.split(' ')[0],\n\t\"source\": 'ALL'},'SAME_WINDOW')}}"
                                                                     },
                                                                     "groupButton2": {
                                                                         "label": "",
@@ -12223,26 +12161,21 @@
                         "link",
                         "Button3",
                         "Divider2",
-                        "Text8",
                         "Canvas19",
                         "Table2",
                         "Divider3",
                         "FileSender2",
                         "Text4",
-                        "Text10",
                         "Canvas28",
                         "Table5",
                         "manualques",
                         "manualanswer",
                         "Divider6",
                         "Text4Copy2",
-                        "Text9",
                         "Button14",
                         "Canvas30",
                         "Button14Copy",
-                        "Text11",
                         "Text12",
-                        "IconButton5",
                         "RichTextEditor1",
                         "Canvas32",
                         "Text13",
@@ -13093,15 +13026,6 @@
                                                         "key": "tableData"
                                                     },
                                                     {
-                                                        "key": "primaryColumns._id.computedValue"
-                                                    },
-                                                    {
-                                                        "key": "primaryColumns.question.computedValue"
-                                                    },
-                                                    {
-                                                        "key": "primaryColumns.result.computedValue"
-                                                    },
-                                                    {
                                                         "key": "derivedColumns.customColumn2.isDisabled"
                                                     },
                                                     {
@@ -13112,60 +13036,21 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customColumn1.isDisabled"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns._id.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.question.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.result.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.url.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
-                                                    "_id": {
-                                                        "index": 0,
-                                                        "width": 150,
-                                                        "id": "_id",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "LEFT",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": false,
-                                                        "isDisabled": false,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "_id",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
-                                                    },
-                                                    "question": {
-                                                        "index": 1,
-                                                        "width": 150,
-                                                        "id": "question",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "LEFT",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isDisabled": false,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "question",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.question))}}"
-                                                    },
-                                                    "result": {
-                                                        "index": 2,
-                                                        "width": 150,
-                                                        "id": "result",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "LEFT",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isDisabled": false,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "result",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.result))}}"
-                                                    },
                                                     "customColumn1": {
                                                         "index": 4,
                                                         "width": 150,
@@ -13211,6 +13096,74 @@
                                                         "buttonVariant": "TERTIARY",
                                                         "verticalAlignment": "LEFT",
                                                         "horizontalAlignment": "LEFT"
+                                                    },
+                                                    "_id": {
+                                                        "index": 0,
+                                                        "width": 150,
+                                                        "id": "_id",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "LEFT",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "_id",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
+                                                    },
+                                                    "question": {
+                                                        "index": 1,
+                                                        "width": 150,
+                                                        "id": "question",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "LEFT",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "question",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.question))}}"
+                                                    },
+                                                    "result": {
+                                                        "index": 2,
+                                                        "width": 150,
+                                                        "id": "result",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "LEFT",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "result",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.result))}}"
+                                                    },
+                                                    "url": {
+                                                        "index": 3,
+                                                        "width": 150,
+                                                        "id": "url",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "LEFT",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "url",
+                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.url))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -13261,7 +13214,7 @@
                                                         "horizontalAlignment": "LEFT"
                                                     }
                                                 },
-                                                "tableData": "{{main.URL.queryParams.typeBase !==\"chroma\" ? getVectors.data.matches.filter(e => e.link == main.URL.queryParams.link).map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.metadata?.question,\n\t\tresult: e?.metadata?.result,\n\t\turl:e?.metadata?.url }\n\t\n}) : getVectors.data.metadatas[0].filter(e => e.link == main.URL.queryParams.link).map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.question,\n\t\tresult: e?.result,\n\t\turl:e?.url }\n\t\n})\n}} \n\n",
+                                                "tableData": "{{main.URL.queryParams.typeBase !==\"chroma\" ? getVectors.data.matches.map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.metadata?.question,\n\t\tresult: e?.metadata?.result,\n\t\turl:e?.metadata?.url }\n\t\n}) :getVectors.data.metadatas[0].map(e=>{\nreturn {_id:e?.id,\n\t\tquestion: e?.question,\n\t\tresult: e?.result,\n\t\turl:e?.url }\n})\n}}",
                                                 "columnSizeMap": {
                                                     "task": 245,
                                                     "step": 62,
@@ -13276,6 +13229,7 @@
                                                     "_id",
                                                     "question",
                                                     "result",
+                                                    "url",
                                                     "customColumn1",
                                                     "customColumn2"
                                                 ],
@@ -14127,41 +14081,6 @@
                                     }
                                 ],
                                 "classStyle": "list"
-                            },
-                            {
-                                "isVisible": true,
-                                "text": "{{\ngetVectors.data.metadatas[0].filter(e => e.link == main.URL.queryParams.link)\n}}",
-                                "fontSize": "PARAGRAPH",
-                                "fontStyle": "BOLD",
-                                "textAlign": "LEFT",
-                                "textColor": "#231F20",
-                                "truncateButtonColor": "#FFC13D",
-                                "widgetName": "Text6",
-                                "shouldTruncate": false,
-                                "overflow": "SCROLL",
-                                "version": 1,
-                                "animateLoading": true,
-                                "type": "TEXT_WIDGET",
-                                "hideCard": false,
-                                "displayName": "Text",
-                                "key": "iuwktdbvzd",
-                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                "widgetId": "z2fp9i0nrj",
-                                "renderMode": "CANVAS",
-                                "isLoading": false,
-                                "parentColumnSpace": 20.171875,
-                                "parentRowSpace": 10,
-                                "leftColumn": 28,
-                                "rightColumn": 56,
-                                "topRow": 82,
-                                "bottomRow": 111,
-                                "parentId": "0",
-                                "dynamicBindingPathList": [
-                                    {
-                                        "key": "text"
-                                    }
-                                ],
-                                "dynamicTriggerPathList": []
                             }
                         ],
                         "snapRows": 60,
@@ -14202,8 +14121,7 @@
                         "Text3",
                         "Text4",
                         "IconButton1",
-                        "IconButton2",
-                        "Text6"
+                        "IconButton2"
                     ],
                     "deleted": false,
                     "policies": [],

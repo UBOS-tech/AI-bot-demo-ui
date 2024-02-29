@@ -6615,7 +6615,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-26T07:44:29.057Z",
-        "updatedAt": "2024-02-27T14:41:24.238Z",
+        "updatedAt": "2024-02-29T09:31:04.449Z",
         "deleted": false,
         "policies": [
             {
@@ -6838,6 +6838,10 @@
                     {
                         "key": "typeName",
                         "value": "{{main.URL.queryParams.typeName}}"
+                    },
+                    {
+                        "key": "source",
+                        "value": "{{main.URL.queryParams.source}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -6863,6 +6867,9 @@
                 },
                 {
                     "key": "queryParameters[2].value"
+                },
+                {
+                    "key": "queryParameters[3].value"
                 }
             ],
             "isValid": true,
@@ -6871,13 +6878,14 @@
                 "main.env.nodeUrl",
                 "main.URL.queryParams.id",
                 "main.URL.queryParams.typeBase",
-                "main.URL.queryParams.typeName"
+                "main.URL.queryParams.typeName",
+                "main.URL.queryParams.source"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:11:20.546Z",
-        "updatedAt": "2024-02-27T15:27:59.757Z",
+        "updatedAt": "2024-02-29T11:29:01.711Z",
         "deleted": false,
         "policies": [
             {
@@ -7474,7 +7482,7 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"link\": {{JSON.stringify(\"manual\")}},\n\t\"name\": {{JSON.stringify(\"manual\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Manual\",\n\t\"result\": {{JSON.stringify(manualanswer.text)}},\n\t\"question\": {{JSON.stringify(manualques.text)}},\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
                     "apiContentType": "none"
@@ -7501,16 +7509,16 @@
                 "JSON.stringify(Select1.selectedOptionValue)",
                 "JSON.stringify(manualanswer.text)",
                 "JSON.stringify(manualques.text)",
-                "JSON.stringify(type.text)",
-                "JSON.stringify(Select1.selectedOptionLabel)",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
                 "appsmith.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,JSON.stringify(Select1.),2023-09-04T13:29:20.709Z,2024-02-19T13:16:50.444Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(Select1.selectedOptionValue),2023-09-04T13:29:20.709Z,2024-02-19T13:16:52.637Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2024-02-23T16:22:53.686Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2024-02-27T08:28:42.231Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
+                "main.env.nodeUrl,JSON.stringify(Select1.selectedOptionLabel.split(' ')[1]),2023-09-04T13:29:20.709Z,2024-02-29T15:25:58.984Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(,2023-09-04T13:29:20.709Z,2024-02-29T15:26:09.817Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2023-09-04T13:29:20.709Z,2024-02-29T15:26:10.751Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2024-02-29T15:26:11.802Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-09-04T13:29:20.709Z",
-        "updatedAt": "2024-02-27T08:28:43.749Z",
+        "updatedAt": "2024-02-29T15:26:14.811Z",
         "deleted": false,
         "policies": [
             {
@@ -7761,7 +7769,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-12T13:23:29.623Z",
-        "updatedAt": "2024-02-28T09:11:18.788Z",
+        "updatedAt": "2024-02-29T13:24:26.943Z",
         "deleted": false,
         "policies": [
             {
@@ -9406,10 +9414,10 @@
                     }
                 ],
                 "queryParameters": [],
-                "body": "{\n\t\"link\": {{JSON.stringify(\"text\")}},\n\t\"name\": {{JSON.stringify(\"myText\")}},\n\t\"id\": {{JSON.stringify( Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(type.text)}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel)}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
+                "body": "{\n\t\"link\": {{JSON.stringify(\"text\")}},\n\t\"name\": {{JSON.stringify(\"myText\")}},\n\t\"id\": {{JSON.stringify(Select1.selectedOptionValue)}},\n\t\"type\": \"Text\",\n\t\"typeBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])}},\n\t\"text\":{{JSON.stringify(RichTextEditor1.text)}},\n\t\"nameBase\":{{JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])}},\n\t\"email\": \"{{appsmith.user.auth_module.user.info.user.email}}\"\n}",
                 "bodyFormData": [],
                 "formData": {
-                    "apiContentType": "none"
+                    "apiContentType": "application/json"
                 },
                 "pluginSpecifiedTemplates": [
                     {
@@ -9431,17 +9439,17 @@
                 "main.env.nodeUrl",
                 "JSON.stringify(\"text\")",
                 "JSON.stringify(\"myText\")",
-                "JSON.stringify( Select1.selectedOptionValue)",
-                "JSON.stringify(type.text)",
+                "JSON.stringify(Select1.selectedOptionValue)",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
                 "JSON.stringify(RichTextEditor1.text)",
-                "JSON.stringify(Select1.selectedOptionLabel)",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
                 "appsmith.user.auth_module.user.info.user.email"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-11-01T13:21:05.761Z",
-        "updatedAt": "2024-02-27T08:28:39.487Z",
+        "updatedAt": "2024-02-29T16:51:29.774Z",
         "deleted": false,
         "policies": [
             {
