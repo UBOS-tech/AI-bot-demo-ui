@@ -9898,7 +9898,7 @@
                                                                         "textSize": "PARAGRAPH",
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
-                                                                        "isVisible": true,
+                                                                        "isVisible": false,
                                                                         "isDisabled": false,
                                                                         "isCellVisible": true,
                                                                         "isDerived": false,
@@ -9984,7 +9984,7 @@
                                                                     "customColumn1": 60,
                                                                     "totaCharacters": 164,
                                                                     "createdAt": 157,
-                                                                    "file": 305,
+                                                                    "file": 503,
                                                                     "_id": 337,
                                                                     "source": 344,
                                                                     "customColumn5": 60
@@ -10480,7 +10480,7 @@
                                                                     "name": 130,
                                                                     "createdAt": 203,
                                                                     "customColumn1": 60,
-                                                                    "question": 536,
+                                                                    "question": 548,
                                                                     "result": 542,
                                                                     "customColumn2": 60
                                                                 },
@@ -11182,7 +11182,7 @@
                                                                         "isDisabled": false,
                                                                         "index": 1,
                                                                         "menuItems": {},
-                                                                        "onClick": "{{getKnowlegeFiles.run()}}"
+                                                                        "onClick": "{{\ngetKnowlegeFiles.run();\n}}"
                                                                     },
                                                                     "groupButton3": {
                                                                         "label": "",
@@ -11853,7 +11853,7 @@
                                                                     }
                                                                 ],
                                                                 "tooltip": "{{check_pinecone.data.settings.filledFields !==6 && type_knowledgebase.selectedOptionValue==='pinecone'? `Fill in the 'Pinecone Configuration'  on the page 'AI Setup'` :\"\"}}",
-                                                                "onClick": "{{createNewBase.run();getIDbase.run(); getKnowlegeFiles.run(); closeModal(\"Modal9\")}}",
+                                                                "onClick": "{{\ncreateNewBase.run();\ngetIDbase.run();\ngetKnowlegeFiles.run(); closeModal(\"Modal9\")\n}}",
                                                                 "borderRadius": "ROUNDED",
                                                                 "iconName": "add-to-artifact",
                                                                 "iconAlign": "left"
