@@ -9764,7 +9764,7 @@
                                                                         "onClick": "{{navigateTo('Vectors',{'id': currentRow._id,\n\t\"typeBase\": type.text,\n\t\"typeName\":namebase.text,\n\"source\": 'AAA-TETS-FILE-FIX-ME'},)}}"
                                                                     }
                                                                 },
-                                                                "tableData": "{{\ngetKnowlegeFiles.data.sortdata.Files.map(e => ({\n\t_id: e._id,\n\tfile: e.file,\n\tstatus: e.status,\n\tcreatedAt: e.createdAt,\n\ttotalCharacters: e.totaCharacters,\n\tsource: e.source,\n}))\n}}",
+                                                                "tableData": "{{\n[...getKnowlegeFiles.data.sortdata.Files ,...getKnowlegeFiles.data.sortdata.FAQ].map(e => ({\n\t_id: e._id,\n\tfile: e.file,\n\tstatus: e.status,\n\tcreatedAt: e.createdAt,\n\ttotalCharacters: e.totaCharacters,\n\tsource: e.source,\n}))\n}}",
                                                                 "columnSizeMap": {
                                                                     "task": 245,
                                                                     "step": 62,
