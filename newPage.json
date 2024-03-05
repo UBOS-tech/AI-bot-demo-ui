@@ -9396,7 +9396,7 @@
                                                                     }
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
-                                                                "onClick": "{{\nsaveLink.run(() => (getKnowlegeFiles.run(),showAlert(\"Successfully updated\",\"info\")), () => {})\n}}",
+                                                                "onClick": "{{\nsaveLink.run(() => (\n\tgetKnowlegeFiles.run(),\n\tshowAlert(\"Successfully updated\",\"info\"),\n\tresetWidget(\"link\",true)), () => {})\n}}",
                                                                 "dynamicPropertyPathList": [
                                                                     {
                                                                         "key": "onClick"
