@@ -9108,27 +9108,6 @@
                                                                         "buttonVariant": "TERTIARY",
                                                                         "onClick": "{{showModal('Modal4')}}"
                                                                     },
-                                                                    "customColumn4": {
-                                                                        "index": 12,
-                                                                        "width": 150,
-                                                                        "id": "customColumn4",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#215484",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "refresh",
-                                                                        "onClick": "{{getKnowlegeFiles.run()}}",
-                                                                        "buttonVariant": "TERTIARY"
-                                                                    },
                                                                     "source": {
                                                                         "index": 9,
                                                                         "width": 150,
@@ -9210,27 +9189,6 @@
                                                                         "borderRadius": "CIRCLE",
                                                                         "buttonVariant": "PRIMARY",
                                                                         "onClick": "{{showModal('Modal4')}}"
-                                                                    },
-                                                                    "customColumn4": {
-                                                                        "index": 12,
-                                                                        "width": 150,
-                                                                        "id": "customColumn4",
-                                                                        "columnType": "iconButton",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": true,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": true,
-                                                                        "label": "Update",
-                                                                        "computedValue": "",
-                                                                        "buttonStyle": "rgb(3, 179, 101)",
-                                                                        "buttonColor": "#215484",
-                                                                        "menuColor": "#03B365",
-                                                                        "labelColor": "#FFFFFF",
-                                                                        "iconName": "refresh",
-                                                                        "onClick": "{{getKnowlegeFiles.run()}}",
-                                                                        "buttonVariant": "TERTIARY"
                                                                     }
                                                                 },
                                                                 "tableData": "{{\ngetKnowlegeFiles.data.sortdata.Link.map(e => ({\n\t_id: e._id,\n\turl: e.url,\n\tstatus: e.status,\n\tcreatedAt: e.createdAt,\n\tsource: e.source,\n}))\n}}",
@@ -9256,7 +9214,6 @@
                                                                     "createdAt",
                                                                     "source",
                                                                     "customColumn2",
-                                                                    "customColumn4",
                                                                     "customColumn1",
                                                                     "customColumn3"
                                                                 ],
@@ -9292,17 +9249,11 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn3.onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn4.onClick"
                                                                     }
                                                                 ],
                                                                 "dynamicPropertyPathList": [
                                                                     {
                                                                         "key": "primaryColumns.customColumn2.isDisabled"
-                                                                    },
-                                                                    {
-                                                                        "key": "primaryColumns.customColumn4.onClick"
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn3.onClick"
