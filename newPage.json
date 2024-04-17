@@ -5921,37 +5921,6 @@
                                                                 "parentId": "r0mubwvbtz",
                                                                 "dynamicBindingPathList": [],
                                                                 "dynamicTriggerPathList": []
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "dev",
-                                                                "fontSize": "PARAGRAPH",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text2",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "w9q3m4wdht",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "3mu6tn80x5",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 11.765625,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 1,
-                                                                "rightColumn": 17,
-                                                                "topRow": 2,
-                                                                "bottomRow": 6,
-                                                                "parentId": "r0mubwvbtz",
-                                                                "dynamicBindingPathList": [],
-                                                                "dynamicTriggerPathList": []
                                                             }
                                                         ],
                                                         "widgetId": "r0mubwvbtz",
@@ -6033,8 +6002,7 @@
                         "Canvas1",
                         "Text1",
                         "Button1",
-                        "Image1",
-                        "Text2"
+                        "Image1"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -10740,7 +10708,7 @@
                                                                 "options": "{{getAllBases.data.map(e=>{\nreturn{\n\t \"label\": e.name +\" \"+ e.type,\n    \"value\": e._id\n}})}}",
                                                                 "serverSideFiltering": false,
                                                                 "widgetName": "Select1",
-                                                                "defaultOptionValue": "{{getAllBases.data[0]}}",
+                                                                "defaultOptionValue": "{{getAllBases.data.find(e=>e.select === true) ? getAllBases.data.find(e=>e.select === true) : getAllBases.data[0]}}",
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
@@ -11457,8 +11425,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 10,
-                                                                "bottomRow": 19,
+                                                                "topRow": 9,
+                                                                "bottomRow": 17,
                                                                 "parentId": "uonrdwcwbe",
                                                                 "dynamicBindingPathList": [
                                                                     {
@@ -11528,7 +11496,7 @@
                                                                     }
                                                                 ],
                                                                 "tooltip": "{{check_pinecone.data.settings.filledFields !==6 && type_knowledgebase.selectedOptionValue==='pinecone'? `Fill in the 'Pinecone Configuration'  on the page 'AI Setup'` :\"\"}}",
-                                                                "onClick": "{{\ncreateNewBase.run();\ngetIDbase.run();\ngetKnowlegeFiles.run(); closeModal(\"Modal9\")\n}}",
+                                                                "onClick": "{{\ncreateNewBase.run(); getAllBases.run();\ngetIDbase.run();\ngetKnowlegeFiles.run(); closeModal(\"Modal9\")\n}}",
                                                                 "borderRadius": "ROUNDED",
                                                                 "iconName": "add-to-artifact",
                                                                 "iconAlign": "left"
@@ -11558,8 +11526,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 19,
-                                                                "bottomRow": 23,
+                                                                "topRow": 17,
+                                                                "bottomRow": 21,
                                                                 "parentId": "uonrdwcwbe",
                                                                 "dynamicBindingPathList": [
                                                                     {
