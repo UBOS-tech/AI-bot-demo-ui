@@ -5538,7 +5538,7 @@
                                                                 ]
                                                             },
                                                             {
-                                                                "isVisible": "{{ makeSetting.responseMeta.statusCode==='200' && !makeSetting.data.error && getMenu.data}}",
+                                                                "isVisible": "{{ makeSetting.responseMeta.statusCode==='200' && !makeSetting.data.error }}",
                                                                 "animateLoading": true,
                                                                 "text": "{{getMenu.data.allT.auth.goLogin}}",
                                                                 "buttonColor": "#3268a8",
