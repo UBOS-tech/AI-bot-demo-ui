@@ -5487,7 +5487,7 @@
                                                                 "classStyle": ""
                                                             },
                                                             {
-                                                                "isVisible": "{{ makeSetting.responseMeta.statusCode==='200' && !makeSetting.data.error && getMenu.data}}",
+                                                                "isVisible": "{{ makeSetting.responseMeta.statusCode==='200' && !makeSetting.data.error }}",
                                                                 "text": "{{getMenu.data.allT.auth.login}}: <span style=\"color:#3268a8;font-size:18px\">{{makeSetting.data.email ? makeSetting.data.email : getMenu.data.allT.auth.undefinedVal}}</span></br>{{getMenu.data.allT.auth.password}}:  <span style=\"color:#3268a8;font-size:18px\">{{makeSetting.data.password ? makeSetting.data.password : getMenu.data.allT.auth.undefinedVal}}</span>",
                                                                 "fontSize": "HEADING3",
                                                                 "fontStyle": "BOLD",
