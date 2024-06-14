@@ -5905,7 +5905,7 @@
                                                         "onClick": "{{storeValue(\"lg\",\"En\"); getMenu.run()}}"
                                                     },
                                                     "menuItem2": {
-                                                        "label": "     🇵🇹",
+                                                        "label": "     🇧🇷",
                                                         "id": "menuItem2",
                                                         "widgetId": "",
                                                         "isVisible": true,
