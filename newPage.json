@@ -9315,7 +9315,7 @@
                                                         "label": "{{main.user.auth_module.user.translation.training.sourceTypeWebsite}}",
                                                         "id": "tab1",
                                                         "widgetId": "ihc06jbcex",
-                                                        "isVisible": "{{check_pinecone.data.openai.filledFields ===2}}",
+                                                        "isVisible": "true",
                                                         "index": 0,
                                                         "isDuplicateLabel": false
                                                     },
@@ -9323,7 +9323,7 @@
                                                         "label": "{{main.user.auth_module.user.translation.training.sourceTypeFile}}",
                                                         "id": "tab2",
                                                         "widgetId": "k2agajmtvu",
-                                                        "isVisible": "{{check_pinecone.data.openai.filledFields ===2}}",
+                                                        "isVisible": "true",
                                                         "index": 1,
                                                         "isDuplicateLabel": false
                                                     },
@@ -9332,7 +9332,7 @@
                                                         "index": 2,
                                                         "label": "{{main.user.auth_module.user.translation.training.sourceTypeFAQ}}",
                                                         "widgetId": "lzfnfil2re",
-                                                        "isVisible": "{{check_pinecone.data.openai.filledFields ===2}}",
+                                                        "isVisible": "true",
                                                         "isDuplicateLabel": false
                                                     },
                                                     "tabwgdo1g4nzd": {
@@ -9340,15 +9340,7 @@
                                                         "index": 3,
                                                         "label": "{{main.user.auth_module.user.translation.training.instructionInsertText}}",
                                                         "widgetId": "r8gv8x6gwm",
-                                                        "isVisible": "{{check_pinecone.data.openai.filledFields ===2}}",
-                                                        "isDuplicateLabel": false
-                                                    },
-                                                    "tabcux66dsi0m": {
-                                                        "id": "tabcux66dsi0m",
-                                                        "index": 4,
-                                                        "label": "{{main.user.auth_module.user.translation.training.before}}",
-                                                        "widgetId": "zvt9xv98if",
-                                                        "isVisible": "{{check_pinecone.data.openai.filledFields !==2}}",
+                                                        "isVisible": "true",
                                                         "isDuplicateLabel": false
                                                     }
                                                 },
@@ -9789,7 +9781,7 @@
                                                                 "labelStyle": "",
                                                                 "resetOnSubmit": true,
                                                                 "isRequired": false,
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2}}",
                                                                 "animateLoading": true,
                                                                 "classStyle": "",
                                                                 "inputType": "TEXT",
@@ -9812,12 +9804,20 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "placeholderText"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "labelTextSize": "HEADING3",
                                                                 "placeholderText": "{{main.user.auth_module.user.translation.training.instructionEnterURL}}",
-                                                                "isSpellCheck": true
+                                                                "isSpellCheck": true,
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -9873,7 +9873,7 @@
                                                                         "key": "isDisabled"
                                                                     }
                                                                 ],
-                                                                "tooltip": "{{main.user.auth_module.user.translation.training.instructionFetchData}}",
+                                                                "tooltip": "{{check_pinecone.data.openai.filledFields !== 2 ? main.user.auth_module.user.translation.training.fillIn : main.user.auth_module.user.translation.training.instructionFetchData}}",
                                                                 "iconName": "add-to-artifact",
                                                                 "iconAlign": "left"
                                                             },
@@ -10284,8 +10284,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 16,
-                                                                "bottomRow": 44,
+                                                                "topRow": 19,
+                                                                "bottomRow": 47,
                                                                 "parentId": "k2agajmtvu",
                                                                 "dynamicTriggerPathList": [
                                                                     {
@@ -10337,8 +10337,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 64,
-                                                                "topRow": 12,
-                                                                "bottomRow": 16,
+                                                                "topRow": 15,
+                                                                "bottomRow": 19,
                                                                 "parentId": "k2agajmtvu"
                                                             },
                                                             {
@@ -10369,8 +10369,8 @@
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 31,
-                                                                "topRow": 4,
-                                                                "bottomRow": 11,
+                                                                "topRow": 8,
+                                                                "bottomRow": 15,
                                                                 "parentId": "k2agajmtvu",
                                                                 "uploadButtonText": "{{main.user.auth_module.user.translation.training.buttonSave}}",
                                                                 "dynamicBindingPathList": [
@@ -10434,6 +10434,49 @@
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": "{{check_pinecone.data.openai.filledFields !== 2}}",
+                                                                "text": "{{check_pinecone.data.openai.filledFields !== 2 && main.user.auth_module.user.translation.training.fillIn}}",
+                                                                "fontSize": "HEADING2",
+                                                                "fontStyle": "BOLD",
+                                                                "textAlign": "LEFT",
+                                                                "textColor": "#DD4B34",
+                                                                "truncateButtonColor": "#FFC13D",
+                                                                "widgetName": "Text15",
+                                                                "shouldTruncate": false,
+                                                                "overflow": "NONE",
+                                                                "version": 1,
+                                                                "animateLoading": true,
+                                                                "type": "TEXT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Text",
+                                                                "key": "lssx48upjd",
+                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                                "widgetId": "am22snwhy5",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 11.885498046875,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 31,
+                                                                "topRow": 4,
+                                                                "bottomRow": 8,
+                                                                "parentId": "k2agajmtvu",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "text"
+                                                                    },
+                                                                    {
+                                                                        "key": "isVisible"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isVisible"
+                                                                    }
+                                                                ]
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -10445,7 +10488,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 282.046875,
                                                         "topRow": 0,
-                                                        "bottomRow": 460,
+                                                        "bottomRow": 490,
                                                         "parentId": "mw49kdef9m",
                                                         "dynamicBindingPathList": [
                                                             {
@@ -10753,7 +10796,7 @@
                                                                 "labelStyle": "",
                                                                 "resetOnSubmit": true,
                                                                 "isRequired": false,
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2}}",
                                                                 "animateLoading": true,
                                                                 "classStyle": "",
                                                                 "inputType": "TEXT",
@@ -10779,12 +10822,20 @@
                                                                     },
                                                                     {
                                                                         "key": "placeholderText"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "labelTextSize": "HEADING3",
                                                                 "placeholderText": "{{main.user.auth_module.user.translation.training.instructionWriteQuestion}}",
-                                                                "isSpellCheck": false
+                                                                "isSpellCheck": false,
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -10800,7 +10851,7 @@
                                                                 "labelStyle": "",
                                                                 "resetOnSubmit": true,
                                                                 "isRequired": false,
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2}}",
                                                                 "animateLoading": true,
                                                                 "classStyle": "",
                                                                 "inputType": "TEXT",
@@ -10826,13 +10877,21 @@
                                                                     },
                                                                     {
                                                                         "key": "placeholderText"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "labelTextSize": "HEADING3",
                                                                 "maxChars": "",
                                                                 "placeholderText": "{{main.user.auth_module.user.translation.training.instructionWriteAnswer}}",
-                                                                "isSpellCheck": false
+                                                                "isSpellCheck": false,
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -10905,7 +10964,7 @@
                                                                 "buttonVariant": "SECONDARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button14",
-                                                                "isDisabled": "{{\nmanualques.text.length === 0 || manualanswer.text.length === 0 ||\nappsmith.user.auth_module.user.info.user.role ==='demo'\n}}",
+                                                                "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2 ||\nmanualques.text.length === 0 || manualanswer.text.length === 0 ||\nappsmith.user.auth_module.user.info.user.role ==='demo'\n}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -10925,7 +10984,7 @@
                                                                 "topRow": 13,
                                                                 "bottomRow": 17,
                                                                 "parentId": "lzfnfil2re",
-                                                                "tooltip": "{{main.user.auth_module.user.translation.training.instructionFetchData}}",
+                                                                "tooltip": "{{check_pinecone.data.openai.filledFields !== 2 ? main.user.auth_module.user.translation.training.fillIn : main.user.auth_module.user.translation.training.instructionFetchData}}",
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "isDisabled"
@@ -11013,7 +11072,7 @@
                                                                 "topRow": 0,
                                                                 "bottomRow": 5,
                                                                 "parentId": "r8gv8x6gwm",
-                                                                "tooltip": "{{main.user.auth_module.user.translation.training.instructionFetchData}}",
+                                                                "tooltip": "{{check_pinecone.data.openai.filledFields !== 2 ? main.user.auth_module.user.translation.training.fillIn : main.user.auth_module.user.translation.training.instructionFetchData}}",
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "isDisabled"
@@ -11092,7 +11151,7 @@
                                                                 "labelStyle": "",
                                                                 "resetOnSubmit": true,
                                                                 "isRequired": false,
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2}}",
                                                                 "animateLoading": true,
                                                                 "classStyle": "",
                                                                 "inputType": "TEXT",
@@ -11115,10 +11174,18 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "placeholderText"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
-                                                                "placeholderText": "{{getMenu.data.allT.training.instructionPutText}} "
+                                                                "placeholderText": "{{main.user.auth_module.user.translation.training.instructionPutText}} ",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ]
                                                             }
                                                         ],
                                                         "minHeight": 620,
@@ -11138,133 +11205,9 @@
                                                             }
                                                         ],
                                                         "dynamicTriggerPathList": []
-                                                    },
-                                                    {
-                                                        "isVisible": true,
-                                                        "widgetName": "Canvas32",
-                                                        "version": 1,
-                                                        "detachFromLayout": true,
-                                                        "type": "CANVAS_WIDGET",
-                                                        "hideCard": true,
-                                                        "displayName": "Canvas",
-                                                        "key": "wwearmuvzs",
-                                                        "tabId": "tabcux66dsi0m",
-                                                        "tabName": "{{getMenu.data.allT.training.before}}",
-                                                        "containerStyle": "none",
-                                                        "canExtend": false,
-                                                        "children": [
-                                                            {
-                                                                "isVisible": true,
-                                                                "text": "{{appsmith.user.auth_module.user.translation.training.fillIn}}",
-                                                                "fontSize": "HEADING1",
-                                                                "fontStyle": "BOLD",
-                                                                "textAlign": "CENTER",
-                                                                "textColor": "#2E3D49",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text13",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "NONE",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "hwchu279oy",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "rwhwzdbvxr",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 16.2734375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 1,
-                                                                "bottomRow": 12,
-                                                                "parentId": "zvt9xv98if",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "text"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": []
-                                                            },
-                                                            {
-                                                                "isVisible": true,
-                                                                "animateLoading": true,
-                                                                "text": "{{appsmith.user.auth_module.user.translation.training.goTo}}",
-                                                                "buttonColor": "#215484",
-                                                                "buttonVariant": "PRIMARY",
-                                                                "placement": "CENTER",
-                                                                "widgetName": "Button17",
-                                                                "isDisabled": false,
-                                                                "isDefaultClickDisabled": true,
-                                                                "recaptchaType": "V3",
-                                                                "version": 1,
-                                                                "classStyle": "",
-                                                                "type": "BUTTON_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Button",
-                                                                "key": "fkdx1z3vkr",
-                                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                                "widgetId": "xqnj3u5o1a",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 16.2734375,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 25,
-                                                                "rightColumn": 41,
-                                                                "topRow": 12,
-                                                                "bottomRow": 16,
-                                                                "parentId": "zvt9xv98if",
-                                                                "borderRadius": "ROUNDED",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "text"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ],
-                                                                "onClick": "{{navigateTo('AI Setup', {})}}"
-                                                            }
-                                                        ],
-                                                        "minHeight": 620,
-                                                        "widgetId": "zvt9xv98if",
-                                                        "renderMode": "CANVAS",
-                                                        "isLoading": false,
-                                                        "parentColumnSpace": 1,
-                                                        "parentRowSpace": 1,
-                                                        "leftColumn": 0,
-                                                        "rightColumn": 752.125,
-                                                        "topRow": 1,
-                                                        "bottomRow": 610,
-                                                        "parentId": "mw49kdef9m",
-                                                        "dynamicBindingPathList": [
-                                                            {
-                                                                "key": "tabName"
-                                                            }
-                                                        ],
-                                                        "dynamicTriggerPathList": []
                                                     }
                                                 ],
                                                 "dynamicBindingPathList": [
-                                                    {
-                                                        "key": "tabsObj.tabcux66dsi0m.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tab1.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tab2.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tabzk5phhc34h.isVisible"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tabwgdo1g4nzd.isVisible"
-                                                    },
                                                     {
                                                         "key": "tabsObj.tab1.label"
                                                     },
@@ -11276,9 +11219,6 @@
                                                     },
                                                     {
                                                         "key": "tabsObj.tabwgdo1g4nzd.label"
-                                                    },
-                                                    {
-                                                        "key": "tabsObj.tabcux66dsi0m.label"
                                                     }
                                                 ],
                                                 "dynamicTriggerPathList": [
@@ -11346,7 +11286,7 @@
                                                                 "version": 1,
                                                                 "isFilterable": true,
                                                                 "isRequired": false,
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2}}",
                                                                 "animateLoading": true,
                                                                 "type": "SELECT_WIDGET",
                                                                 "hideCard": false,
@@ -11372,6 +11312,9 @@
                                                                     },
                                                                     {
                                                                         "key": "labelText"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -11384,6 +11327,9 @@
                                                                 "dynamicPropertyPathList": [
                                                                     {
                                                                         "key": "onOptionChange"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ]
                                                             },
@@ -11445,7 +11391,7 @@
                                                                         "buttonType": "SIMPLE",
                                                                         "placement": "CENTER",
                                                                         "isVisible": true,
-                                                                        "isDisabled": "{{currentRow.status === 'Source saved'}}",
+                                                                        "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2|| currentRow.status === 'Source saved' }}",
                                                                         "index": 0,
                                                                         "menuItems": {},
                                                                         "onClick": "{{navigateTo('Vectors',{'id': Select1.selectedOptionValue,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\":Select1.selectedOptionLabel.split(' ')[0],\n\t\"source\": 'ALL'},'NEW_WINDOW')}}"
@@ -11459,7 +11405,7 @@
                                                                         "placement": "CENTER",
                                                                         "widgetId": "",
                                                                         "isVisible": true,
-                                                                        "isDisabled": false,
+                                                                        "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2}}",
                                                                         "index": 1,
                                                                         "menuItems": {},
                                                                         "onClick": "{{\ngetKnowlegeFiles.run();\n}}"
@@ -11537,6 +11483,9 @@
                                                                     },
                                                                     {
                                                                         "key": "groupButtons.groupButton1.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "groupButtons.groupButton2.isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -11560,6 +11509,9 @@
                                                                     },
                                                                     {
                                                                         "key": "groupButtons.groupButton1.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "groupButtons.groupButton2.isDisabled"
                                                                     }
                                                                 ]
                                                             }
@@ -12315,6 +12267,7 @@
                         "Divider3",
                         "FileSender2",
                         "Text4",
+                        "Text15",
                         "Canvas28",
                         "Table5",
                         "manualques",
@@ -12326,9 +12279,6 @@
                         "Button14Copy",
                         "Text12",
                         "RichTextEditor1",
-                        "Canvas32",
-                        "Text13",
-                        "Button17",
                         "Container5",
                         "Canvas29",
                         "Select1",
