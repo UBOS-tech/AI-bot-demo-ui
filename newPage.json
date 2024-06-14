@@ -5887,7 +5887,7 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
-                                                "label": "{{ \n  main.store.lg ? \n    (main.store.lg == 'Uk' ? '🇺🇦' : \n    main.store.lg == 'Pt' ? '🇵🇹' : \n    main.store.lg == 'Es' ? '🇪🇸' : '🇺🇸') \n  : '🇺🇸' \n}}\n",
+                                                "label": "{{ \n  main.store.lg ? \n    (main.store.lg == 'Uk' ? '🇺🇦' : \n    main.store.lg == 'Pt' ? '🇧🇷' : \n    main.store.lg == 'Es' ? '🇪🇸' : '🇺🇸') \n  : '🇺🇸' \n}}\n",
                                                 "menuColor": "",
                                                 "menuVariant": "SECONDARY",
                                                 "placement": "CENTER",

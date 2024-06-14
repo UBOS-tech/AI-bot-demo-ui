@@ -24860,7 +24860,7 @@
                                     "children": [
                                         {
                                             "isVisible": true,
-                                            "label": "{{ main.user.auth_module.user.translation.lang ? \n  (main.user.auth_module.user.translation.lang == 'uk' ? '🇺🇦' :\n  main.user.auth_module.user.translation.lang == 'pt' ? '🇵🇹' :\n  main.user.auth_module.user.translation.lang == 'es' ? '🇪🇸' : \n  '🇺🇸') : '🇺🇸' }}\n",
+                                            "label": "{{ main.user.auth_module.user.translation.lang ? \n  (main.user.auth_module.user.translation.lang == 'uk' ? '🇺🇦' :\n  main.user.auth_module.user.translation.lang == 'pt' ?  '🇧🇷' :\n  main.user.auth_module.user.translation.lang == 'es' ? '🇪🇸' : \n  '🇺🇸') : '🇺🇸' }}\n",
                                             "menuColor": "",
                                             "menuVariant": "SECONDARY",
                                             "placement": "CENTER",
