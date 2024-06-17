@@ -5887,7 +5887,7 @@
                                         "children": [
                                             {
                                                 "isVisible": true,
-                                                "label": "{{ \n  main.store.lg ? \n    (main.store.lg == 'Uk' ? '🇺🇦' : \n    main.store.lg == 'Pt' ? '🇧🇷' : \n    main.store.lg == 'Es' ? '🇪🇸' : '🇺🇸') \n  : '🇺🇸' \n}}\n",
+                                                "label": "{{ \n  main.store.lg ? \n    (main.store.lg == 'Uk' ? '🇺🇦' : \n\t\t main.store.lg == 'Fr' ? '🇫🇷' : \n    main.store.lg == 'Pt' ? '🇧🇷' : \n    main.store.lg == 'Es' ? '🇪🇸' : '🇺🇸') \n  : '🇺🇸' \n}}\n",
                                                 "menuColor": "",
                                                 "menuVariant": "SECONDARY",
                                                 "placement": "CENTER",
@@ -5930,6 +5930,15 @@
                                                         "isDisabled": false,
                                                         "isVisible": true,
                                                         "onClick": "{{storeValue(\"lg\",\"Uk\"); getMenu.run()}}"
+                                                    },
+                                                    "menuItemwya4udbvcn": {
+                                                        "id": "menuItemwya4udbvcn",
+                                                        "index": 4,
+                                                        "label": "     🇫🇷",
+                                                        "widgetId": "0hjznpr2mq",
+                                                        "isDisabled": false,
+                                                        "isVisible": true,
+                                                        "onClick": "{{storeValue(\"lg\",\"Fr\"); getMenu.run()}}"
                                                     }
                                                 },
                                                 "widgetName": "btn_translate",
@@ -5966,6 +5975,9 @@
                                                     },
                                                     {
                                                         "key": "menuItems.menuItem8jfdpsi8yy.onClick"
+                                                    },
+                                                    {
+                                                        "key": "menuItems.menuItemwya4udbvcn.onClick"
                                                     }
                                                 ],
                                                 "borderRadius": "ROUNDED",
@@ -5981,6 +5993,9 @@
                                                     },
                                                     {
                                                         "key": "menuItems.menuItem8jfdpsi8yy.onClick"
+                                                    },
+                                                    {
+                                                        "key": "menuItems.menuItemwya4udbvcn.onClick"
                                                     }
                                                 ],
                                                 "classStyle": "btn_translate"
