@@ -24786,7 +24786,7 @@
                         {
                             "isVisible": "{{main.user.auth_module.user.info.user.role==='demo'}}",
                             "animateLoading": true,
-                            "text": "Clone it!",
+                            "text": "Clone it! ",
                             "buttonColor": "#3b82ff",
                             "buttonVariant": "SECONDARY",
                             "placement": "CENTER",
@@ -24807,7 +24807,7 @@
                             "parentColumnSpace": 10.34716796875,
                             "parentRowSpace": 10,
                             "leftColumn": 10,
-                            "rightColumn": 26,
+                            "rightColumn": 29,
                             "topRow": 0,
                             "bottomRow": 7,
                             "parentId": "b8feb4cpvv",
@@ -24860,7 +24860,7 @@
                                     "children": [
                                         {
                                             "isVisible": true,
-                                            "label": "{{ main.user.auth_module.user.translation.lang ? \n  (main.user.auth_module.user.translation.lang == 'uk' ? '🇺🇦' :\n\t main.user.auth_module.user.translation.lang == 'Fr' ? '🇫🇷' :\n  main.user.auth_module.user.translation.lang == 'pt' ?  '🇧🇷' :\n  main.user.auth_module.user.translation.lang == 'es' ? '🇪🇸' : \n  '🇺🇸') : '🇺🇸' }}\n",
+                                            "label": "{{ main.user.auth_module.user.translation.lang ? \n  (main.user.auth_module.user.translation.lang == 'uk' ? '🇺🇦' :\n\t main.user.auth_module.user.translation.lang == 'fr' ? '🇫🇷' :\n  main.user.auth_module.user.translation.lang == 'pt' ?  '🇧🇷' :\n  main.user.auth_module.user.translation.lang == 'es' ? '🇪🇸' : \n  '🇺🇸') : '🇺🇸' }}\n",
                                             "menuColor": "",
                                             "menuVariant": "SECONDARY",
                                             "placement": "CENTER",

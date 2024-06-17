@@ -15709,7 +15709,7 @@
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
-                                                                                "text": "{{main.user.auth_module.user.translation.aiSetup.gptPromptConfig}} \n<span style=\"font-size: 14px; color: #999; font-weight: normal;\"></span>",
+                                                                                "text": "{{main.user.auth_module.user.translation.aiSetup.gptPromptConfig}} \n<span style=\"font-size: 14px; color: #999; font-weight: normal;\"></span> ",
                                                                                 "fontSize": "HEADING2",
                                                                                 "fontStyle": "BOLD",
                                                                                 "textAlign": "LEFT",
