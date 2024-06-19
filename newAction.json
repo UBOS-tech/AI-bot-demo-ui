@@ -6844,6 +6844,10 @@
                     {
                         "key": "source",
                         "value": "{{main.URL.queryParams.source}}"
+                    },
+                    {
+                        "key": "page",
+                        "value": "{{Table1.pageNo}}"
                     }
                 ],
                 "bodyFormData": [],
@@ -6872,6 +6876,9 @@
                 },
                 {
                     "key": "queryParameters[3].value"
+                },
+                {
+                    "key": "queryParameters[4].value"
                 }
             ],
             "isValid": true,
@@ -6881,13 +6888,14 @@
                 "main.URL.queryParams.id",
                 "main.URL.queryParams.typeBase",
                 "main.URL.queryParams.typeName",
-                "main.URL.queryParams.source"
+                "main.URL.queryParams.source",
+                "Table1.pageNo"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:11:20.546Z",
-        "updatedAt": "2024-02-29T11:29:01.711Z",
+        "updatedAt": "2024-06-18T16:07:12.550Z",
         "deleted": false,
         "policies": [
             {
@@ -6947,7 +6955,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\"question\": {{JSON.stringify(Input1.text)}},\n\"result\":{{JSON.stringify(Input2.text)}},\n\"url\": {{JSON.stringify(Table1.selectedRow.url)}},\n\"_id \": \"{{main.URL.queryParams.id}}\",\n\"id\":\"{{Table1.selectedRow._id}}\",\n\"typeBase\":{{JSON.stringify(main.URL.queryParams.typeBase)}},\n\"nameBase\":{{JSON.stringify(main.URL.queryParams.typeName)}}\n}"
+                "body": "{\n\"question\": {{JSON.stringify(Input1.text)}},\n\"result\":{{JSON.stringify(Input2.text)}},\n\"url\": {{JSON.stringify(Table1.selectedRow.url)}},\n\"_id \": \"{{main.URL.queryParams.id}}\",\n\"id\":\"{{Table1.selectedRow._id}}\",\n\"typeBase\":{{JSON.stringify(main.URL.queryParams.typeBase)}},\n\"nameBase\":{{JSON.stringify(main.URL.queryParams.typeName)}},\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -6967,13 +6975,14 @@
                 "main.URL.queryParams.id",
                 "Table1.selectedRow._id",
                 "JSON.stringify(main.URL.queryParams.typeBase)",
-                "JSON.stringify(main.URL.queryParams.typeName)"
+                "JSON.stringify(main.URL.queryParams.typeName)",
+                "Table1.selectedRow."
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:38:38.762Z",
-        "updatedAt": "2023-12-13T10:37:57.153Z",
+        "updatedAt": "2024-06-18T15:53:01.522Z",
         "deleted": false,
         "policies": [
             {

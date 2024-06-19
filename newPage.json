@@ -12631,7 +12631,7 @@
                                                         "key": "onClick"
                                                     }
                                                 ],
-                                                "onClick": "{{ updateVectors.run(() => (getVectors.run(), closeModal(\"Modal1\")), () => {})}}",
+                                                "onClick": "{{updateVectors.run(() => (getVectors.run(), closeModal(\"Modal1\")), () => {})}}",
                                                 "dynamicPropertyPathList": [],
                                                 "iconName": "automatic-updates",
                                                 "iconAlign": "left"
@@ -13144,7 +13144,7 @@
                                                 "textSize": "PARAGRAPH",
                                                 "horizontalAlignment": "LEFT",
                                                 "verticalAlignment": "LEFT",
-                                                "totalRecordsCount": 0,
+                                                "totalRecordsCount": "{{getVectors.data.totalCount}}",
                                                 "defaultPageSize": 0,
                                                 "isShowLoading": true,
                                                 "dynamicBindingPathList": [
@@ -13174,6 +13174,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.source.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "totalRecordsCount"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -13345,7 +13348,7 @@
                                                     "task": 245,
                                                     "step": 62,
                                                     "status": 75,
-                                                    "question": 564,
+                                                    "question": 577,
                                                     "result": 560,
                                                     "customColumn1": 65,
                                                     "url": 227,
@@ -13380,7 +13383,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
                                                 "topRow": 9,
-                                                "bottomRow": 65,
+                                                "bottomRow": 96,
                                                 "parentId": "9b9xktrtbb",
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -13388,6 +13391,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customColumn2.onClick"
+                                                    },
+                                                    {
+                                                        "key": "onPageChange"
                                                     }
                                                 ],
                                                 "dynamicPropertyPathList": [
@@ -13402,9 +13408,16 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customColumn1.isDisabled"
+                                                    },
+                                                    {
+                                                        "key": "onPageChange"
                                                     }
                                                 ],
-                                                "classStyle": "table_vectors"
+                                                "classStyle": "table_vectors",
+                                                "serverSidePaginationEnabled": true,
+                                                "onPageChange": "{{getVectors.run()}}",
+                                                "multiRowSelection": false,
+                                                "defaultSearchText": ""
                                             }
                                         ],
                                         "minHeight": 400,
@@ -13416,7 +13429,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 230.25,
                                         "topRow": 0,
-                                        "bottomRow": 670,
+                                        "bottomRow": 980,
                                         "parentId": "1hlu5abhkq"
                                     }
                                 ],
@@ -13436,7 +13449,7 @@
                                 "leftColumn": 7,
                                 "rightColumn": 64,
                                 "topRow": 9,
-                                "bottomRow": 77,
+                                "bottomRow": 108,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": []
