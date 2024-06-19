@@ -6975,14 +6975,13 @@
                 "main.URL.queryParams.id",
                 "Table1.selectedRow._id",
                 "JSON.stringify(main.URL.queryParams.typeBase)",
-                "JSON.stringify(main.URL.queryParams.typeName)",
-                "Table1.selectedRow."
+                "JSON.stringify(main.URL.queryParams.typeName)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-06-29T11:38:38.762Z",
-        "updatedAt": "2024-06-18T15:53:01.522Z",
+        "updatedAt": "2024-06-19T08:22:31.654Z",
         "deleted": false,
         "policies": [
             {
@@ -7521,15 +7520,15 @@
                 "JSON.stringify(manualanswer.text)",
                 "JSON.stringify(manualques.text)",
                 "JSON.stringify(Select1.selectedOptionLabel.split(' ')[1])",
+                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])",
                 "appsmith.user.auth_module.user.info.user.email",
-                "main.env.nodeUrl,JSON.stringify(Select1.selectedOptionLabel.split(' ')[1]),2023-09-04T13:29:20.709Z,2024-02-29T15:25:58.984Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(,2023-09-04T13:29:20.709Z,2024-02-29T15:26:09.817Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2023-09-04T13:29:20.709Z,2024-02-29T15:26:10.751Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2024-02-29T15:26:11.802Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl",
-                "JSON.stringify(Select1.selectedOptionLabel.split(' ')[0])"
+                "main.env.nodeUrl,JSON.stringify(,2023-09-04T13:29:20.709Z,2024-02-29T15:26:09.817Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(),2023-09-04T13:29:20.709Z,2024-02-29T15:26:10.751Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,2023-09-04T13:29:20.709Z,2024-02-29T15:26:11.802Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl,JSON.stringify(Select1.selectedOptionLabel.split(' ')[0]),2023-09-04T13:29:20.709Z,2024-02-29T15:26:14.811Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nodeUrl"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-09-04T13:29:20.709Z",
-        "updatedAt": "2024-02-29T15:26:14.811Z",
+        "updatedAt": "2024-06-19T08:20:27.788Z",
         "deleted": false,
         "policies": [
             {
@@ -7613,7 +7612,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-09-05T11:30:48.543Z",
-        "updatedAt": "2023-09-13T05:39:26.483Z",
+        "updatedAt": "2024-06-19T08:22:03.761Z",
         "deleted": false,
         "policies": [
             {
@@ -8991,7 +8990,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-25T18:21:16.418Z",
-        "updatedAt": "2024-02-27T08:24:41.972Z",
+        "updatedAt": "2024-06-19T08:21:54.063Z",
         "deleted": false,
         "policies": [
             {
@@ -9457,7 +9456,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-11-01T13:21:05.761Z",
-        "updatedAt": "2024-02-29T16:51:29.774Z",
+        "updatedAt": "2024-06-19T08:21:46.510Z",
         "deleted": false,
         "policies": [
             {
@@ -13241,14 +13240,13 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nodeUrl",
-                "main.store.",
                 "main.store.lg"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-05-27T19:22:45.864Z",
-        "updatedAt": "2024-05-27T19:23:05.920Z",
+        "updatedAt": "2024-06-19T08:22:47.390Z",
         "deleted": false,
         "policies": [
             {
@@ -14252,7 +14250,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-06-09T17:22:48.031Z",
-        "updatedAt": "2024-06-09T17:26:55.700Z",
+        "updatedAt": "2024-06-19T08:22:53.486Z",
         "deleted": false,
         "policies": [
             {
