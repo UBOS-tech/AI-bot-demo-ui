@@ -24772,7 +24772,7 @@
                             "parentColumnSpace": 13.9326171875,
                             "parentRowSpace": 10,
                             "leftColumn": 0,
-                            "rightColumn": 10,
+                            "rightColumn": 18,
                             "topRow": 0,
                             "bottomRow": 7,
                             "parentId": "b8feb4cpvv",
@@ -24806,8 +24806,8 @@
                             "isLoading": false,
                             "parentColumnSpace": 10.34716796875,
                             "parentRowSpace": 10,
-                            "leftColumn": 10,
-                            "rightColumn": 29,
+                            "leftColumn": 18,
+                            "rightColumn": 37,
                             "topRow": 0,
                             "bottomRow": 7,
                             "parentId": "b8feb4cpvv",
@@ -24875,7 +24875,7 @@
                                                     "isVisible": true,
                                                     "isDisabled": false,
                                                     "index": 0,
-                                                    "onClick": "{{storeValue(\"lg\",\"En\");Api1.run(() => navigateTo(main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ').toString(), {},'NEW_WINDOW'), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\",\"En\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right"
                                                 },
                                                 "menuItem2": {
@@ -24885,7 +24885,7 @@
                                                     "isVisible": true,
                                                     "isDisabled": false,
                                                     "index": 1,
-                                                    "onClick": "{{storeValue(\"lg\",\"Pt\");Api1.run(() => navigateTo(main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ').toString(), {},'NEW_WINDOW'), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\",\"Pt\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right"
                                                 },
                                                 "menuItem3": {
@@ -24895,7 +24895,7 @@
                                                     "isVisible": true,
                                                     "isDisabled": false,
                                                     "index": 2,
-                                                    "onClick": "{{storeValue(\"lg\",\"Es\");Api1.run(() => navigateTo(main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ').toString(), {},'NEW_WINDOW'), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\",\"Es\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right"
                                                 },
                                                 "menuItem8jfdpsi8yy": {
@@ -24905,7 +24905,7 @@
                                                     "widgetId": "1unn8j99hi",
                                                     "isDisabled": false,
                                                     "isVisible": true,
-                                                    "onClick": "{{storeValue(\"lg\", \"Uk\");Api1.run(() => navigateTo(main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ').toString(), {},'NEW_WINDOW'), () => {})}}",
+                                                    "onClick": "{{storeValue(\"lg\", \"Uk\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}",
                                                     "iconAlign": "right",
                                                     "backgroundColor": ""
                                                 },
@@ -24916,7 +24916,7 @@
                                                     "widgetId": "dgcgxzj3uv",
                                                     "isDisabled": false,
                                                     "isVisible": true,
-                                                    "onClick": "{{storeValue(\"lg\",\"Fr\");Api1.run(() => navigateTo(main.URL.fullPath.split('/').pop().split('?')[0].replace('%20', ' ').toString(), {},'NEW_WINDOW'), () => {})}}"
+                                                    "onClick": "{{storeValue(\"lg\",\"Fr\");Api1.run(() => navigateTo(main.URL.fullPath, {}), () => {})}}"
                                                 }
                                             },
                                             "widgetName": "btn_translate_copy",
