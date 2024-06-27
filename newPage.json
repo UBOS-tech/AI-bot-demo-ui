@@ -10746,18 +10746,18 @@
                                                 "widgetName": "Tabs1",
                                                 "animateLoading": true,
                                                 "tabsObj": {
-                                                    "tab1": {
-                                                        "label": "{{main.user.auth_module.user.translation.training.sourceTypeWebsite}}",
-                                                        "id": "tab1",
-                                                        "widgetId": "ihc06jbcex",
-                                                        "isVisible": "true",
-                                                        "index": 0,
-                                                        "isDuplicateLabel": false
-                                                    },
                                                     "tab2": {
                                                         "label": "{{main.user.auth_module.user.translation.training.sourceTypeFile}}",
                                                         "id": "tab2",
                                                         "widgetId": "k2agajmtvu",
+                                                        "isVisible": "true",
+                                                        "index": 0,
+                                                        "isDuplicateLabel": false
+                                                    },
+                                                    "tab1": {
+                                                        "label": "{{main.user.auth_module.user.translation.training.sourceTypeWebsite}}",
+                                                        "id": "tab1",
+                                                        "widgetId": "ihc06jbcex",
                                                         "isVisible": "true",
                                                         "index": 1,
                                                         "isDuplicateLabel": false
@@ -10898,6 +10898,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.source.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "derivedColumns.customColumn1.isDisabled"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -10982,7 +10985,7 @@
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
                                                                         "isVisible": true,
-                                                                        "isDisabled": false,
+                                                                        "isDisabled": "",
                                                                         "isCellVisible": "true",
                                                                         "isDerived": true,
                                                                         "label": "",
@@ -11069,7 +11072,7 @@
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
                                                                         "isVisible": true,
-                                                                        "isDisabled": false,
+                                                                        "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( check_pinecone.data.openai.totalFields !==2? true:false))}}",
                                                                         "isCellVisible": true,
                                                                         "isDerived": true,
                                                                         "label": "2",
@@ -11197,6 +11200,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn1.isCellVisible"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn1.isDisabled"
                                                                     }
                                                                 ],
                                                                 "multiRowSelection": false,
@@ -11431,6 +11437,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.source.computedValue"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn1.isDisabled"
                                                                     }
                                                                 ],
                                                                 "primaryColumns": {
@@ -11442,7 +11451,7 @@
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
                                                                         "isVisible": true,
-                                                                        "isDisabled": false,
+                                                                        "isDisabled": "{{Table2.sanitizedTableData.map((currentRow) => ( check_pinecone.data.openai.filledFields !== 2))}}",
                                                                         "isCellVisible": "{{Table2.sanitizedTableData.map((currentRow) => ( appsmith.user.auth_module.user.info.user.role !== 'demo'))}}",
                                                                         "isDerived": true,
                                                                         "label": "",
@@ -11613,7 +11622,7 @@
                                                                         "enableFilter": true,
                                                                         "enableSort": true,
                                                                         "isVisible": true,
-                                                                        "isDisabled": true,
+                                                                        "isDisabled": "{{Table2.sanitizedTableData.map((currentRow) => ( check_pinecone.data.openai.filledFields !== 2))}}",
                                                                         "isCellVisible": "{{Table2.sanitizedTableData.map((currentRow) => ( appsmith.user.auth_module.user.info.user.role !== 'demo'))}}",
                                                                         "isDerived": true,
                                                                         "label": "1",
@@ -11745,6 +11754,9 @@
                                                                     },
                                                                     {
                                                                         "key": "primaryColumns.customColumn5.isDisabled"
+                                                                    },
+                                                                    {
+                                                                        "key": "primaryColumns.customColumn1.isDisabled"
                                                                     }
                                                                 ]
                                                             },
@@ -12826,7 +12838,7 @@
                                                                         "buttonType": "SIMPLE",
                                                                         "placement": "CENTER",
                                                                         "isVisible": true,
-                                                                        "isDisabled": "{{check_pinecone.data.openai.filledFields !== 2|| currentRow.status === 'Source saved' }}",
+                                                                        "isDisabled": "",
                                                                         "index": 0,
                                                                         "menuItems": {},
                                                                         "onClick": "{{navigateTo('Vectors',{'id': Select1.selectedOptionValue,\n\t\"typeBase\": Select1.selectedOptionLabel.split(' ')[1],\n\t\"typeName\":Select1.selectedOptionLabel.split(' ')[0],\n\t\"source\": 'ALL'},'NEW_WINDOW')}}"
@@ -12915,9 +12927,6 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "groupButtons.groupButton3.isDisabled"
-                                                                    },
-                                                                    {
-                                                                        "key": "groupButtons.groupButton1.isDisabled"
                                                                     },
                                                                     {
                                                                         "key": "groupButtons.groupButton2.isDisabled"
@@ -14307,7 +14316,7 @@
                                                 "buttonVariant": "SECONDARY",
                                                 "placement": "CENTER",
                                                 "widgetName": "Button2",
-                                                "isDisabled": false,
+                                                "isDisabled": "{{check_openAi.data.openai.filledFields !==2}}",
                                                 "isDefaultClickDisabled": true,
                                                 "recaptchaType": "V3",
                                                 "version": 1,
@@ -14327,14 +14336,22 @@
                                                 "bottomRow": 39,
                                                 "parentId": "6vyn2fuzvn",
                                                 "borderRadius": "ROUNDED",
-                                                "dynamicBindingPathList": [],
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
                                                 "dynamicTriggerPathList": [
                                                     {
                                                         "key": "onClick"
                                                     }
                                                 ],
                                                 "onClick": "{{updateVectors.run(() => (getVectors.run(), closeModal(\"Modal1\")), () => {})}}",
-                                                "dynamicPropertyPathList": [],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isDisabled"
+                                                    }
+                                                ],
                                                 "iconName": "automatic-updates",
                                                 "iconAlign": "left"
                                             },
@@ -14890,7 +14907,7 @@
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
-                                                        "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.user.auth_module.user.info.user.role === 'demo'))}}",
+                                                        "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( (appsmith.user.auth_module.user.info.user.role === 'demo' ||check_openAi.data.openai.filledFields !==2)))}}",
                                                         "isCellVisible": true,
                                                         "isDerived": true,
                                                         "label": "",
@@ -15006,7 +15023,7 @@
                                                         "enableFilter": true,
                                                         "enableSort": true,
                                                         "isVisible": true,
-                                                        "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.user.auth_module.user.info.user.role === 'demo'))}}",
+                                                        "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( (appsmith.user.auth_module.user.info.user.role === 'demo' ||check_openAi.data.openai.filledFields !==2)))}}",
                                                         "isCellVisible": true,
                                                         "isDerived": true,
                                                         "label": "1",
@@ -15997,6 +16014,17 @@
                                     "main.env.nodeUrl",
                                     "main.store.",
                                     "main.store.lg"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "667dd99671b540ae7f98e35a",
+                                "id": "667dd99671b540ae7f98e35a",
+                                "confirmBeforeExecute": false,
+                                "name": "check_openAi",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.nodeUrl"
                                 ],
                                 "timeoutInMillisecond": 10000
                             }

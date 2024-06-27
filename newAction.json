@@ -8684,7 +8684,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-24T19:17:18.874Z",
-        "updatedAt": "2024-06-26T13:57:50.401Z",
+        "updatedAt": "2024-06-27T21:45:49.979Z",
         "deleted": false,
         "policies": [
             {
@@ -8905,7 +8905,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-25T18:21:16.418Z",
-        "updatedAt": "2024-06-19T08:21:54.063Z",
+        "updatedAt": "2024-06-27T21:28:33.067Z",
         "deleted": false,
         "policies": [
             {
@@ -16302,6 +16302,72 @@
         },
         "createdAt": "2024-06-26T14:44:28.750Z",
         "updatedAt": "2024-06-26T14:44:29.360Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "667dd99671b540ae7f98e35a",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "check_openAi",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/getAnalytics"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Vectors",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-06-27T21:28:54.984Z",
+        "updatedAt": "2024-06-27T21:53:40.722Z",
         "deleted": false,
         "policies": [
             {
