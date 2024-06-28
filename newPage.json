@@ -19140,8 +19140,8 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 12,
-                                                "bottomRow": 95,
+                                                "topRow": 9,
+                                                "bottomRow": 92,
                                                 "parentId": "zqhxiq1qo2",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [],
@@ -19271,42 +19271,6 @@
                                                 "parentId": "zqhxiq1qo2",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": []
-                                            },
-                                            {
-                                                "isVisible": true,
-                                                "text": "  {{main.user.auth_module.user.translation.aiSetup.botConfig}}",
-                                                "fontSize": "HEADING2",
-                                                "fontStyle": "BOLD",
-                                                "textAlign": "LEFT",
-                                                "textColor": "#231F20",
-                                                "truncateButtonColor": "#FFC13D",
-                                                "widgetName": "Text16",
-                                                "shouldTruncate": false,
-                                                "overflow": "NONE",
-                                                "version": 1,
-                                                "animateLoading": true,
-                                                "type": "TEXT_WIDGET",
-                                                "hideCard": false,
-                                                "displayName": "Text",
-                                                "key": "6589y63dco",
-                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                "widgetId": "e24vldlssg",
-                                                "renderMode": "CANVAS",
-                                                "isLoading": false,
-                                                "parentColumnSpace": 9.373046875,
-                                                "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 64,
-                                                "topRow": 8,
-                                                "bottomRow": 12,
-                                                "parentId": "zqhxiq1qo2",
-                                                "dynamicBindingPathList": [
-                                                    {
-                                                        "key": "text"
-                                                    }
-                                                ],
-                                                "dynamicTriggerPathList": [],
-                                                "classStyle": "title "
                                             }
                                         ],
                                         "minHeight": 400,
@@ -19318,7 +19282,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 256.5,
                                         "topRow": 0,
-                                        "bottomRow": 970,
+                                        "bottomRow": 940,
                                         "parentId": "4lhvyhy9ql"
                                     }
                                 ],
@@ -19438,8 +19402,7 @@
                         "Container10",
                         "Canvas27",
                         "Image2",
-                        "Text2",
-                        "Text16"
+                        "Text2"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -19862,50 +19825,6 @@
                                         "containerStyle": "none",
                                         "canExtend": false,
                                         "children": [
-                                            {
-                                                "isVisible": "{{main.user.auth_module.user.info.user.role !=='demo'}}",
-                                                "text": "{{main.user.auth_module.user.translation.botSetup.configBots}}",
-                                                "fontSize": "HEADING2",
-                                                "fontStyle": "BOLD",
-                                                "textAlign": "LEFT",
-                                                "textColor": "#231F20",
-                                                "truncateButtonColor": "#FFC13D",
-                                                "widgetName": "Text2",
-                                                "shouldTruncate": false,
-                                                "overflow": "NONE",
-                                                "version": 1,
-                                                "animateLoading": true,
-                                                "type": "TEXT_WIDGET",
-                                                "hideCard": false,
-                                                "displayName": "Text",
-                                                "key": "r0tsl8itp6",
-                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                "widgetId": "siimhkj06c",
-                                                "renderMode": "CANVAS",
-                                                "isLoading": false,
-                                                "parentColumnSpace": 12.68505859375,
-                                                "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 26,
-                                                "topRow": 0,
-                                                "bottomRow": 4,
-                                                "parentId": "ygwa9pgk95",
-                                                "dynamicBindingPathList": [
-                                                    {
-                                                        "key": "isVisible"
-                                                    },
-                                                    {
-                                                        "key": "text"
-                                                    }
-                                                ],
-                                                "dynamicTriggerPathList": [],
-                                                "classStyle": "title",
-                                                "dynamicPropertyPathList": [
-                                                    {
-                                                        "key": "isVisible"
-                                                    }
-                                                ]
-                                            },
                                             {
                                                 "isVisible": true,
                                                 "backgroundColor": "#FFFFFF",
@@ -22985,7 +22904,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 11.96875,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 26,
+                                                "leftColumn": 1,
                                                 "rightColumn": 63,
                                                 "topRow": 0,
                                                 "bottomRow": 7,
@@ -23055,7 +22974,6 @@
                         "support_user_question_input",
                         "Container3",
                         "Canvas16",
-                        "Text2",
                         "Container5",
                         "Canvas18",
                         "Container4CopyCopyCopyCopy",
