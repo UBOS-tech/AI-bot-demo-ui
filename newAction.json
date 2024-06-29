@@ -7890,15 +7890,16 @@
             "jsonPathKeys": [
                 "main.env.nodeUrl",
                 "JSON.stringify(openai.text)",
-                "JSON.stringify(modelopenai.selectedOptionLabel)",
+                "JSON.stringify()",
                 "main.user.auth_module.user.info.user.role",
-                "main.user.auth_module.user.info.user.email"
+                "main.user.auth_module.user.info.user.email",
+                "JSON.stringify(modelopenai.selectedOptionLabel)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-10-20T08:48:38.778Z",
-        "updatedAt": "2024-02-27T12:31:49.546Z",
+        "updatedAt": "2024-06-29T12:23:59.586Z",
         "deleted": false,
         "policies": [
             {
