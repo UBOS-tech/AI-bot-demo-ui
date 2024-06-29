@@ -22792,7 +22792,7 @@
                                             },
                                             {
                                                 "isVisible": "{{main.user.auth_module.user.info.user.role ==='demo'}}",
-                                                "backgroundColor": "#ffebdd",
+                                                "backgroundColor": "#9ac9f5",
                                                 "widgetName": "Container8",
                                                 "containerStyle": "card",
                                                 "borderColor": "transparent",
